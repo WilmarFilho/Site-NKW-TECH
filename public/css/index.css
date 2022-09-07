@@ -1,0 +1,222 @@
+/*Responsividade*/
+
+@media (max-width: 475.98px) {
+	div.fundo-logo {
+		background: url('../img/setup.jpg');
+		background-attachment: fixed;
+		background-size: cover;	
+		height: 400px;
+	}
+
+	img.img {
+		width: 350px;
+	}
+
+	h2.h2-carousel {
+		font-size: 2em;
+		font-weight: bolder;
+		font-family: beach;
+		text-shadow: 0 0 0.8em cyan;
+	}
+
+	h3.h3-carousel {
+		font-size: 1.2em;
+		font-weight: 400;
+		font-family: one;
+		text-shadow: 0 0 1em cyan;
+	}
+
+	btn.btn-lg {
+		font-size: 1rem !important;
+		font-family: beach;
+	}
+
+	div.img-carousel, div.img-carousel-2 {
+		height: 450px;
+	}
+
+	section#carousel {
+		border: 7px double cyan;
+		border-left: none;
+		border-right: none;
+		box-shadow: none;		
+	}
+
+	iframe.video {
+		height: 300px;
+	}
+
+
+
+
+
+}
+
+@media (min-width: 475.99px) and (max-width: 575.98px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/*Formatações Gerais*/
+
+@font-face {
+	font-family: tec;
+	src: url('../fonts/neutron.woff');
+}
+
+@font-face {
+	font-family: beach;
+	src: url('../fonts/beach.woff');
+}
+
+@font-face {
+	font-family: one;
+	src: url('../fonts/one.woff');
+}
+
+body {
+	margin: 0;
+	background-color: black; 
+
+	
+}
+
+/*Topo*/
+
+.fundo-logo {
+	background: url('../img/setup.jpg');
+	background-attachment: fixed;
+	background-size: cover;	
+	height: 750px;
+}
+
+.logo {
+	background-color: rgb(0, 0, 0, .7);
+	border-radius: 10px;
+	box-shadow: 5px 5px 1em white;
+}
+
+.img {
+	width: 850px;
+}		
+
+/*Carousel*/
+
+.img-carousel {
+	background: url('../img/setup4.jpg');
+}
+
+.img-carousel-2 {
+	background: url('../img/setup3.jpg');	
+}
+
+.img-carousel, .img-carousel-2 {
+	background-size: cover;	
+	height: 800px;
+}
+
+.btn-lg {
+	font-size: 1.7rem !important;
+	font-family: beach;
+}
+
+.h2-carousel {
+	font-size: 5.2em;
+	font-weight: bolder;
+	font-family: beach;
+	text-shadow: 0 0 0.8em cyan;
+}
+
+.h3-carousel {
+	font-size: 2.2em;
+	font-weight: 400;
+	font-family: one;
+	text-shadow: 0 0 1em cyan;
+}
+
+#carousel {
+	border: 7px double cyan;
+	border-left: none;
+	border-right: none;
+}
+
+/*Video Principal*/
+
+.h2-video {
+	font-family: one;
+	font-size: 3em;
+	font-weight: 600;
+	font-style: italic;
+	text-shadow: 0 0 0.2em purple;
+}
+
+#video {
+	background: url('../img/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.video {
+	height: 500px;
+}
+
+/*Suporte*/
+
+#suporte {
+	background: url('../img/bg10.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.icon {
+	font-size: 4em;
+	text-shadow: 0 0 1em cyan;
+}
+
+.p-suporte {
+	font-size: 1.8em;
+	font-family: one;
+	margin-top: 30px;
+	text-shadow: 0 0 1em purple;
+}
+
+/*Feedback*/
+
+#feedback {
+	background: url('../img/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#feedback h2 {
+	font-family:  Noto Sans, sans-serif;
+	font-size: 3em;
+	font-weight: 600;
+	font-style: italic;
+	text-shadow: 0 0 1em cyan;
+}
+
+.foto-perfil {			
+	height: 80px;
+	width: 80px;
+	border-radius: 100px;
+}
+
+.borda {
+	border:  3px solid cyan;
+}
+
+/*Rodape*/
+
+#rodape {
+	background: rgb(0, 0, 0, 0.8);
+}
