@@ -15,10 +15,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9d7842dfbe.js" crossorigin="anonymous"></script> <!-- Icones -->
+
+    <!-- Icones -->
+    <script src="https://kit.fontawesome.com/9d7842dfbe.js" crossorigin="anonymous"></script>
 
     <!-- Scripts -->
-     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <script> 
@@ -38,47 +40,10 @@
     
     </script>
 
-     <style>  
-    
-        .bg-custom {
-            background: rgb(0, 0, 0, .8);
-        }
-
-        #btn-login {
-            padding: 8px;
-            margin: 10px;
-            font-size: 1.1em;
-            font-family: one;
-            width: 200px;
-            border-radius: 15px !important;
-            color: lightcyan;
-            box-shadow: 0 0 1em red;
-        }
-
-        #navbar {
-           
-        }
-
-        .nav-link {
-            font-family: one;
-            font-size: 1.1em;
-            color: lightgray !important;
-        }
-
-        .nav-link:hover {
-            color: white !important;
-        }
-
-        body {
-            background-color: black;
-        } 
-
- 
-    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-custom shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm fixed-top">
             <div class="container">
                <a id='btn-login' class="btn btn-outline-danger nav-link" href="{{ route('login') }}">{{ __('Área do Usuário') }}
                  
@@ -108,7 +73,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>

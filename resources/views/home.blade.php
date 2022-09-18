@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row justify-content-center" >    
          <div class='col-4 text-center'>
-            <h2><a type='button' class='a_home_nav' data-toggle="modal" data-target="#exampleModal">Abrir chamado</a>  <br>  <i class=" a_home_nav fa-solid fa-plus"></i></h2>
+            <h2><a type='button' class='a_home_nav' data-toggle="modal" data-target="#chamado">Abrir chamado</a>  <br>  <i class=" a_home_nav fa-solid fa-plus"></i></h2>
          
          </div>
 
@@ -19,10 +19,15 @@
          </div>     
     </div>
 
+   
+   <modal-component id='chamado' titulo='Novo Chamado'> 
+        
+            <form-component token_csrf='{{csrf_token()}}'></form-component>
+        
+   </modal-component>
 
-   <modal-component> </modal-component>
+ 
    
 </div>
-
 
 @endsection

@@ -1,0 +1,135 @@
+/* Formatações gerais  */
+
+@font-face {
+	font-family: neutron;
+	src: url('../fonts/neutron.woff');
+}
+
+@font-face {
+	font-family: beach;
+	src: url('../fonts/beach.woff');
+}
+
+@font-face {
+	font-family: one;
+	src: url('../fonts/one.woff');
+}
+
+body {
+    background: url('../img/bg1.jpg') center 20% ;
+}
+
+.bg-nav-custom {
+    background: rgb(0, 0, 0, .6);
+}
+
+/* Login */
+
+.card{
+    --bs-card-bg: rgb(0, 0, 0, .8) !important;
+    box-shadow: 0 0 1em red; 
+}
+
+
+a {
+    text-decoration: none !important;
+  
+}
+
+.form-check-input:checked {
+    background-color: red !important;
+    border-color: red !important;
+}
+
+
+/*  Chamados  */
+
+#btn-filtro {
+    font-size: 1.3em;
+    font-family: one;
+    text-shadow: 0 0 1.5em cyan;
+}
+
+#data-hora {
+    font-family: one;
+}
+
+.label-form {
+    background-color: darkred;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'one';
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.titulo-chamado {
+    font-family: beach;
+    font-size: 1.8em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.texto-chamado {
+    font-size: 1.3em;
+    font-family: one;
+}
+
+#div_feedback {
+    background-color: rgb(0, 0, 0, .6);
+    border-radius: 15px;
+    padding: 10px;
+    padding-top: 30px;
+    margin-top: 200px;
+}
+
+.h2-feedback {
+    font-family: beach;
+    font-size: 3em;
+    font-style: italic;
+    text-shadow: 0 0 1em cyan;
+}
+
+.p-feedback {
+    font-size: 1.2em;
+    font-family: one;
+    font-weight: 200;
+}
+
+.link_chamados {
+    font-family: beach;
+    font-size: 1.2em;
+    margin-left: 10px;
+    color: red;
+}
+
+.link_chamados:hover {
+    color: azure;
+}
+
+
+/*  Botão home  */
+
+
+#home {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    background-color: rgb(0, 0, 0, .8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em cyan;
+    cursor: pointer;
+
+}
+
+#home a {
+    color: aliceblue;
+}
+

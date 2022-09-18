@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class chamado extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'tipo_serviço',
+        'descricao',
+        'img_descricao',
+        'user_id'
+    ];
 }

@@ -91,7 +91,7 @@
 
 					<div class="col-4 text-center text-white">
 						<i class="fa-solid fa-laptop-code icon"></i>
-						<p class="p-suporte">Conteudos educativos sem pagar nada !</p>
+						<p class="p-suporte">Assistência total sem sair de casa !</p>
 					</div>
 
 				</div> <!-- Inicio Suporte -->
@@ -109,26 +109,21 @@
 				<div class="row justify-content-center mt-5">
 				
 					<div class="col-md-4 col-10  mb-4 ">
-						
-						
-							<iframe  class="borda" width="100%"  height="250"  src="https://www.youtube.com/embed/sNNBaUuvjVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						
-
-						
-
+                        <video class="borda"   src='video/cliente1.mp4' controls >
+                        
+                        </video>		
 					</div>
 
 					<div class=" offset-md-2 col-md-4 col-10  mb-4">
 						
-							<iframe class="borda"  width="100%"  height="250"  src="https://www.youtube.com/embed/sNNBaUuvjVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					
-
-						
+							<video class="borda"  src='video/cliente2.mp4' controls >
+                        
+                            </video>			
 					</div>
 
 					<div class="col-md-4 col-10 ">
 						
-							<iframe class="borda"  width="100%"  height="250"  src="https://www.youtube.com/embed/sNNBaUuvjVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
 						
 
 						
@@ -136,7 +131,7 @@
 
 					<div class="offset-md-2 col-md-4 col-10">
 					
-							<iframe class="borda" width="100%"  height="250"  src="https://www.youtube.com/embed/sNNBaUuvjVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							
 						
 
 						
@@ -146,20 +141,16 @@
 
 			</section> <!-- Fim Feedback -->
 
-			<footer id="rodape"> <!-- Inicio Rodape -->
+			<footer id="rodape" class='my-2'> <!-- Inicio Rodape -->
 
-				<div class="row">
-					<div class="col-6 mr-auto ml-3 mt-5 text-white">
-						<p>Copyright (c) 2003 Company Name
-								All Rights Reserved
-								 
-								
-
+				<div class="row align-items-center">
+					<div class="col-6 offset-1  text-light">
+						<p class=''>Copyright (c) 2022 Nkw tech <br> Todos os direitos reservados
 						</p>
 					</div>
 					
-					<div class="col-3 ml-auto mt-5">
-						<img src="imagens/logo.png" class="img-fluid">
+					<div class="col-3 ms-auto ">
+						<img src="img/logo.png" class="img-fluid">
 					</div>
 
 				</div>

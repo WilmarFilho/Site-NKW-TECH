@@ -16,7 +16,6 @@ use App\Models\chamado;
 
 Route::get('/', function () {
    return view('index');
-   //return 'oi';
 });
 
 Auth::routes();

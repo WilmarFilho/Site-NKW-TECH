@@ -24,6 +24,16 @@ app.component('apresentacao-component', ApresentacaoComponent);
 import ModalComponent from './components/ModalComponent.vue';
 app.component('modal-component', ModalComponent);
 
+import FormComponent from './components/FormComponent.vue';
+app.component('form-component', FormComponent);
+
+import ChamadosComponent from './components/ChamadosComponent.vue';
+app.component('chamados-component', ChamadosComponent);
+
+import DetalhesComponent from './components/DetalhesComponent.vue';
+app.component('detalhes-component', DetalhesComponent);
+
+
 
 /**
  * The following block of code may be used to automatically register your

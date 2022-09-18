@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('tipo_serviço', 100);
             $table->string('descricao', 200);
             $table->string('img_descricao', 150);
+            $table->string('status', 50)->default('Pendente');
         });
     }
 

@@ -9,52 +9,26 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Style custom  -->
+    <link rel='stylesheet' href={{asset('css/chamados.css')}}>
    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+     <!-- Icones -->
+    <script src="https://kit.fontawesome.com/9d7842dfbe.js" crossorigin="anonymous"></script>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
-     <!-- Style custom  -->
-   
-
-    <style>  
-    
-        .bg-custom {
-            background: rgb(0, 0, 0, .6);
-        }
-
-        .card{
-            background: rgb(0, 0, 0, .8);
-        }
-
-        body {
-            background: url('img/bg1.jpg') center 20%  !important;
-        }
-
-        a {
-            text-decoration: none !important;
-            color:rgb(255, 255, 255) !important;
-        }
-
-        .form-check-input:checked {
-            background-color: red !important;
-            border-color: red !important;
-        }
- 
-    </style>
-
-   
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-custom shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-nav-custom shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src='img/logo.png' class='img-fluid' width='250'>
+                    <img src={{asset('img/logo.png')}} class='img-fluid' width='250'>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,14 +44,17 @@
                     <ul class="navbar-nav ms-auto ">
                         <!-- Authentication Links -->
                         @guest
-                            <!--@if (Route::has('login'))
+                            @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                                 </li>
-                            @endif-->
+                                 <li class="nav-item">
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                                </li>
+                            @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -85,7 +62,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Sair') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -103,5 +80,9 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>

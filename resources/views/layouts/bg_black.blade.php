@@ -10,33 +10,22 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Style custom  -->
-    <link rel='stylesheet' href='css/estilo.css'>
-    <link rel='stylesheet' href='css/index.css'>
+    <link rel='stylesheet' href='css/home.css'>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
+    <!-- Icones -->
     <script src="https://kit.fontawesome.com/9d7842dfbe.js" crossorigin="anonymous"></script> <!-- Icones -->
 
     <!-- Scripts -->
      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-     <style>  
-    
-        .bg-custom {
-            background: rgb(0, 0, 0, .6);
-        }
-
-        body {
-            background-color: black;
-        }
-
- 
-    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-custom shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-nav-custom shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src='img/logo.png' class='img-fluid' width='250'>
@@ -72,11 +61,11 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item " href="{{ route('logout') }}"
+                                <div class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Sair') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

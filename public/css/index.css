@@ -26,7 +26,7 @@
 		text-shadow: 0 0 1em cyan;
 	}
 
-	btn.btn-lg {
+	button.btn-lg {
 		font-size: 1rem !important;
 		font-family: beach;
 	}
@@ -67,7 +67,7 @@
 /*Formatações Gerais*/
 
 @font-face {
-	font-family: tec;
+	font-family: neutron;
 	src: url('../fonts/neutron.woff');
 }
 
@@ -89,6 +89,31 @@ body {
 }
 
 /*Topo*/
+
+.nav-link {
+	font-family: one;
+	font-size: 1.1em;
+	color: lightgray !important;
+}
+
+.nav-link:hover {
+	color: white !important;
+}
+
+.bg-nav-custom {
+	background: rgb(0, 0, 0, .8);
+}
+
+#btn-login {
+	padding: 8px;
+	margin: 10px;
+	font-size: 1.1em;
+	font-family: one;
+	width: 200px;
+	border-radius: 15px !important;
+	color: lightcyan;
+	box-shadow: 0 0 1em red;
+}
 
 .fundo-logo {
 	background: url('../img/setup.jpg');
@@ -213,10 +238,16 @@ body {
 
 .borda {
 	border:  3px solid cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 1em cyan;
+    height: 400px;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .7);
 }
 
 /*Rodape*/
 
 #rodape {
+    box-shadow: 0 -7px 1em cyan;
 	background: rgb(0, 0, 0, 0.8);
 }
