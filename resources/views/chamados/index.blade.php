@@ -50,6 +50,10 @@
             <template v-slot:data> 
                 <h5 id='data-hora' class="ms-auto me-4 mt-1">{{$data}}-{{$hora}} </h5>
             </template>
+
+            <template v-slot:tipo> 
+                <h5 class="card-header text-center titulo-chamado">{{$chamado->tipo_serviço}}</h5>
+            </template>
             
             <template v-slot:descricao> 
                 <p class="card-text texto-chamado">{{$chamado->descricao}}</p>
@@ -61,9 +65,24 @@
 
         </chamados-component>
 
+            <modal-component id={{$chamado->id}} titulo='Deseja mesmo remover o chamado ?' botao='btn-outline-dark'>
+
+                <form method='POST' action={{route('chamado.destroy', $chamado)}}>
+                
+                    @csrf
+                    @method('DELETE')
+                    <button class='btn btn-danger btn-lg' type='submit'>Apagar <i class="fa-regular fa-trash-can"></i></button>
+
+
+                </form>
+     
+            </modal-component>
+
      @endforeach
 
-    <div class='text-center row justify-content-center'>
+   
+
+    <div class=''>
       
          {{$chamados->links()}}
        

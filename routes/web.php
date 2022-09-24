@@ -18,8 +18,19 @@ Route::get('/', function () {
    return view('index');
 });
 
+Route::get('/perfil', function () {
+   return view('auth.perfil');
+})->name('perfil');
+
 Auth::routes();
 
 Route::resource('chamado', 'App\Http\Controllers\ChamadoController');
+
+Route::get('/adiciona', function () {
+   return view('chamados.novoChamado');
+})->name('adiciona');
+
+
+Route::resource('chat', 'App\Http\Controllers\ChatController');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

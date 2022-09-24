@@ -1,0 +1,107 @@
+body {
+    background: url('../img/bg20.jpg') ;
+}
+
+@font-face {
+	font-family: neutron;
+	src: url('../fonts/neutron.woff');
+}
+
+@font-face {
+	font-family: beach;
+	src: url('../fonts/beach.woff');
+}
+
+@font-face {
+	font-family: one;
+	src: url('../fonts/one.woff');
+}
+
+.bg-nav-custom {
+	background: rgb(0, 0, 0, .6);
+}
+
+#container {
+    background: rgb(0, 0, 0, .6);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.img-perfil {
+    border-radius: 110px;
+}
+
+.nome-perfil {
+    color: white;
+    font-family: one;
+}
+
+.label-perfil{
+    font-family: beach;
+    color: aliceblue;
+}
+
+.label-form {
+   
+   
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 1.1em;
+    font-family: 'one';
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/*  Modal  */
+
+
+
+#adicionaChamado {
+    box-shadow: 0 0 1em red;
+    background: rgb(0, 0, 0, .6);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#label-modal {
+    font-family: one;
+    font-size: 1.8em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.label-formulario {
+    background-color: darkred;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'one';
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+
+/*  Botão home  */
+
+
+#home {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    background-color: rgb(0, 0, 0, .8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em cyan;
+    cursor: pointer;
+
+}
+
+#home a {
+    color: aliceblue;
+}

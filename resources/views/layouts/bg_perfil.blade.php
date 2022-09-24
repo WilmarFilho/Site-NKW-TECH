@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Style custom  -->
-    <link rel='stylesheet' href='css/home.css'>
+    <link rel='stylesheet' href='css/perfil.css'>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

@@ -75,10 +75,67 @@ a {
     font-style: italic;
 }
 
+.titulo-chat, .titulo-detalhes {
+    font-family: one;
+    font-size: 2.3em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-style: italic;
+    
+}
+
+#chat {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.resposta {
+    box-shadow: 5px 5px 1em black;;
+    background-color: rgb(255, 255, 255, .4);
+    border-radius: 15px;
+}
+
+.user-resposta {
+    font-size: 1.3em;
+    font-family: one;
+    color: rgb(26, 12, 12);
+}
+
+.data-resposta {
+    font-size: 1em;
+    color: rgb(26, 12, 12);
+}
+
+.texto-resposta {
+    font-size: 1.6em;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
 .texto-chamado {
     font-size: 1.3em;
     font-family: one;
 }
+
+.detalhes {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+}
+
+.label-chamado {
+    background-color: darkred;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-family: 'one';
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
 
 #div_feedback {
     background-color: rgb(0, 0, 0, .6);
@@ -110,6 +167,42 @@ a {
 
 .link_chamados:hover {
     color: azure;
+}
+
+#label-modal {
+    font-family: one;
+    font-size: 1.8em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#paginacao ul li span {
+    font-size: 1.3em !important;
+    font-family: one;
+}
+
+.pagination {
+    --bs-pagination-bg: rgb(0,0,0,.3) !important;
+    --bs-pagination-disabled-bg: rgb(0,0,0,.3) !important;
+}
+
+
+
+
+#paginacao ul li a {
+    font-size: 1.3em;
+    color: white;
+    font-family: one;
+}
+
+#paginacao ul li a:hover {
+    font-size: 1.3em;
+    color: black;
+    font-family: one;
+}
+
+#paginacao ul{
+    box-shadow: 0 0 1em rgb(235, 232, 232);
 }
 
 

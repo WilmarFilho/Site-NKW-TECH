@@ -1,5 +1,5 @@
 <template>
-   <div class="modal fade" :id=id tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal fade" :id=modalid tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                
@@ -12,8 +12,9 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+                    <button type="button"   class="btn"  :class=botao  data-dismiss="modal">Fechar</button>
                 </div>
+                {{erro}}
                 
             </div>
         </div>
@@ -25,13 +26,25 @@
 
         mounted() {
             $(document).ready(() => {
-                $('#modal-feedback').modal('show');
-            })   
+                if(this.erro ==! '[]') {
+                    $('#chamado_erro').modal('show')
+                    console.log(this.erro)
+                }
+            })
+            console.log(this.erro)
         },
 
         props: [
-            'titulo', 'id'
-        ]
+            'titulo', 'id','botao', 'erro'
+        ],
+
+        computed: {
+
+            modalid() {
+                return 'chamado_' + this.id
+            },
+
+        }
              
     }
 </script>
