@@ -12,4 +12,9 @@ class chat extends Model
         'user_id',
         'chamado_id'
     ];
+
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

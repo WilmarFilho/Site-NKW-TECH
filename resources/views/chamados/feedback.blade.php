@@ -21,4 +21,12 @@
 
      <a href={{route('home')}}><i class="fa-solid fa-house fa-2x"></i> </a>
 
+     <script>
+     
+        setTimeout(function() {
+            window.location.href = "http://127.0.0.1:8000/home";
+        }, 4000) 
+    
+     </script>
+
 @endsection

@@ -37,7 +37,7 @@
                         <div class='offset-8 col-4 text-center resposta p-3'>
                             
                             <div class=''>
-                                <span class='user-resposta'>{{auth()->user()->name}} </span>   <br>
+                                <span class='user-resposta'>{{$chamado->User->name}} </span>   <br>
                                 <small class='data-resposta'>{{$data}}-{{$hora}}</small>
                             </div>
                             <div class=''>
@@ -69,7 +69,7 @@
                             <div class=' {{$class_resposta}} col-4 text-center resposta p-3'>
                                 
                                 <div class=''>
-                                    <span class='user-resposta'>{{auth()->user()->name}} </span>   <br>
+                                    <span class='user-resposta'>{{$reposta->User->name}} </span>   <br>
                                     <small class='data-resposta'>{{$data}}-{{$hora}}</small>
                                 </div>
                                 <div class=''>

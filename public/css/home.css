@@ -80,4 +80,16 @@ a {
 }
 
 
-
+.label-formulario {
+    background-color: darkred;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: 'one';
+    font-style: italic;
+    letter-spacing: 1px;
+}

@@ -3,6 +3,7 @@
         <slot name="tipo"></slot>
         <slot name="data"></slot>
         <div class="card-body">
+            <slot name='usuario'></slot>
             <slot name='descricao'></slot>
                
             <div class='row'>

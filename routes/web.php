@@ -18,9 +18,14 @@ Route::get('/', function () {
    return view('index');
 });
 
-Route::get('/perfil', function () {
-   return view('auth.perfil');
-})->name('perfil');
+Route::get('/perfil',[App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
+
+Route::get('/altera-senha',[App\Http\Controllers\PerfilController::class, 'NovaSenha'])->name('perfilsenha');
+Route::post('/novaSenha',[App\Http\Controllers\PerfilController::class, 'AlteraSenha'])->name('alteraSenha');
+
+Route::post('/perfil-foto',[App\Http\Controllers\PerfilController::class, 'mudaFoto'])->name('perfilFoto');
+
+Route::post('/admin',[App\Http\Controllers\PerfilController::class, 'admin'])->name('admin');
 
 Auth::routes();
 

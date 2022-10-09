@@ -2,7 +2,7 @@
             <div id='topo' class="d-flex justify-content-center ">
 				<div id='conteudo-topo' class="align-self-center text-center">
 					<div >
-                        <h2  class=' h2-topo '>Seja Bem vindo</h2>
+                        <h2  class=' h2-topo '>{{titulo}}</h2>
                     </div>
                         
                     <div class='mt-5' id='textos'>
@@ -20,6 +20,11 @@
             $(document).ready(() => {
                 $('#conteudo-topo').fadeIn(2500)
             })
-        }
+        },
+
+        props: [
+            'titulo'
+        ]
+
     }
 </script>

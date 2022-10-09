@@ -34,18 +34,36 @@ class ChamadoController extends Controller
     public function index(Request $request)
     {
         if($request->input('filtro')) {
-            $chamados = chamado::where('user_id', auth()->user()->id)->where('status', $request->input('filtro'))->orderby('created_at')->simplepaginate(3);
+            if(auth()->user()->CODFUN == 2) {
+                $chamados = chamado::where('user_id', auth()->user()->id)->where('status', $request->input('filtro'))->orderby('created_at')->simplepaginate(3);
+            }
+            if(auth()->user()->CODFUN == 1) {
+                $chamados = chamado::where('status', $request->input('filtro'))->orderby('created_at')->simplepaginate(3);
+            }
             return view('chamados.index', ['chamados' => $chamados]);
         }
 
         if($request->input('filtro') == null) {
-            $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
+            if(auth()->user()->CODFUN == 2) {
+                $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
+            }
+            if(auth()->user()->CODFUN == 1) {
+                $chamados = chamado::orderBy('id', 'desc')->simplepaginate(3);
+            }
+            
             return view('chamados.index', ['chamados' => $chamados]);
         }
 
         else {
-            $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
+            if(auth()->user()->CODFUN == 2) {
+                $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
+            }
+            if(auth()->user()->CODFUN == 1) {
+                $chamados = chamado::orderBy('id', 'desc')->simplepaginate(3);
+            }
+            
             return view('chamados.index', ['chamados' => $chamados]);
+            
         }
 
     }

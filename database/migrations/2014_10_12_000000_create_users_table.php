@@ -22,6 +22,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->integer('CODFUN')->nullable();
+            $table->integer('ADMIN')->nullable();
             $table->string('img_perfil', 100)->nullable();
         });
     }

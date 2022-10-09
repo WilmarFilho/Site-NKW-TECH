@@ -54,6 +54,12 @@
             <template v-slot:tipo> 
                 <h5 class="card-header text-center titulo-chamado">{{$chamado->tipo_serviço}}</h5>
             </template>
+
+            @if(auth()->user()->CODFUN == 1)
+                <template v-slot:usuario> 
+                    <p class="card-text texto-chamado">Usuario: {{$chamado->User->name}}</p>
+                </template>
+            @endif
             
             <template v-slot:descricao> 
                 <p class="card-text texto-chamado">{{$chamado->descricao}}</p>
