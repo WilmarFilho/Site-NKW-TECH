@@ -41,7 +41,7 @@ class ChatController extends Controller
             'resposta' => $request->input('resposta')
         ]);
 
-        return view('home');
+        return redirect()->route('chamado.index');
     }
 
     /**

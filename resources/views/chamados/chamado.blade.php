@@ -28,6 +28,28 @@
                 $hora = $hora[0] . ':' . $hora[1];
             @endphp
 
+            @if(auth()->user()->ADMIN == 1)
+                <div class="">
+
+                    <form class='mx-auto my-4 ' action='{{route('chamado.update', ['chamado' => $chamado])}}' method='POST'>
+                        @csrf
+                        @method('PUT')
+                        <label class='label-form'> Alterar status do chamado: </label>
+                        
+                        <div class='input-group'>
+                            <select name='status' class='form-control'>
+                                <option>Andamento</option>
+                                <option>Finalizado</option>
+                                <option>Pendente</option>
+                            </select>
+                            <button class='btn btn-outline-info'>Alterar</button>
+                        </div>
+                    
+                    </form>
+
+                </div>
+            @endif
+
             <div class="card text-white my-4">
                 <h5 class="card-header text-center titulo-chat">Chat do chamado</h5>
                 
@@ -46,13 +68,14 @@
                         </div>
                     </div>
                     
-                
+                   
+
                     @foreach($respostas as $indice => $reposta)
                         
                          @php 
                             
                             $class_resposta = 'ms-3';
-                            if($reposta->user_id == 2) {
+                            if($reposta->User->ADMIN == 0) {
                                 $class_resposta = 'offset-8';
                             }
 

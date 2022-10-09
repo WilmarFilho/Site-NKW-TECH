@@ -144,7 +144,8 @@ class ChamadoController extends Controller
      */
     public function update(Request $request, chamado $chamado)
     {
-        //
+        chamado::where('id', $chamado->id)->update(['status' => $request->status]);
+        return redirect()->route('chamado.index');
     }
 
     /**
