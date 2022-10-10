@@ -42,7 +42,7 @@
 
 </head>
 <body>
-    <div id="app">
+    <div id="app" class='container-fluid'>
         <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm fixed-top">
             <div class="container">
                <a id='btn-login' class="btn btn-outline-danger nav-link" href="{{ route('login') }}">{{ __('Área do Usuário') }}

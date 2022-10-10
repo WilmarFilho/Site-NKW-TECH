@@ -42,7 +42,7 @@
                                 <option>Finalizado</option>
                                 <option>Pendente</option>
                             </select>
-                            <button class='btn btn-outline-info'>Alterar</button>
+                            <button class='btn btn-info'>Alterar</button>
                         </div>
                     
                     </form>
@@ -56,7 +56,7 @@
                 <div class="card-body row" id="chat">
 
                     <div class='col-12 row mb-3 mt-1 '>
-                        <div class='offset-8 col-4 text-center resposta p-3'>
+                        <div class='offset-md-8 col-md-4 offset-6 col-6 text-center resposta p-3'>
                             
                             <div class=''>
                                 <span class='user-resposta'>{{$chamado->User->name}} </span>   <br>
@@ -76,7 +76,7 @@
                             
                             $class_resposta = 'ms-3';
                             if($reposta->User->ADMIN == 0) {
-                                $class_resposta = 'offset-8';
+                                $class_resposta = 'offset-md-8 offset-6';
                             }
 
                             $dataHora = explode(" ",$reposta->created_at);
@@ -89,7 +89,7 @@
                         @endphp
 
                         <div class='col-12 row mb-3 mt-1 '>
-                            <div class=' {{$class_resposta}} col-4 text-center resposta p-3'>
+                            <div class=' {{$class_resposta}} col-md-4 col-6 text-center resposta p-3'>
                                 
                                 <div class=''>
                                     <span class='user-resposta'>{{$reposta->User->name}} </span>   <br>

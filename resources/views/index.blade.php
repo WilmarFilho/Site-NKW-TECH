@@ -141,7 +141,7 @@
 
 			</section> <!-- Fim Feedback -->
 
-			<footer id="rodape" class='my-2'> <!-- Inicio Rodape -->
+			<footer id="" class='my-2'> <!-- Inicio Rodape -->
 
 				<div class="row align-items-center">
 					<div class="col-6 offset-1  text-light">

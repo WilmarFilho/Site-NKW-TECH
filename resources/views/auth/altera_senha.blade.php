@@ -4,11 +4,11 @@
 
     <div id='container' class='container mx-auto row justify-content-center'>
         
-      <div class='col-8'>
+      <div class='col-md-8 col-12'>
             <h2 class='label-perfil text-center'> Alterar senha  </h2>
       </div>
 
-      <div class='col-6 mt-2'>
+      <div class='col-md-6 col-8 mt-2'>
         <form action='{{route('alteraSenha')}}' method='POST' class='text-center'>
             @csrf
             <label class='label-formulario'> Antiga senha</label>
@@ -34,10 +34,5 @@
 
     </div>
 
-    <div id='home'>
-
-      <a href={{route('home')}}><i class="fa-solid fa-house fa-2x"></i> </a>
-     
-    </div>
 
 @endsection

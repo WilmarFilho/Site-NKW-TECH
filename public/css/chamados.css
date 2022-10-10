@@ -1,3 +1,32 @@
+/*Responsividade*/
+
+@media (max-width: 475.98px) {
+	
+    div#home {
+       display: none;
+    
+    }
+    
+    p.usuario-chamado {
+        font-size: 1.3em;
+        font-family: one;
+        text-align: center !important;
+    }
+
+}
+
+@media (min-width: 475.99px) and (max-width: 575.98px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
 /* Formatações gerais  */
 
 @font-face {
@@ -113,6 +142,11 @@ a {
 }
 
 .texto-chamado {
+    font-size: 1.3em;
+    font-family: one;
+}
+
+.usuario-chamado {
     font-size: 1.3em;
     font-family: one;
 }

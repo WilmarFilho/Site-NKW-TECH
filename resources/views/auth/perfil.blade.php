@@ -6,8 +6,8 @@
         
         @php  auth()->user()->img_perfil == null ? $imgPerfil = 'Indefinida' : $imgPerfil =  'storage/' . auth()->user()->img_perfil;   @endphp
         
-        <div class='col-5 text-center mt-3 row justify-content-center'>
-            <div class='col-7'>    
+        <div class='col-md-5 col-12 text-center mt-3 row justify-content-center'>
+            <div class='col-8'>    
                 @if($imgPerfil !== 'Indefinida')
                     <img src='{{asset($imgPerfil)}}' class='img-fluid img-perfil' width=150>
                 @else 
@@ -15,7 +15,7 @@
                 @endif
                 
             </div>
-            <form class='col-10' method='POST' action='/perfil-foto' enctype="multipart/form-data">
+            <form class='col-12' method='POST' action='/perfil-foto' enctype="multipart/form-data">
                 @csrf
                 <label class='label-form'> @if($imgPerfil == 'Indefinida') Carregar @endif  @if($imgPerfil !== 'Indefinida') Alterar @endif foto de perfil</label>
                 <div class='input-group'>
@@ -36,17 +36,17 @@
 
         <div class='row justify-content-center col-12 mt-5'>
 
-            <h2 class='col-10 label-perfil'>Dados cadastrais: </h2>
+            <h2 class='col-md-10 col-12 label-perfil'>Dados cadastrais: </h2>
 
-            <div class='col-10'>
+            <div class='col-md-10 col-12'>
                 <form>
                     <fieldset disabled>
                         <div class='row'>
-                            <div class='col-5'>
+                            <div class='col-md-5 col-10'>
                                 <label class='label-form'>Nome:</label>
                                 <input class='form-control disable' type='text' value='{{auth()->user()->name}}'>
                             </div>
-                            <div class='col-5'>
+                            <div class='col-md-5 col-10'>
                                 <label class='label-form'>Email:</label>
                                 <input class='form-control disable' type='text' value='{{auth()->user()->email}}'>
                             </div>
@@ -59,17 +59,17 @@
 
             </div>
             
-            <h2 class='col-10 label-perfil mt-4'>Dados de endereço: </h2>
+            <h2 class='col-md-10 col-12 label-perfil mt-4'>Dados de endereço: </h2>
 
-            <div class='col-10'>
+            <div class='col-md-10 col-12'>
                 <form>
                     <fieldset disabled>
                         <div class='row'>
-                            <div class='col-5'>
+                            <div class='col-md-5 col-10'>
                                 <label class='label-form'>Endereço:</label>
                                 <input class='form-control disable' type='text' value=''>
                             </div>
-                            <div class='col-5'>
+                            <div class='col-md-5 col-10'>
                                 <label class='label-form'>Setor:</label>
                                 <input class='form-control' type='password' value=''>
                             </div>
@@ -89,12 +89,5 @@
            
     
     </div>
-
-            <div id='home'>
-
-                <a href={{route('home')}}><i class="fa-solid fa-house fa-2x"></i> </a>
-     
-            </div>
-
 
 @endsection

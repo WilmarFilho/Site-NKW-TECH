@@ -5,7 +5,7 @@
                         <h2  class=' h2-topo '>{{titulo}}</h2>
                     </div>
                         
-                    <div class='mt-5' id='textos'>
+                    <div class='mt-1' id='textos'>
                         <i class="fa-solid fa-laptop-code icon text-danger" style='font-size: 6em;'></i>
                         <h3>NKW</h3>
                         <h4>Tech</h4>

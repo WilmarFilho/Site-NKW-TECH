@@ -25,7 +25,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-nav-custom shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
                     <img src='img/logo.png' class='img-fluid' width='250'>
@@ -56,12 +56,12 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown text-center">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-dark" href="{{ route('perfil') }}"
                                        >
                                         {{ __('Perfil') }}

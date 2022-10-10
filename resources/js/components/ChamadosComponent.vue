@@ -7,11 +7,11 @@
             <slot name='descricao'></slot>
                
             <div class='row'>
-                <div class='col-6'>
+                <div class='col-md-6 col-12'>
                     <slot name='button'></slot>
                     <a type="button" data-toggle='modal' :data-target=modalId class='ms-3 btn btn-outline-danger btn-lg'><i class="fa-regular fa-trash-can"></i></a>
                 </div>
-                <div class='col-6'>
+                <div class='col-md-6 col-12'>
                     <a class='btn btn-sm ml-5' :class="statusClass"  style='margin-left: 80%;' >{{status}}</a>
                 </div>
                 

@@ -12,7 +12,7 @@
         
 
         <div class='collapse row  mt-4 justify-content-center' id='filtro'>
-            <form class='col-5 form-inline' action='/chamado'>
+            <form class='col-md-5 col-10 form-inline' action='/chamado'>
                 <label class='label-form'>Selecione o status de chamado para a consulta</label>
                 <div class='row'>
                     <div class='col-8'>
@@ -48,7 +48,7 @@
 
 
             <template v-slot:data> 
-                <h5 id='data-hora' class="ms-auto me-4 mt-1">{{$data}}-{{$hora}} </h5>
+                <h5 id='data-hora' class="ms-auto me-4 mt-2">{{$data}}-{{$hora}} </h5>
             </template>
 
             <template v-slot:tipo> 
@@ -57,12 +57,12 @@
 
             @if(auth()->user()->CODFUN == 1)
                 <template v-slot:usuario> 
-                    <p class="card-text texto-chamado">Usuario: {{$chamado->User->name}}</p>
+                    <p class="card-text usuario-chamado">Usuario: {{$chamado->User->name}}</p>
                 </template>
             @endif
             
             <template v-slot:descricao> 
-                <p class="card-text texto-chamado">{{$chamado->descricao}}</p>
+                <p class="card-text texto-chamado mt-3">{{$chamado->descricao}}</p>
             </template>
 
              <template v-slot:button> 
