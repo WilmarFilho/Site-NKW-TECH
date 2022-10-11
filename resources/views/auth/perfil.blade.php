@@ -4,7 +4,9 @@
 
     <div id='container' class='container mx-auto row justify-content-center'>
         
-        @php  auth()->user()->img_perfil == null ? $imgPerfil = 'Indefinida' : $imgPerfil =  'storage/' . auth()->user()->img_perfil;   @endphp
+        @php  
+            auth()->user()->img_perfil == null ? $imgPerfil = 'Indefinida' : $imgPerfil =  'storage/' . auth()->user()->img_perfil;
+        @endphp
         
         <div class='col-md-5 col-12 text-center mt-3 row justify-content-center'>
             <div class='col-8'>    
@@ -15,15 +17,12 @@
                 @endif
                 
             </div>
-            <form class='col-12' method='POST' action='/perfil-foto' enctype="multipart/form-data">
-                @csrf
-                <label class='label-form'> @if($imgPerfil == 'Indefinida') Carregar @endif  @if($imgPerfil !== 'Indefinida') Alterar @endif foto de perfil</label>
-                <div class='input-group'>
-                    <input  type='file' class='form-control' name='imgPerfil' id='imgPerfil'>
-                    <button  type='submit' class='btn btn-info '>Alterar</button>
-                </div>
-                
-            </form>
+        
+
+            <formsimples-component token_csrf={{csrf_token()}} label='Alterar foto de perfil' classlabel='label-form mt-2' labelbtn='Alterar' classbtn='btn btn-info' route='/perfil-foto' enctype='multipart/form-data'>
+                <input  type='file' class='form-control' name='imgPerfil' id='imgPerfil'>
+            </formsimples-component>
+
                 @if($errors != '[]')
                     <div class="alert alert-danger mt-3" role="alert">
                         <?php foreach ($errors->all() as $message) { ?>
@@ -39,21 +38,16 @@
             <h2 class='col-md-10 col-12 label-perfil'>Dados cadastrais: </h2>
 
             <div class='col-md-10 col-12'>
-                <form>
-                    <fieldset disabled>
-                        <div class='row'>
-                            <div class='col-md-5 col-10'>
-                                <label class='label-form'>Nome:</label>
-                                <input class='form-control disable' type='text' value='{{auth()->user()->name}}'>
-                            </div>
-                            <div class='col-md-5 col-10'>
-                                <label class='label-form'>Email:</label>
-                                <input class='form-control disable' type='text' value='{{auth()->user()->email}}'>
-                            </div>
-                        </div>
-                    </fieldset>
-                
-                </form>
+
+                <formdisable-component>
+                    <template v-slot:campo1 >
+                        <input-component label='Nome:' value='{{auth()->user()->name}}' classlabel='label-form'></input-component>
+                    </template>
+
+                    <template v-slot:campo2 >
+                        <input-component label='Email:' value='{{auth()->user()->email}}' classlabel='label-form'></input-component>
+                    </template>  
+                </formdisable-component>
 
                 <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilsenha')}}>Alterar Senha</a>
 
@@ -62,25 +56,20 @@
             <h2 class='col-md-10 col-12 label-perfil mt-4'>Dados de endereço: </h2>
 
             <div class='col-md-10 col-12'>
-                <form>
-                    <fieldset disabled>
-                        <div class='row'>
-                            <div class='col-md-5 col-10'>
-                                <label class='label-form'>Endereço:</label>
-                                <input class='form-control disable' type='text' value='{{auth()->user()->endereco}}'>
-                            </div>
-                            <div class='col-md-5 col-10'>
-                                <label class='label-form'>Setor:</label>
-                                <input class='form-control' type='text' value='{{auth()->user()->setor}}'>
-                            </div>
-                            <div class='col-md-5 col-10'>
-                                <label class='label-form'>Celular:</label>
-                                <input class='form-control' type='text' value='{{auth()->user()->celular}}'>
-                            </div>
-                        </div>
-                    </fieldset>
-                
-                </form>
+
+                <formdisable-component>
+                    <template v-slot:campo1 >
+                        <input-component label='Endereço:' value='{{auth()->user()->endereco}}' classlabel='label-form'></input-component>
+                    </template>
+
+                    <template v-slot:campo2 >
+                        <input-component label='Setor:' value='{{auth()->user()->setor}}' classlabel='label-form'></input-component>
+                    </template>  
+
+                    <template v-slot:campo3 >
+                        <input-component label='Celular:' value='{{auth()->user()->celular}}' classlabel='label-form'></input-component>
+                    </template> 
+                </formdisable-component>
 
                 <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilendereco')}}>Alterar dados de endereço</a>
 

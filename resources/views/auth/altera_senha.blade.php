@@ -9,27 +9,29 @@
       </div>
 
       <div class='col-md-6 col-8 mt-2'>
-        <form action='{{route('alteraSenha')}}' method='POST' class='text-center'>
-            @csrf
-            <label class='label-formulario'> Antiga senha</label>
-            <input class='form-control' type='password' name='antigaSenha' placeholder='Digite sua antiga senha'>
+        <formdados-component token_csrf={{csrf_token()}} route='{{route('alteraSenha')}}' labelbtn='Alterar'>
+            <template v-slot:campo1 >
+                <input-component label='Antiga senha:' placeholder='Digite sua senha atual' classlabel='label-formulario' name='antigaSenha' ></input-component>
+            </template>
 
-            <label class='label-formulario'> Nova senha</label>
-            <input class='form-control' type='password' name='novaSenha' placeholder='Digite sua nova senha'>
+            <template v-slot:campo2 >
+                <input-component label='Nova Senha:' placeholder='Digite sua nova senha' classlabel='label-formulario' name='novaSenha' ></input-component>
+            </template>  
 
-             <label class='label-formulario'> Confirme a senha</label>
-            <input class='form-control' type='password' name='novaSenha_confirmation' placeholder='Confirme sua nova senha'>
+            <template v-slot:campo3 >
+                <input-component label='Confirme a senha:' placeholder='Confirme sua nova senha' classlabel='label-formulario' name='novaSenha_confirmation'></input-component>
+            </template> 
 
-            @if($errors != '[]')
+            <template v-slot:campo4 >
+                @if($errors != '[]')
                     <div class="alert alert-danger mt-3" role="alert">
                         <?php foreach ($errors->all() as $message) { ?>
                             <span>{{$message}}</span> <br>
                         <?php } ?>
                     </div>
-            @endif
-
-            <button type='submit' class='btn btn-danger mt-3'>Alterar</button>
-        </form>
+                @endif
+            </template> 
+        </formdados-component>
       </div>
 
     </div>

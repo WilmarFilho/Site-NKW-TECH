@@ -6,32 +6,22 @@
 
     <div class='container'>
     
-    <div class='text-center row justify-content-center'>
+        <div class='text-center row justify-content-center'>
+            
+            <button id='btn-filtro' class='btn btn-outline-light btn-block col-4 label-filtro' type='button' data-toggle='collapse' data-target='#filtro'> Filtro  <i class="fa-solid fa-filter"></i> </button>
         
-        <button id='btn-filtro' class='btn btn-outline-light btn-block col-4 label-filtro' type='button' data-toggle='collapse' data-target='#filtro'> Filtro  <i class="fa-solid fa-filter"></i> </button>
+            <div class='collapse row  mt-4 justify-content-center' id='filtro'>
+                <formsimples-component classform='col-md-5 col-10 form-inline' route='/chamado' token_csrf='{{csrf_token()}}' label='Selecione o status de chamado para a consulta' ibtn='fa-solid fa-magnifying-glass' labelbtn='Procurar' classbtn='btn btn-danger' classlabel='label-form'>
+                    <select name='filtro' class='form-control'>
+                        <option value=''>Todos</option>
+                        <option>Pendente</option>
+                        <option>Andamento</option>
+                        <option>Finalizado</option>
+                    </select>
+                </formsimples-component>
+            </div>
         
-
-        <div class='collapse row  mt-4 justify-content-center' id='filtro'>
-            <form class='col-md-5 col-10 form-inline' action='/chamado'>
-                <label class='label-form'>Selecione o status de chamado para a consulta</label>
-                <div class='row'>
-                    <div class='col-8'>
-                        <select name='filtro' class='form-control'>
-                            <option value=''>Todos</option>
-                            <option>Pendente</option>
-                            <option>Andamento</option>
-                            <option>Finalizado</option>
-                        </select>
-                    </div>
-
-                    <div class='col-4'>
-                        <button type='submit' class='btn btn-danger'>Procurar <i class="fa-solid fa-magnifying-glass"></i> </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    
-    </div>
+        </div>  
 
     @foreach($chamados as $indice => $chamado)
         <chamados-component id={{$chamado->id}}  tipo={{$chamado->tipo_serviço}}  status=<?=$chamado->status?> >
@@ -74,32 +64,21 @@
             <modal-component id={{$chamado->id}} titulo='Deseja mesmo remover o chamado ?' botao='btn-outline-dark'>
 
                 <form method='POST' action={{route('chamado.destroy', $chamado)}}>
-                
                     @csrf
                     @method('DELETE')
                     <button class='btn btn-danger btn-lg' type='submit'>Apagar <i class="fa-regular fa-trash-can"></i></button>
-
-
                 </form>
      
             </modal-component>
 
      @endforeach
 
-   
-
-    <div class=''>
+    <div>
       
          {{$chamados->links()}}
        
     </div>
 
-     <div id='home'>
-
-         <a href={{route('home')}}><i class="fa-solid fa-house fa-2x"></i> </a>
-     
-     </div>
-
-    </div>
+    <home-component route='\home'> </home-component>
 
 @endsection

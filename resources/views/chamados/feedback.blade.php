@@ -12,20 +12,17 @@
             <p class='p-feedback'>Para ver o andamento dos seus chamados  <a class='link_chamados' href={{route('chamado.index')}}> clique aqui </a>  <p>
             <a href={{route('home')}} class='btn btn-outline-light'>Home  <i class="fa-solid fa-house fa-2x"></i>  </a>
 
-
         </div>
 
-   
-     
     </div>
 
-     <a href={{route('home')}}><i class="fa-solid fa-house fa-2x"></i> </a>
+     <home-component></home-component>
 
      <script>
      
         setTimeout(function() {
             window.location.href = "http://127.0.0.1:8000/home";
-        }, 4000) 
+        }, 3200) 
     
      </script>
 

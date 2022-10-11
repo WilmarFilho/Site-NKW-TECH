@@ -33,6 +33,21 @@ app.component('chamados-component', ChamadosComponent);
 import DetalhesComponent from './components/DetalhesComponent.vue';
 app.component('detalhes-component', DetalhesComponent);
 
+import FormSimplesComponent from './components/FormSimplesComponent.vue';
+app.component('formsimples-component', FormSimplesComponent);
+
+import HomeComponent from './components/HomeComponent.vue';
+app.component('home-component', HomeComponent);
+
+import FormDisableComponent from './components/FormDisableComponent.vue';
+app.component('formdisable-component', FormDisableComponent);
+
+import FormDadosComponent from './components/FormDadosComponent.vue';
+app.component('formdados-component', FormDadosComponent);
+
+import InputComponent from './components/InputComponent.vue';
+app.component('input-component', InputComponent);
+
 
 
 /**

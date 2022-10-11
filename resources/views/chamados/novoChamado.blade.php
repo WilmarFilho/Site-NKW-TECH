@@ -19,10 +19,6 @@
         </div>
     <div>
 
-    <div id='home'>
-
-        <a href={{route('home')}}><i class="fa-solid fa-house fa-2x"></i> </a>
-     
-    </div>
+    <home-component route='\home'> </home-component>
 
 @endsection

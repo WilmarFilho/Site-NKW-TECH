@@ -9,27 +9,37 @@
       </div>
 
       <div class='col-md-6 col-8 mt-2'>
-        <form action='{{route('alteraendereco')}}' method='POST' class='text-center'>
-            @csrf
-            <label class='label-formulario'> Novo Endereço</label>
-            <input class='form-control' type='text' name='endereco' placeholder='Digite seu novo endereco'>
 
-            <label class='label-formulario'> Novo Setor</label>
-            <input class='form-control' type='text' name='setor' placeholder='Digite seu novo setor'>
+        <formdados-component token_csrf={{csrf_token()}} route='{{route('alteraendereco')}}' labelbtn='Alterar'>
+        
+            <template v-slot:campo1 >
+                <input-component label='Novo Endereço:' placeholder='Digite seu novo endereco' classlabel='label-formulario' name='endereco'></input-component>
+            </template>
 
-             <label class='label-formulario'> Novo Celular</label>
-            <input class='form-control' type='text' name='celular' placeholder='Digite seu novo celular '>
+            <template v-slot:campo2 >
+                <input-component label='Novo Setor:' placeholder='Digite seu novo setor' classlabel='label-formulario' name='setor'></input-component>
+            </template>  
 
-            @if($errors != '[]')
+            <template v-slot:campo3 >
+                <input-component label='Novo Celular:' placeholder='Digite seu novo celular' classlabel='label-formulario' name='celular'></input-component>
+            </template> 
+
+            <template v-slot:campo4 >
+                @if($errors != '[]')
                     <div class="alert alert-danger mt-3" role="alert">
                         <?php foreach ($errors->all() as $message) { ?>
                             <span>{{$message}}</span> <br>
                         <?php } ?>
                     </div>
-            @endif
+                @endif
+            </template> 
+        
+        </formdados-component>
 
-            <button type='submit' class='btn btn-danger mt-3'>Alterar</button>
-        </form>
+
+
+
+
       </div>
 
     </div>

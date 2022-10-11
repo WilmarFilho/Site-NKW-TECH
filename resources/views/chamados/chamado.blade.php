@@ -10,7 +10,6 @@
 
                $img_urn =  'storage/' . $chamado->img_descricao;
                
-
                 $status = 'btn-warning';
                 if($chamado->status == 'Andamento') {
                     $status = 'btn-info';
@@ -108,15 +107,16 @@
 
                 </div>
 
-                <form method='POST' class='m-1' action='{{route('chat.store')}}'> 
-                    @csrf
-
-                        <div class='input-group'>
-                            <input type='hidden' name='chamado' value='{{$chamado->id}}'>
-                            <input name='resposta' type='text' class='form-control'>
-                            <button type='submit' class='btn btn-info'>Enviar</button>
-                        </div>
-                </form>
+                <formsimples-component 
+                    token_csrf='{{csrf_token()}}' 
+                    classbtn='btn btn-info' 
+                    labelbtn='Enviar'
+                    classform='m-1'
+                    route='{{route('chat.store')}}'>
+                    
+                    <input type='hidden' name='chamado' value='{{$chamado->id}}'>
+                    <input name='resposta' type='text' class='form-control'>
+                </formsimples-component>
 
             </div>
     

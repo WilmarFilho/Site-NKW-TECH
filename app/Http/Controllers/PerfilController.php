@@ -55,26 +55,26 @@ class PerfilController extends Controller
 
     public function AlteraSenha(Request $request) {
         
-        if(Hash::check($request->antigaSenha, auth()->user()->password)){
-            $rules = [
-                'novaSenha' => 'required|min:8|confirmed',
-                'novaSenhaConfirmada' => 'min:8'
-            ];
-    
-            $feedback = [
-                'required' => 'O campo :attribute é obrigatório',
-                'min' => 'Digite pelo menos 8 digitos',
-                'confirmed' => 'Senhas não batem'
-            ];
-            
-    
-            $request->validate($rules, $feedback);
-    
-            User::where('id', auth()->user()->id)->update(['password' => bcrypt($request->novaSenha)]);
-            return redirect()->route('perfil');
+        if(!Hash::check($request->antigaSenha, auth()->user()->password)){
+            return redirect()->route('perfilsenha')->withErrors(['antigaSenha' => 'Senha atual está incorreta'])->withInput();
         };
       
-        return redirect()->route('perfilsenha')->withErrors(['antigaSenha' => 'Senha atual está incorreta'])->withInput();
+        $rules = [
+            'novaSenha' => 'required|min:8|confirmed',
+            'novaSenhaConfirmada' => 'min:8'
+        ];
+
+        $feedback = [
+            'required' => 'O campo :attribute é obrigatório',
+            'min' => 'Digite pelo menos 8 digitos',
+            'confirmed' => 'Senhas não batem'
+        ];
+        
+
+        $request->validate($rules, $feedback);
+
+        User::where('id', auth()->user()->id)->update(['password' => bcrypt($request->novaSenha)]);
+        return redirect()->route('perfil');
        
     }
 

@@ -16,17 +16,12 @@
             @php  auth()->user()->CODFUN == 1 ? $admin = '' : $admin = '';  @endphp
 
             @if(auth()->user()->ADMIN == 1)
-                <form class="{{$admin}} col-md-4 col-9 mt-4" action="/admin" method="POST">
-                    @csrf
-                    <label class='label-formulario'>Trocar tela:</label>
-                    <div class='input-group'>
-                        <select class='form-control' name='codfun'>
-                            <option value='1'>Admin</option>
-                            <option value='2'>Usuario</option>
-                        </select>
-                        <button type='submit' class='btn btn-outline-info'>Trocar</button>
-                    </div>
-                </form>
+                <formsimples-component route='/admin' classform='{{$admin}} col-md-4 col-9 mt-4' token_csrf='{{csrf_token()}}'  label='Trocar tela' labelbtn='Trocar' classbtn='btn btn-outline-info' classlabel='label-formulario' >
+                    <select class='form-control' name='codfun'>
+                        <option value='1'>Admin</option>
+                        <option value='2'>Usuario</option>
+                    </select>>
+                </formsimples-component>
             @endif
 
             @if(auth()->user()->CODFUN == 2)
