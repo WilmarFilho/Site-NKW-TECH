@@ -33,6 +33,7 @@ Route::post('/admin',[App\Http\Controllers\PerfilController::class, 'admin'])->n
 Auth::routes();
 
 Route::resource('chamado', 'App\Http\Controllers\ChamadoController');
+Route::post('/chamado-filtro', [App\Http\Controllers\ChamadoController::class, 'indexFiltro'])->name('filtro');
 
 Route::get('/adiciona', function () {
    return view('chamados.novoChamado');

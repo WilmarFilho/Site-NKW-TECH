@@ -36,9 +36,26 @@ class ChamadoController extends Controller
         ];
     }
 
-    public function index(Request $request)
+    public function index()
     {
-        if($request->input('filtro')) {
+        
+            if(auth()->user()->CODFUN == 2) {
+                $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
+            }
+            if(auth()->user()->CODFUN == 1) {
+                $chamados = chamado::orderBy('id', 'desc')->simplepaginate(3);
+            }
+            
+            return view('chamados.index', ['chamados' => $chamados]);
+
+    }
+
+    public function indexFiltro(Request $request)
+    {
+            if ($request->input('filtro') == 'Todos') {
+                return redirect()->route('chamado.index');
+            }
+
             if(auth()->user()->CODFUN == 2) {
                 $chamados = chamado::where('user_id', auth()->user()->id)->where('status', $request->input('filtro'))->orderby('created_at')->simplepaginate(3);
             }
@@ -46,30 +63,6 @@ class ChamadoController extends Controller
                 $chamados = chamado::where('status', $request->input('filtro'))->orderby('created_at')->simplepaginate(3);
             }
             return view('chamados.index', ['chamados' => $chamados]);
-        }
-
-        if($request->input('filtro') == null) {
-            if(auth()->user()->CODFUN == 2) {
-                $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
-            }
-            if(auth()->user()->CODFUN == 1) {
-                $chamados = chamado::orderBy('id', 'desc')->simplepaginate(3);
-            }
-            
-            return view('chamados.index', ['chamados' => $chamados]);
-        }
-
-        else {
-            if(auth()->user()->CODFUN == 2) {
-                $chamados = chamado::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->simplepaginate(3);
-            }
-            if(auth()->user()->CODFUN == 1) {
-                $chamados = chamado::orderBy('id', 'desc')->simplepaginate(3);
-            }
-            
-            return view('chamados.index', ['chamados' => $chamados]);
-            
-        }
 
     }
 
