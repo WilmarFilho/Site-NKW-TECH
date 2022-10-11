@@ -21,9 +21,12 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->integer('CODFUN')->nullable();
-            $table->integer('ADMIN')->nullable();
+            $table->integer('CODFUN')->default(2);
+            $table->integer('ADMIN')->default(0);
             $table->string('img_perfil', 100)->nullable();
+            $table->string('endereco', 80);
+            $table->string('setor', 50);
+            $table->string('celular', 10);
         });
     }
 

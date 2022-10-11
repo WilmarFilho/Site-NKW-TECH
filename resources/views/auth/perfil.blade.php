@@ -67,18 +67,22 @@
                         <div class='row'>
                             <div class='col-md-5 col-10'>
                                 <label class='label-form'>Endereço:</label>
-                                <input class='form-control disable' type='text' value=''>
+                                <input class='form-control disable' type='text' value='{{auth()->user()->endereco}}'>
                             </div>
                             <div class='col-md-5 col-10'>
                                 <label class='label-form'>Setor:</label>
-                                <input class='form-control' type='password' value=''>
+                                <input class='form-control' type='text' value='{{auth()->user()->setor}}'>
+                            </div>
+                            <div class='col-md-5 col-10'>
+                                <label class='label-form'>Celular:</label>
+                                <input class='form-control' type='text' value='{{auth()->user()->celular}}'>
                             </div>
                         </div>
                     </fieldset>
                 
                 </form>
 
-                <button class='btn btn-outline-info btn-sm  mt-4'>Alterar Endereço</button>
+                <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilendereco')}}>Alterar dados de endereço</a>
 
             </div>
 

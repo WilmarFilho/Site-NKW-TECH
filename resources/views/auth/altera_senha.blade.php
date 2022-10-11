@@ -12,13 +12,13 @@
         <form action='{{route('alteraSenha')}}' method='POST' class='text-center'>
             @csrf
             <label class='label-formulario'> Antiga senha</label>
-            <input class='form-control' type='text' name='antigaSenha' placeholder='Digite sua antiga senha'>
+            <input class='form-control' type='password' name='antigaSenha' placeholder='Digite sua antiga senha'>
 
             <label class='label-formulario'> Nova senha</label>
-            <input class='form-control' type='text' name='novaSenha' placeholder='Digite sua nova senha'>
+            <input class='form-control' type='password' name='novaSenha' placeholder='Digite sua nova senha'>
 
              <label class='label-formulario'> Confirme a senha</label>
-            <input class='form-control' type='text' name='novaSenha_confirmation' placeholder='Confirme sua nova senha'>
+            <input class='form-control' type='password' name='novaSenha_confirmation' placeholder='Confirme sua nova senha'>
 
             @if($errors != '[]')
                     <div class="alert alert-danger mt-3" role="alert">

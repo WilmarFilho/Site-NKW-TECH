@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class PerfilController extends Controller
 {   
@@ -46,27 +47,58 @@ class PerfilController extends Controller
        
     }
 
-    public function AlteraSenha(Request $request) {
-        $request->antigaSenha = bcrypt($request->antigaSenha);
+    public function NovoEndereco() {
         
+        return view('auth.altera_endereco');
+       
+    }
+
+    public function AlteraSenha(Request $request) {
+        
+        if(Hash::check($request->antigaSenha, auth()->user()->password)){
+            $rules = [
+                'novaSenha' => 'required|min:8|confirmed',
+                'novaSenhaConfirmada' => 'min:8'
+            ];
+    
+            $feedback = [
+                'required' => 'O campo :attribute é obrigatório',
+                'min' => 'Digite pelo menos 8 digitos',
+                'confirmed' => 'Senhas não batem'
+            ];
+            
+    
+            $request->validate($rules, $feedback);
+    
+            User::where('id', auth()->user()->id)->update(['password' => bcrypt($request->novaSenha)]);
+            return redirect()->route('perfil');
+        };
+      
+        return redirect()->route('perfilsenha')->withErrors(['antigaSenha' => 'Senha atual está incorreta'])->withInput();
+       
+    }
+
+    public function AlteraEndereco(Request $request) {
 
         $rules = [
-            'antigaSenha' => 'required|exists:users,password',
-            'novaSenha' => 'required|min:8|confirmed',
-            'novaSenhaConfirmada' => 'min:8'
+            'endereco' => 'required',
+            'setor' => 'required',
+            'celular' => 'required'
         ];
 
         $feedback = [
-            'required' => 'O campo :attribute é obrigatório',
-            'exists' => 'Senha antiga incorreta',
-            'min' => 'Digite pelo menos 8 digitos',
-            'confirmed' => 'Senhas não batem'
+            'required' => 'O campo :attribute é obrigatório'
         ];
         
 
         $request->validate($rules, $feedback);
 
-        User::where('id', auth()->user()->id)->update(['password' => bcrypt($request->novaSenha)]);
+        User::where('id', auth()->user()->id)->update([
+            'endereco' => $request->endereco,
+            'setor' => $request->setor,
+            'celular' => $request->celular
+        ]);
+        
         return redirect()->route('perfil');
        
     }

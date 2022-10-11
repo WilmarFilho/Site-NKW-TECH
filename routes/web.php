@@ -23,6 +23,9 @@ Route::get('/perfil',[App\Http\Controllers\PerfilController::class, 'index'])->n
 Route::get('/altera-senha',[App\Http\Controllers\PerfilController::class, 'NovaSenha'])->name('perfilsenha');
 Route::post('/novaSenha',[App\Http\Controllers\PerfilController::class, 'AlteraSenha'])->name('alteraSenha');
 
+Route::get('/altera-endereco',[App\Http\Controllers\PerfilController::class, 'NovoEndereco'])->name('perfilendereco');
+Route::post('/novaEndereco',[App\Http\Controllers\PerfilController::class, 'AlteraEndereco'])->name('alteraendereco');
+
 Route::post('/perfil-foto',[App\Http\Controllers\PerfilController::class, 'mudaFoto'])->name('perfilFoto');
 
 Route::post('/admin',[App\Http\Controllers\PerfilController::class, 'admin'])->name('admin');
