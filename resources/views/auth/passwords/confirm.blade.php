@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.bg_foto')
 
 @section('content')
 <div class="container">
