@@ -81,13 +81,17 @@ class PerfilController extends Controller
     public function AlteraEndereco(Request $request) {
 
         $rules = [
-            'endereco' => 'required',
-            'setor' => 'required',
-            'celular' => 'required'
+            'endereco' => 'required|min:8',
+            'setor' => 'required|min:4',
+            'celular' => 'required|numeric|min:10|max:11'
         ];
 
         $feedback = [
-            'required' => 'O campo :attribute é obrigatório'
+            'required' => 'O campo :attribute é obrigatório',
+            'min' => 'Descreve mais seu :attribute',
+            'celular.min' => 'Numero invalido',
+            'celular.max' => 'Numero invalido',
+            'celular.numeric' => 'Numero invalido'
         ];
         
 

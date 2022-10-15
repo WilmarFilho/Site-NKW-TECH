@@ -15,7 +15,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nome') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" placeholder='Digite seu nome completo ' class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" placeholder="Digite seu endereço de email " type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -43,7 +43,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input placeholder='Digite sua senha' id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirme sua senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" placeholder='Confirme a senha' type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Endereço') }}</label>
 
                             <div class="col-md-6">
-                                <input id="endereco" type="text" class="form-control @error('endereco') is-invalid @enderror" name="endereco" value="{{ old('endereco') }}" required autocomplete="endereco" autofocus>
+                                <input id="endereco" placeholder='Digite seu endereço completo' type="text" class="form-control @error('endereco') is-invalid @enderror" name="endereco" value="{{ old('endereco') }}" required autocomplete="endereco" autofocus>
 
                                 @error('endereco')
                                     <span class="invalid-feedback" role="alert">
@@ -82,7 +82,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Setor') }}</label>
 
                             <div class="col-md-6">
-                                <input id="setor" type="text" class="form-control @error('setor') is-invalid @enderror" name="setor" value="{{ old('setor') }}" required autocomplete="setor" autofocus>
+                                <input id="setor" placeholder='Digite seu setor' type="text" class="form-control @error('setor') is-invalid @enderror" name="setor" value="{{ old('setor') }}" required autocomplete="setor" autofocus>
 
                                 @error('setor')
                                     <span class="invalid-feedback" role="alert">
