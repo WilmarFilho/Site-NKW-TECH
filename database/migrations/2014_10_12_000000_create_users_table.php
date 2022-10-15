@@ -26,7 +26,8 @@ return new class extends Migration
             $table->string('img_perfil', 100)->nullable();
             $table->string('endereco', 80);
             $table->string('setor', 50);
-            $table->string('celular', 10);
+            $table->string('celular', 20);
+            $table->string('assinatura', 20)->default('visitante');
         });
     }
 

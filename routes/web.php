@@ -14,34 +14,48 @@ use App\Models\chamado;
 |
 */
 
+   // Pagina inicial //
+
 Route::get('/', function () {
    return view('index');
 });
 
+   // Rota de sucesso no pagamento //
+
+Route::get('/sucess', [App\Http\Controllers\PagamentoController::class, 'pagamentoSucesso'])->name('pagamento-sucesso');
+
 Route::post('/checkout', [App\Http\Controllers\PagamentoController::class, 'checkout'])->name('checkout');
 
-Route::get('/perfil',[App\Http\Controllers\PerfilController::class, 'index'])->name('perfil')->middleware('verified');
+   // Plataforma //
 
-Route::get('/altera-senha',[App\Http\Controllers\PerfilController::class, 'NovaSenha'])->name('perfilsenha')->middleware('verified');
-Route::post('/novaSenha',[App\Http\Controllers\PerfilController::class, 'AlteraSenha'])->name('alteraSenha')->middleware('verified');
+// Home 
 
-Route::get('/altera-endereco',[App\Http\Controllers\PerfilController::class, 'NovoEndereco'])->name('perfilendereco')->middleware('verified');
-Route::post('/novaEndereco',[App\Http\Controllers\PerfilController::class, 'AlteraEndereco'])->name('alteraendereco')->middleware('verified');
-
-Route::post('/perfil-foto',[App\Http\Controllers\PerfilController::class, 'mudaFoto'])->name('perfilFoto')->middleware('verified');
-
-Route::post('/admin',[App\Http\Controllers\PerfilController::class, 'admin'])->name('admin')->middleware('verified');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified')->middleware('premium');
 Auth::routes(['verify' => true]);
 
-Route::resource('chamado', 'App\Http\Controllers\ChamadoController')->middleware('verified');
-Route::post('/chamado-filtro', [App\Http\Controllers\ChamadoController::class, 'indexFiltro'])->name('filtro')->middleware('verified');
+// Perfil
+
+Route::get('/perfil',[App\Http\Controllers\PerfilController::class, 'index'])->name('perfil')->middleware('verified')->middleware('premium');
+
+Route::get('/altera-senha',[App\Http\Controllers\PerfilController::class, 'NovaSenha'])->name('perfilsenha')->middleware('verified')->middleware('premium');
+Route::post('/novaSenha',[App\Http\Controllers\PerfilController::class, 'AlteraSenha'])->name('alteraSenha')->middleware('verified')->middleware('premium');
+
+Route::get('/altera-endereco',[App\Http\Controllers\PerfilController::class, 'NovoEndereco'])->name('perfilendereco')->middleware('verified')->middleware('premium');
+Route::post('/novaEndereco',[App\Http\Controllers\PerfilController::class, 'AlteraEndereco'])->name('alteraendereco')->middleware('verified')->middleware('premium');
+
+Route::post('/perfil-foto',[App\Http\Controllers\PerfilController::class, 'mudaFoto'])->name('perfilFoto')->middleware('verified')->middleware('premium');
+
+// Chamados
+
+Route::resource('chamado', 'App\Http\Controllers\ChamadoController')->middleware('verified')->middleware('premium');
+Route::post('/chamado-filtro', [App\Http\Controllers\ChamadoController::class, 'indexFiltro'])->name('filtro')->middleware('verified')->middleware('premium');
 
 Route::get('/adiciona', function () {
    return view('chamados.novoChamado');
-})->name('adiciona')->middleware('verified');
+})->name('adiciona')->middleware('verified')->middleware('premium');
 
+Route::resource('chat', 'App\Http\Controllers\ChatController')->middleware('verified')->middleware('premium');
 
-Route::resource('chat', 'App\Http\Controllers\ChatController')->middleware('verified');
+// Para adms
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::post('/admin',[App\Http\Controllers\PerfilController::class, 'admin'])->name('admin')->middleware('verified')->middleware('premium');

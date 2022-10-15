@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PagamentoController extends Controller
 {
@@ -12,7 +13,7 @@ class PagamentoController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     public function checkout() {
 
         
@@ -30,7 +31,7 @@ class PagamentoController extends Controller
                     'quantity' => 1,
                 ]],
                 'mode' => 'subscription',
-                'success_url' => $YOUR_DOMAIN . '/home?session_id={CHECKOUT_SESSION_ID}',
+                'success_url' => $YOUR_DOMAIN . '/sucess?session_id={CHECKOUT_SESSION_ID}',
                 'cancel_url' => $YOUR_DOMAIN . '/',
             ]);
            
@@ -45,4 +46,13 @@ class PagamentoController extends Controller
           
         }
     }
+
+    public function pagamentoSucesso() {
+
+        User::where('id', auth()->user()->id)->update(['assinatura' => 'premium']);
+
+        return redirect()->route('home');
+
+    }
+
 }
