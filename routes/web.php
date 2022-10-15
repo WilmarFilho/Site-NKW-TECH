@@ -18,6 +18,8 @@ Route::get('/', function () {
    return view('index');
 });
 
+Route::post('/checkout', [App\Http\Controllers\PagamentoController::class, 'checkout'])->name('checkout');
+
 Route::get('/perfil',[App\Http\Controllers\PerfilController::class, 'index'])->name('perfil')->middleware('verified');
 
 Route::get('/altera-senha',[App\Http\Controllers\PerfilController::class, 'NovaSenha'])->name('perfilsenha')->middleware('verified');

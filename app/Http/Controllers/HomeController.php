@@ -22,7 +22,12 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
+    {   
+        if(isset($_GET['session_id'])) {
+            dd('oi');
+        }
+
+        
         return view('home');
     }
 }

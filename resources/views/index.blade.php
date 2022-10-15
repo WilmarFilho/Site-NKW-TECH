@@ -23,7 +23,11 @@
 								<h2 class="h2-carousel text-white  text-center ">Já teve levar seu pc na assistência ?</h2>
 								<h3 class="h3-carousel text-white text-center">Imagine ter um suporte sem sair de casa</h3>
 								<div class="d-flex justify-content-center mt-3">
-									<button class="btn btn-danger text-center mx-auto btn-lg">Garanta já</button>
+									<a href='https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c93808483c69de90183c8c6db9a01cb' class="btn btn-danger text-center mx-auto btn-lg">Garanta já</a>
+									
+									
+
+
 								</div>
 							</div>
 						</div>		
@@ -67,7 +71,13 @@
 						</div>
 
 						<div class="col-10 text-center mx-auto mt-4">
-							<button class="btn btn-danger btn-lg">Garanta sua vaga agora</button> <br>
+							<form action="{{route('checkout')}}" method="POST">
+								@csrf
+								<!-- Add a hidden field with the lookup_key of your Price -->
+								<input type="hidden" name="lookup_key" value="1LsdrDHCT0bYlJFqpniUjfkg" />
+								<button class='btn btn-info' id="checkout-and-portal-button" type="submit">Checkout</button>
+							</form>
+							<br>
 							<small class="text-white">Apenas 10 reais mensais</small>
 						</div>
 					
