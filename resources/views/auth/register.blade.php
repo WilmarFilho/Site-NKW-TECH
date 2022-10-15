@@ -96,7 +96,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Celular') }}</label>
 
                             <div class="col-md-6">
-                                <input id="celular" type="text" class="form-control @error('celular') is-invalid @enderror" name="celular" value="{{ old('celular') }}" required autocomplete="celular" autofocus>
+                                <input placeholder='00 0 0000 0000' id="celular" type="tel" class="form-control @error('celular') is-invalid @enderror" name="celular" value="{{ old('celular') }}" required autocomplete="celular" autofocus>
 
                                 @error('celular')
                                     <span class="invalid-feedback" role="alert">
