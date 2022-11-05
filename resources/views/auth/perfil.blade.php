@@ -75,6 +75,10 @@
 
             </div>
 
+            <div class='col-md-10 col-12'>
+                <a class='btn btn-outline-danger btn-sm  mt-4' href='https://billing.stripe.com/p/login/test_3cs8yR6v6aYG1hu288'>Gerenciar assinatura</a>
+            </div>
+
 
         </div>
 
