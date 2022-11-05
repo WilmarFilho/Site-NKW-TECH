@@ -44,12 +44,59 @@
 	src: url('../fonts/one.woff');
 }
 
+
+
+@keyframes opacidade {
+	0% {
+        transform: translateX(-50px);
+		opacity: 0;;
+	}
+	
+	100% {
+        transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
 body {
     background: url('../img/bg1.jpg') center 20% ;
 }
 
 .bg-nav-custom {
     background: rgb(0, 0, 0, .6);
+}
+
+/* Tela de assinatura */
+
+
+
+#card-principal {
+    background-color: rgb(0, 0, 0, .6);
+    border-radius: 20px;
+    padding: 20px;
+    animation: 1s opacidade forwards;
+}
+
+.h2-assinatura {
+    color: white;
+    font-family: neutron;
+    font-size: 3.5em;
+}
+
+.h3-assinatura {
+    color: white;
+    font-size: 2em;
+    font-family: beach;
+}
+
+#lista-asssinatura ul li {
+    font-family: one;
+    text-shadow: 0 0 1em cyan;
+}
+
+.carousel-btn {
+	--bs-btn-font-size: 1.3rem !important;
+	--bs-btn-font-family: one !important;
 }
 
 /* Login */

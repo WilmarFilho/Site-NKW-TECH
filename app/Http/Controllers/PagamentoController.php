@@ -17,34 +17,43 @@ class PagamentoController extends Controller
     public function checkout() {
 
         
-        \Stripe\Stripe::setApiKey('sk_test_51LsYCqHCT0bYlJFqcTG8ZP72VfWqIZEgAJlHFUvCMDDf76b2OtYROKo8r2LXBTiGaHYe0o9qGLVNQ5x5Zw3iE8k200OWvffTaE');
-
-        header('Content-Type: application/json');
-
-        $YOUR_DOMAIN = 'http://127.0.0.1:8000';
-
-        try {
-
-            $checkout_session = \Stripe\Checkout\Session::create([
-                'line_items' => [[
-                    'price' => 'price_1LsefVHCT0bYlJFqwL852CN3',
-                    'quantity' => 1,
-                ]],
-                'mode' => 'subscription',
-                'success_url' => $YOUR_DOMAIN . '/sucess?session_id={CHECKOUT_SESSION_ID}',
-                'cancel_url' => $YOUR_DOMAIN . '/',
-            ]);
-           
-            header("HTTP/1.1 303 See Other");
-            $link = "<script>location.href='" . $checkout_session->url . "';</script>";
-            echo $link;
-
-        } catch (Error $e) {
-            http_response_code(500);
-                
-            echo json_encode(['error' => $e->getMessage()]);
-          
+        if(auth()->user()->assinatura == 'premium') {
+            return redirect()->route('home'); //possivel melhoria avisando que o usuario ja tem aasinatura
         }
+
+        else {
+            \Stripe\Stripe::setApiKey('sk_test_51LsYCqHCT0bYlJFqcTG8ZP72VfWqIZEgAJlHFUvCMDDf76b2OtYROKo8r2LXBTiGaHYe0o9qGLVNQ5x5Zw3iE8k200OWvffTaE');
+
+            header('Content-Type: application/json');
+
+            $YOUR_DOMAIN = 'http://127.0.0.1:8000';
+
+            try {
+
+                $checkout_session = \Stripe\Checkout\Session::create([
+                    'line_items' => [[
+                        'price' => 'price_1LsefVHCT0bYlJFqwL852CN3',
+                        'quantity' => 1,
+                    ]],
+                    'mode' => 'subscription',
+                    'success_url' => $YOUR_DOMAIN . '/sucess?session_id={CHECKOUT_SESSION_ID}',
+                    'cancel_url' => $YOUR_DOMAIN . '/',
+                ]);
+            
+                header("HTTP/1.1 303 See Other");
+                $link = "<script>location.href='" . $checkout_session->url . "';</script>";
+                echo $link;
+
+            } catch (Error $e) {
+                http_response_code(500);
+                    
+                echo json_encode(['error' => $e->getMessage()]);
+            
+            }
+        }
+
+
+        
     }
 
     public function pagamentoSucesso() {
@@ -54,5 +63,13 @@ class PagamentoController extends Controller
         return redirect()->route('home');
 
     }
+
+    public function assinar() {
+
+        return view('assinatura');
+
+    }
+
+    
 
 }

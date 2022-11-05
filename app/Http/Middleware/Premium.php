@@ -17,7 +17,7 @@ class Premium
     public function handle(Request $request, Closure $next)
     {
        if(auth()->user()->assinatura == 'visitante') {
-        dd('acesso negado');
+        return redirect()->route('assinar');
        }
 
        return $next($request);

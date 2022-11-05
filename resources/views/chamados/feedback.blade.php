@@ -20,9 +20,9 @@
 
      <script>
      
-        setTimeout(function() {
+        /*setTimeout(function() {
             window.location.href = "http://127.0.0.1:8000/home";
-        }, 3200) 
+        }, 3200) */
     
      </script>
 

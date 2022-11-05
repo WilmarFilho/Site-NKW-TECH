@@ -28,6 +28,10 @@ Route::post('/checkout', [App\Http\Controllers\PagamentoController::class, 'chec
 
    // Plataforma //
 
+// Usuario sem acesso 
+
+Route::get('/assinatura', [App\Http\Controllers\PagamentoController::class, 'assinar'])->name('assinar')->middleware('verified');
+
 // Home 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified')->middleware('premium');

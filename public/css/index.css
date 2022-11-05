@@ -9,7 +9,7 @@
 	}
 
 	img.img {
-		width: 350px;
+		width: 310px;
 	}
 
 	h2.h2-carousel {
@@ -17,6 +17,11 @@
 		font-weight: bolder;
 		font-family: beach;
 		text-shadow: 0 0 0.8em cyan;
+	}
+
+	button.carousel-btn {
+		--bs-btn-font-size: 1rem !important;
+		--bs-btn-font-family: one !important;
 	}
 
 	h3.h3-carousel {
@@ -59,7 +64,12 @@
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
-
+	h2.h2-carousel {
+		font-size: 2em;
+		font-weight: bolder;
+		font-family: beach;
+		text-shadow: 0 0 0.8em cyan;
+	}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -87,6 +97,26 @@
 	src: url('../fonts/one.woff');
 }
 
+@keyframes translatex {
+	0% {
+		transform: translateX(-50px);
+	}
+	
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes opacidade {
+	0% {
+		opacity: 0;;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
 body {
 	margin: 0;
 	background-color: black !important; 
@@ -103,6 +133,7 @@ body {
 
 .nav-link:hover {
 	color: white !important;
+	transition: 1s;
 }
 
 .bg-nav-custom {
@@ -122,20 +153,28 @@ body {
 
 .fundo-logo {
 	background: url('../img/setup.jpg');
-	background-attachment: fixed;
 	background-size: cover;	
 	height: 750px;
+	animation: 2s translatex forwards;
+	
 }
 
 .logo {
 	background-color: rgb(0, 0, 0, .7);
+	transition: 1s;
 	border-radius: 10px;
 	box-shadow: 5px 5px 1em white;
 }
 
 .img {
 	width: 850px;
-}		
+	transition: 1s;
+	animation: 2s opacidade forwards;
+}	
+
+.img:hover, .logo:hover {
+	transform: scale(1.1);
+}
 
 /*Carousel*/
 
@@ -152,9 +191,11 @@ body {
 	height: 800px;
 }
 
-.btn-lg {
-	font-size: 1.7rem !important;
-	font-family: beach;
+
+
+.carousel-btn {
+	--bs-btn-font-size: 1.8rem !important;
+	--bs-btn-font-family: one !important;
 }
 
 .h2-carousel {
@@ -172,12 +213,23 @@ body {
 }
 
 #carousel {
-	border: 7px double cyan;
+	border: 5px double cyan;
 	border-left: none;
 	border-right: none;
 }
 
 /*Video Principal*/
+
+.js .anime {
+	opacity: 0;
+	transform: translate3D(-50px, 0px, 0px);
+}
+
+.js .anime-init {
+	opacity: 1;
+	transform: translate3D(0px, 0px, 0px);
+	transition: .3s all ease;
+}
 
 .h2-video {
 	font-family: one;
@@ -200,6 +252,41 @@ body {
 
 /*Suporte*/
 
+#garantia {
+
+	/*border: 2px double cyan;*/
+	/*background-color: rgb(0, 0, 0, .4);*/
+	/*box-shadow: 0 0 1em cyan;*/
+	border: 2px double cyan;
+	border-radius: 20px;
+	margin: 15px;
+	padding: 15px;
+
+}
+
+#duvida {
+	/*box-shadow: 0 0 1em cyan;*/
+	/*background-color: rgb(0, 0, 0, .4);*/
+	/*border: 2px double cyan;*/
+	border: 2px double cyan;
+	border-radius: 20px;
+	margin: 15px;
+	padding: 15px;
+
+}
+
+.h2-duvida {
+	font-size: 4em;
+	color: lightgray;
+	font-family: beach;
+}
+
+.h3-duvida {
+	font-size: 3em;
+	color: lightgray;
+	font-family: beach;
+}
+
 #suporte {
 	background: url('../img/bg10.jpg');
 	background-size: cover;
@@ -213,6 +300,8 @@ body {
 
 .p-suporte {
 	font-size: 1.8em;
+	
+	color: white;
 	font-family: one;
 	margin-top: 30px;
 	text-shadow: 0 0 1em purple;
@@ -253,6 +342,5 @@ body {
 /*Rodape*/
 
 #rodape {
-    box-shadow: 0 -7px 1em cyan;
-	background: rgb(0, 0, 0, 0.8);
+	background: url('../img/bg10.jpg');
 }
