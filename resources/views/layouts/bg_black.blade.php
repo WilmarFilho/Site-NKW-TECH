@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Icon -->
+    <link rel="icon"  href="{{asset('img/icon.png')}}">
+
     <!-- Style custom  -->
     <link rel='stylesheet' href='css/home.css'>
 

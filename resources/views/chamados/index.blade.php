@@ -79,6 +79,6 @@
        
     </div>
 
-    <home-component route="{{route('home')}}"> </home-component>
+  
 
 @endsection

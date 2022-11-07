@@ -30,10 +30,46 @@
         text-shadow: 0 0 0.8em cyan;
     }
 
+    h3.h3-intro {
+        color: darkred;
+        font-size: 5em;
+        text-shadow: 0 0 0.7em red;
+        font-family: 'neutron';
+        letter-spacing: 10px;
+        margin-top: 10px;
+        
+    }
+    
+    h4.h4-intro {
+        color: darkgreen;
+        font-size: 3.8em;
+        text-shadow: 0 0 0.3em green;
+        font-family: 'neutron';
+        margin-left: -5%;
+        margin-top: -10px;
+    }
+
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
-
+    h3.h3-intro {
+        color: darkred;
+        font-size: 6em;
+        text-shadow: 0 0 0.7em red;
+        font-family: 'neutron';
+        letter-spacing: 10px;
+        margin-top: 10px;
+        
+    }
+    
+    h4.h4-intro {
+        color: darkgreen;
+        font-size: 4em;
+        text-shadow: 0 0 0.3em green;
+        font-family: 'neutron';
+        margin-left: -5%;
+        margin-top: -10px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -96,21 +132,22 @@ body {
     border-radius: 15px;
 }
 
-#textos h3 {
+.h3-intro {
     color: darkred;
     font-size: 7em;
     text-shadow: 0 0 0.7em red;
     font-family: 'neutron';
     letter-spacing: 10px;
-    margin-top: -30px;
+   
 }
 
-#textos h4 {
+.h4-intro {
     color: darkgreen;
     font-size: 4em;
     text-shadow: 0 0 0.3em green;
     font-family: 'neutron';
-    margin-top: -20px;
+    margin-left: -5%;
+  
 }
 
 .a_home_nav {
