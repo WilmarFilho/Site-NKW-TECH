@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\chat;
 use Illuminate\Http\Request;
+use App\Models\chamado;
+use App\Mail\AtualizacaoChamadoMail;
+use Illuminate\Support\Facades\Mail;
+
 
 class ChatController extends Controller
 {
@@ -46,6 +50,30 @@ class ChatController extends Controller
             'chamado_id' => $request->input('chamado'),
             'resposta' => $request->input('resposta')
         ]);
+
+        $idurl = 'http://127.0.0.1:8000/chamado/' . $request->input('chamado');
+        
+        
+        if(auth()->user()->CODFUN == 2) {
+
+            $nome = 'Tecnico';
+
+            Mail::to('wilmarfilho32@hotmail.com')->send(new AtualizacaoChamadoMail($idurl, $nome));
+            Mail::to('nattanmendonca@gmail.com')->send(new AtualizacaoChamadoMail($idurl, $nome));
+            Mail::to('kaykyfsoares@hotmail.com')->send(new AtualizacaoChamadoMail($idurl, $nome));
+        }
+
+        else {
+
+            $chamado = chamado::where('id',  $request->input('chamado'))->get();
+
+            $nome = $chamado[0]->User->name;
+            $email = $chamado[0]->User->email;
+
+            Mail::to($email)->send(new AtualizacaoChamadoMail($idurl, $nome));
+
+        }
+
 
         return redirect()->route('chamado.index');
     }

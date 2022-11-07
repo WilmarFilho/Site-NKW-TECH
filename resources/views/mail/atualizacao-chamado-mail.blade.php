@@ -1,10 +1,10 @@
 @component('mail::message')
-# Olá
+# Olá {{$nome}}
 
 O chamado teve uma nova atualização.
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::button', ['url' => $url])
+Clique aqui para ver o chamado
 @endcomponent
 
 Obrigado,<br>

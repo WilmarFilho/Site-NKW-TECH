@@ -16,9 +16,10 @@ class AtualizacaoChamadoMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($url, $nome)
     {
-        //
+        $this->url = $url;
+        $this->nome = $nome;
     }
 
     /**
@@ -28,6 +29,6 @@ class AtualizacaoChamadoMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.atualizacao-chamado-mail');
+        return $this->markdown('mail.atualizacao-chamado-mail', ['url' => $this->url, 'nome' => $this->nome]);
     }
 }
