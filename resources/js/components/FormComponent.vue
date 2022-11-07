@@ -1,5 +1,5 @@
 <template>
-                    <form method="POST" action='/public/chamado' enctype="multipart/form-data">
+                    <form method="POST" action='/chamado' enctype="multipart/form-data">
                         <input type="hidden" name="_token" :value="token_csrf">
 
                         <label class="label-formulario"> Selecione o tipo do chamado</label>

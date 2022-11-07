@@ -11,7 +11,7 @@
             <button id='btn-filtro' class='btn btn-outline-light btn-block col-4 label-filtro' type='button' data-toggle='collapse' data-target='#filtro'> Filtro  <i class="fa-solid fa-filter"></i> </button>
         
             <div class='collapse row  mt-4 justify-content-center' id='filtro'>
-                <formsimples-component classform='col-md-5 col-10 form-inline' route='/chamado-filtro' token_csrf='{{csrf_token()}}' label='Selecione o status de chamado para a consulta' ibtn='fa-solid fa-magnifying-glass' labelbtn='Procurar' classbtn='btn btn-danger' classlabel='label-form'>
+                <formsimples-component classform='col-md-5 col-10 form-inline' route="{{route('filtro')}}"token_csrf='{{csrf_token()}}' label='Selecione o status de chamado para a consulta' ibtn='fa-solid fa-magnifying-glass' labelbtn='Procurar' classbtn='btn btn-danger' classlabel='label-form'>
                     <select name='filtro' class='form-control'>
                         <option >Todos</option>
                         <option >Pendente</option>
@@ -79,6 +79,6 @@
        
     </div>
 
-    <home-component route='\home'> </home-component>
+    <home-component route="{{route('home')}}"> </home-component>
 
 @endsection

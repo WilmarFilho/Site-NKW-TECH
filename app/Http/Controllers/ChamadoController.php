@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\chamado;
 use App\Models\chat;
 use Illuminate\Http\Request;
+use App\Mail\NovaChamadoMail;
+use Illuminate\Support\Facades\Mail;
+
 
 class ChamadoController extends Controller
 {
@@ -103,6 +106,15 @@ class ChamadoController extends Controller
                 'img_descricao' => $img_urn
             ]);
         }
+
+        
+        $novochamado = chamado::where('user_id', auth()->user()->id)->where('tipo_serviço', $request->input('tipo_serviço'))->where('descricao', $request->input('descricao'))->where('img_descricao', $img_urn)->get();
+        
+        $idurl = 'http://127.0.0.1:8000/chamado/' . $novochamado[0]->id;
+        $nome = auth()->user()->name;
+       
+        Mail::to('wilmarfilho32@hotmail.com')->send(new NovaChamadoMail($idurl, $nome));
+        Mail::to('nattanmendonca@gmail.com')->send(new NovaChamadoMail($idurl, $nome));
 
         return view('chamados.feedback', ['cadastrar' => 'não']);
     
