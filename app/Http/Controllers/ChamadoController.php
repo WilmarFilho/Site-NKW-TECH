@@ -113,11 +113,10 @@ class ChamadoController extends Controller
         $idurl = 'http://127.0.0.1:8000/chamado/' . $novochamado[0]->id;
         $nome = auth()->user()->name;
        
-        Mail::to('wilmarfilho32@hotmail.com')->send(new NovaChamadoMail($idurl, $nome));
-        Mail::to('nattanmendonca@gmail.com')->send(new NovaChamadoMail($idurl, $nome));
+        //Mail::to('wilmarfilho32@hotmail.com')->send(new NovaChamadoMail($idurl, $nome));
+        //Mail::to('nattanmendonca@gmail.com')->send(new NovaChamadoMail($idurl, $nome));    
 
-        return view('chamados.feedback', ['cadastrar' => 'não']);
-    
+        return redirect()->route('feedback');
 
     }
 
@@ -158,6 +157,13 @@ class ChamadoController extends Controller
         return redirect()->route('chamado.index');
     }
 
+    public function novofeedback() 
+    {
+
+        return view('chamados.feedback');
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -179,4 +185,6 @@ class ChamadoController extends Controller
         
         return redirect()->route('chamado.index');
     }
+
+   
 }

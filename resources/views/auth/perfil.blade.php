@@ -75,8 +75,18 @@
 
             </div>
 
+            <h2 class='col-md-10 col-12 label-perfil mt-4'>Dados da assinatura: </h2>
+
             <div class='col-md-10 col-12'>
-                <a class='btn btn-outline-danger btn-sm  mt-4' href='https://billing.stripe.com/p/login/test_3cs8yR6v6aYG1hu288'>Gerenciar assinatura</a>
+
+                <formdisable-component>
+                    <template v-slot:campo1 >
+                        <input-component label='Assinatura:' value='{{auth()->user()->assinatura}}' classlabel='label-form'></input-component>
+                    </template>
+                </formdisable-component>
+
+                <a class='btn btn-outline-info btn-sm  mt-4' href='https://billing.stripe.com/p/login/test_3cs8yR6v6aYG1hu288'>Gerenciar assinatura</a>
+
             </div>
 
 

@@ -52,6 +52,7 @@ Route::post('/perfil-foto',[App\Http\Controllers\PerfilController::class, 'mudaF
 // Chamados
 
 Route::resource('chamado', 'App\Http\Controllers\ChamadoController')->middleware('verified')->middleware('premium');
+Route::get('/chamado-feedback', [App\Http\Controllers\ChamadoController::class, 'novofeedback'])->name('feedback')->middleware('verified')->middleware('premium');
 Route::post('/chamado-filtro', [App\Http\Controllers\ChamadoController::class, 'indexFiltro'])->name('filtro')->middleware('verified')->middleware('premium');
 
 Route::get('/adiciona', function () {

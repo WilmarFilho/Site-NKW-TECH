@@ -1,4 +1,3 @@
-
 @extends('layouts.bg_foto')
 
 
@@ -16,14 +15,5 @@
 
     </div>
 
-     <home-component></home-component>
-
-     <script>
-     
-        /*setTimeout(function() {
-            window.location.href = "http://127.0.0.1:8000/home";
-        }, 3200) */
-    
-     </script>
-
+     <home-component route="{{route('home')}}"></home-component>
 @endsection

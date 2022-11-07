@@ -38,7 +38,7 @@
 					<div class="carousel-item active img-carousel">
 						<div  class="d-flex justify-content-center h-100">
 							<div class="align-self-center">
-								<h2 class="h2-carousel text-white  text-center ">Já teve levar seu pc na assistência ?</h2>
+								<h2 class="h2-carousel text-white  text-center ">Já teve que levar seu pc na assistência ?</h2>
 								<h3 class="h3-carousel text-white text-center">Imagine ter um suporte sem sair de casa</h3>
 								<div class="d-flex justify-content-center mt-3">
 									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
@@ -54,7 +54,7 @@
 					<div class="carousel-item img-carousel-2">
 						<div  class="d-flex justify-content-center h-100">	
 							<div class="align-self-center">					    		
-								<h2 class="h2-carousel text-white  text-center ">Uma plataforma acessivel para celulares e dektop</h2>
+								<h2 class="h2-carousel text-white  text-center ">Uma plataforma acessivel para celulares e desktop</h2>
 								<h3 class="h3-carousel text-white  text-center ">Suporte total sobre informática</h3>
 								<div class="d-flex justify-content-center mt-3">
 									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
@@ -99,7 +99,7 @@
 							<?php } else { ?>
 								<a  href="{{route('assinar')}}"  class='btn btn-danger text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
 								<br>
-								<small class='mt-2 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou cria sua conta primeiro !</small>
+								<small class='mt-2 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou crie sua conta primeiro !</small>
 							<?php } ?>
 							
 							

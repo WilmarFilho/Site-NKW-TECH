@@ -1,5 +1,5 @@
 <template>
-                    <form method="POST" action='/chamado' enctype="multipart/form-data">
+                    <form method="POST" :action=rota enctype="multipart/form-data">
                         <input type="hidden" name="_token" :value="token_csrf">
 
                         <label class="label-formulario"> Selecione o tipo do chamado</label>
@@ -23,7 +23,7 @@
 
                         <slot></slot>
 
-                        <button  type="submit" class="btn btn-outline-success mt-4">Adicionar</button>>
+                        <button  type="submit" class="btn btn-danger mt-4">Finalizar</button>>
 
 
 
@@ -33,6 +33,6 @@
 
 <script>
     export default {
-        props: ['token_csrf']
+        props: ['token_csrf', 'rota']
     }
 </script>
