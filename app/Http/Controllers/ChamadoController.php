@@ -167,7 +167,16 @@ class ChamadoController extends Controller
     public function destroy(chamado $chamado)
     {
         $chamado = chamado::find($chamado->id);
+
+        $respostas = chat::where('chamado_id', $chamado->id)->get();
+
+        foreach($respostas as $key => $resposta) {
+            $resposta->delete();
+        }
+
         $chamado->delete();
+
+        
         return redirect()->route('chamado.index');
     }
 }

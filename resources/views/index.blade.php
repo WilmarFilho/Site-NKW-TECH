@@ -1,3 +1,22 @@
+<?php
+									
+	if(isset(auth()->user()->name)) {
+
+		if(auth()->user()->assinatura == 'premium') {
+			$msg = 'Você já é nosso assinante';
+		}
+		else {
+			$msg = '';
+		}
+											
+	}
+
+	else {
+		$msg = '';
+	}
+									
+?>
+
 @extends('layouts.index')
 	
 	
@@ -22,7 +41,11 @@
 								<h2 class="h2-carousel text-white  text-center ">Já teve levar seu pc na assistência ?</h2>
 								<h3 class="h3-carousel text-white text-center">Imagine ter um suporte sem sair de casa</h3>
 								<div class="d-flex justify-content-center mt-3">
-									<a  href="{{route('assinar')}}" class="btn btn-danger text-center mx-auto carousel-btn">Garanta já</a>
+									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
+										<h4 class='text-danger' style='font-family: one;'>{{$msg}}</h4>
+									<?php } else { ?>
+										<a  href="{{route('assinar')}}" class="btn btn-danger text-center mx-auto carousel-btn">Garanta já</a>	
+									<?php } ?>
 								</div>
 							</div>
 						</div>	
@@ -34,7 +57,11 @@
 								<h2 class="h2-carousel text-white  text-center ">Uma plataforma acessivel para celulares e dektop</h2>
 								<h3 class="h3-carousel text-white  text-center ">Suporte total sobre informática</h3>
 								<div class="d-flex justify-content-center mt-3">
-									<a   href="{{route('assinar')}}" class="btn btn-danger text-center mx-auto carousel-btn">Garanta já</a>
+									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
+										<h4 class='text-warning' style='font-family: one;'>{{$msg}}</h4>
+									<?php } else { ?>
+										<a  href="{{route('assinar')}}" class="btn btn-danger text-center mx-auto carousel-btn">Garanta já</a>	
+									<?php } ?>
 								</div>
 							</div> 
 						</div>	
@@ -67,9 +94,15 @@
 
 						<div class="col-10 text-center mx-auto mt-4">
 							
-							<a  href="{{route('assinar')}}"  class='btn btn-danger text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
-							<br>
-							<small class='mt-2 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou cria sua conta primeiro !</small>
+							<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
+								<h4 class='text-white' style='font-family: one;'>{{$msg}}</h4>
+							<?php } else { ?>
+								<a  href="{{route('assinar')}}"  class='btn btn-danger text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
+								<br>
+								<small class='mt-2 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou cria sua conta primeiro !</small>
+							<?php } ?>
+							
+							
 
 							
 							
