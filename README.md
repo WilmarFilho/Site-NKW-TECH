@@ -1,4 +1,4 @@
-<p align="center"><a href="https://nkwtech.produtosdotiao.com/public" target="blank"><img src="public/img/logo.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://nkwtech.produtosdotiao.com/public" target="blank"><img src="public/img/logo.png" width="400" alt="Nkw Logo"></a></p>
 
 
 
