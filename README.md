@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com](https://nkwtech.produtosdotiao.com/public" target="_blank"><img src="public/img/logo.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://nkwtech.produtosdotiao.com/public" target="_blank"><img src="public/img/logo.png" width="400" alt="Laravel Logo"></a></p>
 
 
 
@@ -16,15 +16,15 @@ A nkw tech é uma plataforma de suporte online e atendimento a clientes, focada 
 
 A nkw tech é um site completo que eu desenvolvi todo o front end e back end. A plataforma vai ser usada pela empresa Nkw Tech em que eu mesmo sou sócio
 
-## Veja mais sobre a Nkw Tech
+## Veja algumas das paginas da Nkw Tech
 
 ### Página de venda
+<img src='tela11.png'>
+### Página da home
 
-### Tela da home
+### Página de chamados
 
-### Tela de chamados
-
-### Tela de perfil
+### Página de perfil
 
 
 
