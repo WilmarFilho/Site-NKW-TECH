@@ -19,12 +19,24 @@ A nkw tech é um site completo que eu desenvolvi todo o front end e back end. A 
 ## Veja algumas das paginas da Nkw Tech
 
 ### Página de venda
+
 <img src='tela11.png'>
+<img src='tela12.png'>
+
 ### Página da home
+
+<img src='tela21.png'>
+<img src='tela22.png'>
 
 ### Página de chamados
 
+<img src='tela31.png'>
+<img src='tela32.png'>
+
 ### Página de perfil
+
+<img src='tela4.png'>
+
 
 
 
