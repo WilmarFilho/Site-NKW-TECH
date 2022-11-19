@@ -120,7 +120,7 @@
 
 					<div class="col-4 text-center text-white " >
 						<i class="fa-solid fa-hand-holding-dollar icon"></i>
-						<p class="p-suporte">Experimente por 30 dias e caso não goste te reembolsamos !</p>
+						<p class="p-suporte">Experimente por 7 dias e caso não goste te reembolsamos !</p>
 					</div>
 
 					<div class="col-4 text-center text-white">
@@ -141,7 +141,7 @@
 
 					<div class='col-md-6  text-center  '>
 						<h3 class='h3-duvida'>Vou ser atentido qualquer hora ?</h3>
-						<p class="p-suporte">Nosso time de tecnicos vai estar disponivel 12 horas para lhe atender !</p>
+						<p class="p-suporte">Nosso time de tecnicos irá lhe atender o mais rápido possível !</p>
 					</div>
 
 					<div class='col-md-6 text-center'>
@@ -186,9 +186,11 @@
                             </video>			
 					</div>
 
-					<div class="col-md-4 col-10 ">
+					<div class="col-md-4 col-10">
 						
-					
+						<video class="borda"  src='video/cristian.mp4' controls >
+                        
+                        </video>
 						
 
 						

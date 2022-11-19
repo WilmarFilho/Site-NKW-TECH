@@ -18,7 +18,7 @@
             <ul class='text-white mt-4' style='list-style: none'>
                 <li>Atendimento online para problemas gerais de computadores </li>
                 <li>Atendimento presencial </li>
-                <li>Suporte 12 horas por dia </li>
+                <li>Suporte o mais rápido possível </li>
                 <li>Buscamos e entregamos</li>
                 <li>Desconto em serviços presenciais</li>
             </ul>
