@@ -45,10 +45,24 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        $request->validate(['imagem' => 'required'], ['required' => 'Digite sua mensagem antes de enviar !']);
+
+        if($request->hasFile('imagem')) {
+            $imagem = $request->imagem;
+            $img_urn = $imagem->store('imagems/chat', 'public');
+        }
+
+        else {
+            $img_urn = 'noimage';
+        }
+       
         chat::create([
             'user_id' => auth()->user()->id,
             'chamado_id' => $request->input('chamado'),
-            'resposta' => $request->input('resposta')
+            'resposta' => $request->input('resposta'),
+            'imagem' => $img_urn
         ]);
 
         $idurl = 'http://127.0.0.1:8000/chamado/' . $request->input('chamado');
@@ -75,7 +89,7 @@ class ChatController extends Controller
         }
 
 
-        return redirect()->route('chamado.index');
+        return redirect()->route('chamado.show', ['chamado' => $request->chamado]);
     }
 
     /**

@@ -10,7 +10,8 @@ class chat extends Model
     protected $fillable = [
         'resposta',
         'user_id',
-        'chamado_id'
+        'chamado_id',
+        'imagem'
     ];
 
     public function User()

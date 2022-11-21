@@ -8,7 +8,7 @@
 
             @php 
 
-               $img_urn =  'storage/' . $chamado->img_descricao;
+                $img_urn =  'storage/' . $chamado->img_descricao;
                
                 $status = 'btn-warning';
                 if($chamado->status == 'Andamento') {
@@ -73,6 +73,8 @@
                         
                          @php 
                             
+                            $img = 'storage/' . $reposta->imagem;
+
                             $class_resposta = 'ms-3';
                             if($reposta->User->ADMIN == 0) {
                                 $class_resposta = 'offset-md-8 offset-6';
@@ -96,6 +98,7 @@
                                 </div>
                                 <div class=''>
                                     <p class='texto-resposta'>{{$reposta->resposta}} </p>   
+                                    <img class='img-fluid' src='{{asset($img)}}'>
                                 </div>
                             </div>
                         </div>
@@ -112,10 +115,12 @@
                     classbtn='btn btn-info' 
                     labelbtn='Enviar'
                     classform='m-1'
-                    route='{{route('chat.store')}}'>
+                    route='{{route('chat.store')}}'
+                    enctype='multipart/form-data'>
                     
                     <input type='hidden' name='chamado' value='{{$chamado->id}}'>
                     <input name='resposta' type='text' class='form-control'>
+                    <input name='imagem' type='file' class='form-control' accept='.jpg,.png'>
                 </formsimples-component>
 
             </div>

@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('Verifique seu email para ter acesso ao nosso sistema !') }}
-                    {{ __('Caso não tenha recebido o email clique aqui : ') }},
+                    {{ __('Caso não tenha recebido o email clique aqui : ') }}
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('Clique aqui para receber outro email ') }}</button>.

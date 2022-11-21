@@ -4,9 +4,9 @@
 O chamado teve uma nova atualização.
 
 @component('mail::button', ['url' => $url])
-Clique aqui para ver o chamado
+Clique aqui para ver o chamado;
 @endcomponent
 
-Obrigado,<br>
+Obrigado.<br>
 {{ config('app.name') }}
 @endcomponent
