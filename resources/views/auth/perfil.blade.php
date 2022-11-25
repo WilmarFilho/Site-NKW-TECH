@@ -85,7 +85,10 @@
                     </template>
                 </formdisable-component>
 
-                <a class='btn btn-outline-info btn-sm  mt-4' href='https://billing.stripe.com/p/login/test_3cs8yR6v6aYG1hu288'>Gerenciar assinatura</a>
+                <form method="POST" action="{{route('portal')}}">
+                    @csrf
+                    <button class='btn btn-outline-info btn-sm  mt-4'  type="submit">Gerenciar assinatura</button>
+                </form>
 
             </div>
 

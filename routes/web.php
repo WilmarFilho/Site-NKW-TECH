@@ -22,9 +22,13 @@ Route::get('/', function () {
 
    // Rota de sucesso no pagamento //
 
-Route::get('/sucess', [App\Http\Controllers\PagamentoController::class, 'pagamentoSucesso'])->name('pagamento-sucesso');
+Route::get('/sucess/{session_id}', [App\Http\Controllers\PagamentoController::class, 'pagamentoSucesso'])->name('pagamento-sucesso');
+
+Route::post('/webhook', [App\Http\Controllers\WebhookController::class, 'webhook'])->name('webhook');
 
 Route::post('/checkout', [App\Http\Controllers\PagamentoController::class, 'checkout'])->name('checkout');
+
+Route::post('/portal', [App\Http\Controllers\PagamentoController::class, 'portal'])->name('portal');
 
    // Plataforma //
 
