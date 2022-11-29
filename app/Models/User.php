@@ -25,7 +25,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'setor',
         'endereco',
         'celular',
-        'idcliente'
+        'idcliente',
+        'cancelada'
     ];
 
     /**

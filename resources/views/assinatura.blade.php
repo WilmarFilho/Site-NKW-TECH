@@ -6,7 +6,7 @@
 
 <div class=" row">
 
-    <div id='card-principal' class='col-6 mx-auto d-flex flex-column'>
+    <div id='card-principal' class='col-md-6 col-10 mx-auto d-flex flex-column'>
 
         <div class='text-center'>
             <h2 class='h2-assinatura'>PLATAFORMA</h2>
@@ -16,11 +16,11 @@
         <div id='lista-asssinatura' class='text-center'>
             <h3 class='h3-assinatura'>Nossos beneficios :<h3>
             <ul class='text-white mt-4' style='list-style: none'>
-                <li>Atendimento online para problemas gerais de computadores </li>
-                <li>Atendimento presencial </li>
-                <li>Suporte o mais rápido possível </li>
-                <li>Buscamos e entregamos</li>
-                <li>Desconto em serviços presenciais</li>
+                <li class='li-assinatura'>- Atendimento online para problemas gerais de computadores </li>
+                <li class='li-assinatura'>- Atendimento presencial </li>
+                <li class='li-assinatura'>- Suporte o mais rápido possível </li>
+                <li class='li-assinatura'>- Buscamos e entregamos</li>
+                <li class='li-assinatura'>- Desconto em serviços presenciais</li>
             </ul>
         </div>
 

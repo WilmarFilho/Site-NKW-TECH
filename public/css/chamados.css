@@ -13,6 +13,24 @@
         text-align: center !important;
     }
 
+    h2.h2-assinatura {
+        color: white;
+        font-family: neutron;
+        font-size: 3em;
+    }
+    
+    h3.h3-assinatura {
+        color: white;
+        font-size: 1.8em;
+        font-family: beach;
+    }
+    
+    li.li-assinatura {
+        font-family: one;
+        text-shadow: 0 0 1em cyan;
+        font-size: 1em;
+    }
+
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
@@ -59,7 +77,9 @@
 }
 
 body {
-    background: url('../img/bg1.jpg') center 20% ;
+    /*background: url('../img/bg1.jpg') center 20% ;*/
+    background: url('../img/bg20.jpg') ;
+    /*--bs-body-bg: black ;*/
 }
 
 .bg-nav-custom {
@@ -89,9 +109,10 @@ body {
     font-family: beach;
 }
 
-#lista-asssinatura ul li {
+li.li-assinatura {
     font-family: one;
     text-shadow: 0 0 1em cyan;
+    padding-top: 15px;
 }
 
 .carousel-btn {

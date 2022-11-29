@@ -52,11 +52,10 @@ class WebhookController extends Controller
 
             
         default:
-            
+           echo 'Evento diferente'; 
         }
 
         
-
         http_response_code(200);
 
     }

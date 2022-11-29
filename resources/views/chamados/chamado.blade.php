@@ -97,8 +97,10 @@
                                     <small class='data-resposta'>{{$data}}-{{$hora}}</small>
                                 </div>
                                 <div class=''>
-                                    <p class='texto-resposta'>{{$reposta->resposta}} </p>   
-                                    <img class='img-fluid' src='{{asset($img)}}'>
+                                    <p class='texto-resposta'>{{$reposta->resposta}} </p> 
+                                    @if($img != 'storage/noimage')
+                                        <img class='img-fluid' src='{{asset($img)}}'>
+                                    @endif 
                                 </div>
                             </div>
                         </div>

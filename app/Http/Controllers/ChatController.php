@@ -47,7 +47,7 @@ class ChatController extends Controller
     {
 
 
-        $request->validate(['imagem' => 'required'], ['required' => 'Digite sua mensagem antes de enviar !']);
+        $request->validate(['resposta' => 'required'], ['required' => 'Digite sua mensagem antes de enviar !']);
 
         if($request->hasFile('imagem')) {
             $imagem = $request->imagem;

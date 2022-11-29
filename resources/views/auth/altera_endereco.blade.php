@@ -13,15 +13,15 @@
         <formdados-component token_csrf={{csrf_token()}} route='{{route('alteraendereco')}}' labelbtn='Alterar'>
         
             <template v-slot:campo1 >
-                <input-component label='Novo Endereço:' placeholder='Digite seu novo endereco' classlabel='label-formulario' name='endereco'></input-component>
+                <input-component type='text' label='Novo Endereço:' placeholder='Digite seu novo endereco' classlabel='label-formulario' name='endereco'></input-component>
             </template>
 
             <template v-slot:campo2 >
-                <input-component label='Novo Setor:' placeholder='Digite seu novo setor' classlabel='label-formulario' name='setor'></input-component>
+                <input-component  type='text' label='Novo Setor:' placeholder='Digite seu novo setor' classlabel='label-formulario' name='setor'></input-component>
             </template>  
 
             <template v-slot:campo3 >
-                <input-component label='Novo Celular:' placeholder='Digite seu novo celular' classlabel='label-formulario' name='celular'></input-component>
+                <input-component  type='text' label='Novo Celular:' placeholder='Digite seu novo celular' classlabel='label-formulario' name='celular'></input-component>
             </template> 
 
             <template v-slot:campo4 >

@@ -11,15 +11,15 @@
       <div class='col-md-6 col-8 mt-2'>
         <formdados-component token_csrf={{csrf_token()}} route='{{route('alteraSenha')}}' labelbtn='Alterar'>
             <template v-slot:campo1 >
-                <input-component label='Antiga senha:' placeholder='Digite sua senha atual' classlabel='label-formulario' name='antigaSenha' ></input-component>
+                <input-component type='password' label='Antiga senha:' placeholder='Digite sua senha atual' classlabel='label-formulario' name='antigaSenha' ></input-component>
             </template>
 
             <template v-slot:campo2 >
-                <input-component label='Nova Senha:' placeholder='Digite sua nova senha' classlabel='label-formulario' name='novaSenha' ></input-component>
+                <input-component type='password' label='Nova Senha:' placeholder='Digite sua nova senha' classlabel='label-formulario' name='novaSenha' ></input-component>
             </template>  
 
             <template v-slot:campo3 >
-                <input-component label='Confirme a senha:' placeholder='Confirme sua nova senha' classlabel='label-formulario' name='novaSenha_confirmation'></input-component>
+                <input-component type='password' label='Confirme a senha:' placeholder='Confirme sua nova senha' classlabel='label-formulario' name='novaSenha_confirmation'></input-component>
             </template> 
 
             <template v-slot:campo4 >
