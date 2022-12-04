@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('idcliente', 70)->nullable();
             $table->string('cancelada', 5)->nullable();
+            $table->string('cidade', 15);
+            $table->string('estado', 2);
         });
     }
 

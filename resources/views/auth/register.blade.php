@@ -62,6 +62,65 @@
                         </div>
 
                         <label class='label-form'>Dados de endereço :</label>
+                        
+                        <div class="row mb-3">
+                            <label for="cidade" class="col-md-4 col-form-label text-md-end">{{ __('Cidade') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="cidade" placeholder='Digite sua cidade' type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{ old('cidade') }}" required autocomplete="cidade" autofocus>
+
+                                @error('cidade')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="estado" class="col-md-4 col-form-label text-md-end">{{ __('Estado') }}</label>
+
+                            <div class="col-md-6">
+                                
+                                <select id="estado" placeholder='Selecione seu estado'  class="form-control @error('estado') is-invalid @enderror" name="estado" value="{{ old('cidade') }}" required autocomplete="estado" autofocus>
+                                
+                                    <option>GO</option>
+                                    <option>DF</option>
+                                    <option>MT</option>
+                                    <option>MS</option>
+                                    <option>RS</option>
+                                    <option>SC</option>
+                                    <option>PR</option>
+                                    <option>SP</option>
+                                    <option>RJ</option>
+                                    <option>MG</option>
+                                    <option>BA</option>
+                                    <option>SE</option>
+                                    <option>AL</option>
+                                    <option>PE</option>
+                                    <option>PB</option>
+                                    <option>RN</option>
+                                    <option>CE</option>
+                                    <option>PI</option>
+                                    <option>MA</option>
+                                    <option>TO</option>
+                                    <option>AP</option>
+                                    <option>PA</option>
+                                    <option>RR</option>
+                                    <option>AM</option>
+                                    <option>AC</option>
+                                    <option>RO</option>
+                                
+                                </select>
+                                @error('estado')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            
+                        </div>
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Endereço') }}</label>
