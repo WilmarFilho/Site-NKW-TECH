@@ -11,6 +11,12 @@
                 <div class='col-md-5 col-10'>
                     <slot name="campo3"></slot>
                 </div>
+                <div class='col-md-5 col-10'>
+                    <slot name="campo4"></slot>
+                </div>
+                <div class='col-md-5 col-10'>
+                    <slot name="campo5"></slot>
+                </div>
             </div>
         </fieldset>
     </form>

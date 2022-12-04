@@ -18,6 +18,18 @@ class PerfilController extends Controller
         return view('auth.perfil');
     }
 
+    public function perfilUser($id) {
+        
+        if(auth()->user()->ADMIN == 0) {
+            return redirect()->route('home');
+        }
+
+        $dadosUser = User::where('id', auth()->user()->id)->get();
+
+        return view('auth.perfil', ['dadosUser' => $dadosUser[0]]);
+
+    }
+
     public function ruleFoto() {
         return  [
             'imgPerfil' => 'mimes:png,jpg|required'

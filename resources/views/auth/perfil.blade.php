@@ -41,11 +41,11 @@
 
                 <formdisable-component>
                     <template v-slot:campo1 >
-                        <input-component label='Nome:' value='{{auth()->user()->name}}' classlabel='label-form'></input-component>
+                        <input-component label='Nome:' value='@if(isset($dadosUser)) {{$dadosUser->name}} @else {{auth()->user()->name}} @endif' classlabel='label-form'></input-component>
                     </template>
 
                     <template v-slot:campo2 >
-                        <input-component label='Email:' value='{{auth()->user()->email}}' classlabel='label-form'></input-component>
+                        <input-component label='Email:' value='@if(isset($dadosUser)) {{$dadosUser->email}} @else {{auth()->user()->email}} @endif' classlabel='label-form'></input-component>
                     </template>  
                 </formdisable-component>
 
@@ -58,16 +58,24 @@
             <div class='col-md-10 col-12'>
 
                 <formdisable-component>
-                    <template v-slot:campo1 >
-                        <input-component label='Endereço:' value='{{auth()->user()->endereco}}' classlabel='label-form'></input-component>
+                    <template v-slot:campo1 > 
+                        <input-component label='Cidade:' value='@if(isset($dadosUser)) {{$dadosUser->cidade}} @else {{auth()->user()->cidade}} @endif' classlabel='label-form'></input-component>
                     </template>
 
                     <template v-slot:campo2 >
-                        <input-component label='Setor:' value='{{auth()->user()->setor}}' classlabel='label-form'></input-component>
-                    </template>  
+                        <input-component label='UF:' value='@if(isset($dadosUser)) {{$dadosUser->estado}} @else {{auth()->user()->estado}} @endif' classlabel='label-form'></input-component>
+                    </template>
 
                     <template v-slot:campo3 >
-                        <input-component label='Celular:' value='{{auth()->user()->celular}}' classlabel='label-form'></input-component>
+                        <input-component label='Endereço:' value='@if(isset($dadosUser)) {{$dadosUser->endereco}} @else {{auth()->user()->endereco}} @endif' classlabel='label-form'></input-component>
+                    </template>
+
+                    <template v-slot:campo4 >
+                        <input-component label='Setor:' value='@if(isset($dadosUser)) {{$dadosUser->setor}} @else {{auth()->user()->setor}} @endif' classlabel='label-form'></input-component>
+                    </template>  
+
+                    <template v-slot:campo5 >
+                        <input-component label='Celular:' value='@if(isset($dadosUser)) {{$dadosUser->celular}} @else {{auth()->user()->celular}} @endif' classlabel='label-form'></input-component>
                     </template> 
                 </formdisable-component>
 
@@ -81,7 +89,7 @@
 
                 <formdisable-component>
                     <template v-slot:campo1 >
-                        <input-component label='Assinatura:' value='{{auth()->user()->assinatura}}' classlabel='label-form'></input-component>
+                        <input-component label='Assinatura:' value='@if(isset($dadosUser)) @if($dadosUser->cancelada == 'sim') {{'Cancelada'}} @else {{$dadosUser->assinatura}} @endif @else @if(auth()->user()->cancelada == 'sim') {{'Cancelada'}} @else {{auth()->user()->assinatura}} @endif @endif' classlabel='label-form'></input-component>
                     </template>
                 </formdisable-component>
 

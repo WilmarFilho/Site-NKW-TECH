@@ -47,7 +47,7 @@
 
             @if(auth()->user()->CODFUN == 1)
                 <template v-slot:usuario> 
-                    <p class="card-text usuario-chamado">Usuario: {{$chamado->User->name}}</p>
+                    <span class="card-text usuario-chamado" >Usuario: </span> <a style='color: white; text-decoration: underline !important;' href='{{route('perfilUser', ['id' => $chamado->User->id])}}' class="card-text usuario-chamado"> {{$chamado->User->name}}</a>
                 </template>
             @endif
             
