@@ -5,7 +5,15 @@
     <div id='container' class='container mx-auto row justify-content-center'>
         
         @php  
+            
             auth()->user()->img_perfil == null ? $imgPerfil = 'Indefinida' : $imgPerfil =  'storage/' . auth()->user()->img_perfil;
+
+            if(isset($dadosUser)) {
+
+                $dadosUser->img_perfil == null ? $imgPerfil = 'Indefinida' : $imgPerfil =  'storage/' . $dadosUser->img_perfil;
+
+            }
+
         @endphp
         
         <div class='col-md-5 col-12 text-center mt-3 row justify-content-center'>
@@ -48,8 +56,10 @@
                         <input-component label='Email:' value='@if(isset($dadosUser)) {{$dadosUser->email}} @else {{auth()->user()->email}} @endif' classlabel='label-form'></input-component>
                     </template>  
                 </formdisable-component>
-
-                <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilsenha')}}>Alterar Senha</a>
+                
+                @if(!isset($dadosUser))
+                    <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilsenha')}}>Alterar Senha</a>
+                @endif
 
             </div>
             
@@ -79,7 +89,9 @@
                     </template> 
                 </formdisable-component>
 
-                <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilendereco')}}>Alterar dados de endereço</a>
+                @if(!isset($dadosUser))
+                    <a class='btn btn-outline-info btn-sm  mt-4' href={{route('perfilendereco')}}>Alterar dados de endereço</a>
+                @endif
 
             </div>
 
@@ -92,11 +104,13 @@
                         <input-component label='Assinatura:' value='@if(isset($dadosUser)) @if($dadosUser->cancelada == 'sim') {{'Cancelada'}} @else {{$dadosUser->assinatura}} @endif @else @if(auth()->user()->cancelada == 'sim') {{'Cancelada'}} @else {{auth()->user()->assinatura}} @endif @endif' classlabel='label-form'></input-component>
                     </template>
                 </formdisable-component>
-
-                <form method="POST" action="{{route('portal')}}">
-                    @csrf
-                    <button class='btn btn-outline-info btn-sm  mt-4'  type="submit">Gerenciar assinatura</button>
-                </form>
+                
+                @if(!isset($dadosUser))
+                    <form method="POST" action="{{route('portal')}}">
+                        @csrf
+                        <button class='btn btn-outline-info btn-sm  mt-4'  type="submit">Gerenciar assinatura</button>
+                    </form>
+                @endif
 
             </div>
 

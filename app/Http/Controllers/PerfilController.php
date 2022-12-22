@@ -24,7 +24,7 @@ class PerfilController extends Controller
             return redirect()->route('home');
         }
 
-        $dadosUser = User::where('id', auth()->user()->id)->get();
+        $dadosUser = User::where('id', $id)->get();
 
         return view('auth.perfil', ['dadosUser' => $dadosUser[0]]);
 
