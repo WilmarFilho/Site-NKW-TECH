@@ -124,4 +124,8 @@ class PerfilController extends Controller
         return redirect()->route('home');
 
     }
+
+    public function ajudaAnyDesk() {
+        return view('auth.anydesk');
+    }
 }

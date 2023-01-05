@@ -45,6 +45,8 @@ Auth::routes(['verify' => true]);
 
 Route::get('/perfil',[App\Http\Controllers\PerfilController::class, 'index'])->name('perfil')->middleware('verified')->middleware('premium');
 
+Route::get('/ajudaAnyDesk',[App\Http\Controllers\PerfilController::class, 'ajudaAnyDesk'])->name('ajuda')->middleware('verified')->middleware('premium');
+
 Route::get('/perfil/{id}',[App\Http\Controllers\PerfilController::class, 'perfilUser'])->name('perfilUser')->middleware('verified')->middleware('premium');
 
 Route::get('/altera-senha',[App\Http\Controllers\PerfilController::class, 'NovaSenha'])->name('perfilsenha')->middleware('verified')->middleware('premium');

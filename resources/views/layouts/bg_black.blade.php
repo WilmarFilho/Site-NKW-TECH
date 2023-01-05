@@ -67,12 +67,16 @@
                                 <div class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-dark" href="{{ route('perfil') }}"
                                        >
-                                        {{ __('Perfil') }}
+                                        {{ __('Perfil') }} <i class="fa-solid fa-user"></i>
+                                    </a>
+                                    <a class="dropdown-item text-dark" href="{{ route('ajuda') }}"
+                                       >
+                                        {{ __('Ajuda AnyDesk ') }}<i class="fa-solid fa-circle-info"></i>
                                     </a>
                                      <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Sair') }}
+                                        {{ __('Sair') }} <i class="fa-solid fa-right-from-bracket"></i>
                                     </a>
 
 
