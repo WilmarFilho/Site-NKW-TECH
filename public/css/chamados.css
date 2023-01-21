@@ -31,6 +31,10 @@
         font-size: 1em;
     }
 
+    label.check-termos {
+        font-size: 0.9em;
+    }
+
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
@@ -77,9 +81,7 @@
 }
 
 body {
-    /*background: url('../img/bg1.jpg') center 20% ;*/
-    background: url('../img/bg20.jpg') ;
-    /*--bs-body-bg: black ;*/
+    background: url('../img/bg1.jpg') center 20% ;
 }
 
 .bg-nav-custom {
@@ -305,6 +307,28 @@ a {
 
 #paginacao ul{
     box-shadow: 0 0 1em rgb(235, 232, 232);
+}
+
+
+.caixa-termos {
+    background-color: rgb(235, 232, 232, 0.7);
+    padding: 10px;
+    border-radius: 15px;
+    height: 150px;
+    overflow-y: scroll
+}
+
+.h2-termos {
+    font-family: one;
+    font-size: 1.5em;
+}
+
+.termos {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.check-termos {
+    font-size: 1em;
 }
 
 

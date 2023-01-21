@@ -61,10 +61,13 @@
                     <ul class="navbar-nav  ms-auto mt-1">
                             @if (Route::has('login'))
                                 <li class="nav-item text-center">
-                                    <a class="nav-link" href="#video">{{ __('Sobre Nós') }}</a> 
+                                    <a class="nav-link" href="#video">{{ __('Nossa Plataforma') }}</a> 
                                 </li>
                                 <li class="nav-item text-center">
                                     <a class="nav-link" href="#feedback">{{ __('Nossos clientes') }}</a> 
+                                </li>
+                                <li class="nav-item text-center">
+                                    <a class="nav-link" href="#sobre-nos">{{ __('Sobre nós') }}</a> 
                                 </li>
                              
                             @endif

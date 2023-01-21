@@ -14,9 +14,18 @@ class PagamentoController extends Controller
     }
 
 
-    public function checkout() {
+    public function checkout(Request $request) {
 
-        
+        $rules = [
+            'termos' => 'required'   
+        ];
+
+        $feedback = [
+            'required' => 'Aceite nossos termos de uso primeiro !',
+        ];
+
+        $request->validate($rules, $feedback);
+
         if(auth()->user()->assinatura == 'premium') {
             return redirect()->route('home'); //possivel melhoria avisando que o usuario ja tem aasinatura
         }

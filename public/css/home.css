@@ -49,6 +49,23 @@
         margin-top: -10px;
     }
 
+    h2.h2-montagem {
+        font-family: one;
+        color: aliceblue;
+        text-shadow: 0 0 1em purple;
+        font-size: 3em;
+    }
+
+    .p-montagem {
+        font-size: 2em;
+        color: aliceblue;
+        font-family: beach;
+        text-shadow: 0 0 1em cyan;
+        background-color: rgb(0, 0, 0, .8);
+        padding: 10px;
+        border-radius: 4px;
+    }
+
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
@@ -111,7 +128,7 @@ body {
 #topo {
     background: url('../img/setup.jpg') ;
     background-size: cover;
-    height: 750px;
+    height: 850px;
 }
 
 #conteudo-topo {
@@ -176,4 +193,50 @@ a {
     font-family: 'one';
     font-style: italic;
     letter-spacing: 1px;
+}
+
+.montagem {
+    /*background-image: linear-gradient(to right, #100325, #5005a4);*/
+      background-image: linear-gradient(to top, #0b0417, #37027d);
+}
+
+.teste {
+    background: url('../img/pc3.jpg') ;
+    background-size: cover;
+}
+
+.h2-montagem {
+    font-family: one;
+    color: aliceblue;
+    text-shadow: 0 0 1em purple;
+    font-size: 5em;
+}
+
+.fundo {
+    background: url('../img/teste3.jpg') ;
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom: 4px double purple;
+    border-top: 4px double purple;
+   
+}
+
+.p-montagem {
+    font-size: 2em;
+    color: aliceblue;
+    font-family: beach;
+    text-shadow: 0 0 1em cyan;
+    background-color: rgb(0, 0, 0, .8);
+    border-radius: 10px;
+}
+
+.js .anime {
+	opacity: 0;
+	transform: translate3D(-50px, 0px, 0px);
+}
+
+.js .anime-init {
+	opacity: 1;
+	transform: translate3D(0px, 0px, 0px);
+	transition: .3s all ease;
 }

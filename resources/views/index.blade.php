@@ -38,7 +38,7 @@
 					<div class="carousel-item active img-carousel">
 						<div  class="d-flex justify-content-center h-100">
 							<div class="align-self-center">
-								<h2 class="h2-carousel text-white  text-center ">Já teve que levar seu pc na assistência ?</h2>
+								<h2 class="h2-carousel text-white  text-center ">Já teve que levar seu pc <br>na assistência ?</h2>
 								<h3 class="h3-carousel text-white text-center">Imagine ter um suporte sem sair de casa</h3>
 								<div class="d-flex justify-content-center mt-3">
 									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
@@ -54,7 +54,7 @@
 					<div class="carousel-item img-carousel-2">
 						<div  class="d-flex justify-content-center h-100">	
 							<div class="align-self-center">					    		
-								<h2 class="h2-carousel text-white  text-center ">Uma plataforma acessivel para celulares e desktop</h2>
+								<h2 class="h2-carousel text-white  text-center ">Uma plataforma acessivel <br>para celulares e desktop</h2>
 								<h3 class="h3-carousel text-white  text-center ">Suporte total sobre informática</h3>
 								<div class="d-flex justify-content-center mt-3">
 									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
@@ -88,8 +88,10 @@
 							<h2 class="text-white h2-video">Veja nosso video !</h2>
 						</div>	
 					
-						<div class="col-md-6 col-10 mx-auto" >
-							<iframe width="100%" class="video" src="https://www.youtube.com/embed/sNNBaUuvjVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+						<div class="col-md-4 col-10 mx-auto" >
+							<video class="video borda"  src='video/principal.mp4' controls >
+                        
+                            </video>	
 						</div>
 
 						<div class="col-10 text-center mx-auto mt-4">
@@ -125,7 +127,7 @@
 
 					<div class="col-4 text-center text-white">
 						<i class="fa-solid fa-shield icon"></i>
-						<p class="p-suporte">Suporte e seguro total pra nossos assinantes</p>
+						<p class="p-suporte">Ambiente seguro para todos meios de pagamento</p>
 					</div>
 
 					<div class="col-4 text-center text-white">
@@ -186,7 +188,7 @@
                             </video>			
 					</div>
 
-					<div class="col-md-4 col-10">
+					<div class="col-md-4 col-10 mb-4">
 						
 						<video class="borda"  src='video/cristian.mp4' controls >
                         
@@ -197,9 +199,10 @@
 					</div>
 
 					<div class="offset-md-2 col-md-4 col-10">
-					
 							
-						
+						<video class="borda"  src='video/cliente3.mp4' controls >
+                        
+                        </video>
 
 						
 					</div>
@@ -208,17 +211,83 @@
 
 			</section> <!-- Fim Feedback -->
 
-			<footer id="rodape" class='my-2'> <!-- Inicio Rodape -->
+			<section class='quem-somos row justify-content-center' id='sobre-nos'>
 
-				<div class="row align-items-center">
-					<div class="col-6 offset-1  text-light">
-						<p class=''>Copyright (c) 2022 Nkw tech <br> Todos os direitos reservados
-						</p>
+				<div class="col-12 text-center mt-5">
+					<h2 class="text-white h2-video">Sobre nós !</h2>
+				</div>	
+
+				<div class="col-9  text-center mt-2">
+					<p class="p-suporte">
+						Fascinados por esse mundo de computadores e tecnologia desde cedo, nós somos jovens empresários do interior de Goiás prontos
+						para revolucionar o Brasil no quesito de assistência e consultoria técnica.<br>
+						Conheça um pouco mais de nós clicando no botão abaixo !
+					</p>
+					
+					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-outline-info btn-lg' style='font-family: beach;'>Saiba mais</a>
+				</div>	
+
+				<div class='row justify-content-center'>
+
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/nattan.png')}}>
+
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/kayky.png')}}>
+
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/guizo.png')}}>
+
+				</div>
+
+				
+
+
+
+
+			
+			</section>
+
+			<footer id="rodape" class=''> <!-- Inicio Rodape -->
+
+				<div class="row align-items-center  py-4 text-center" style='border-bottom: 2px solid gray; font-family: one'>
+					
+					<div class=" col-md-4 col-12   text-light">
+						<h4>Menu</h4>
+						<ul class="navbar-nav nav-rodape ">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#video">{{ __('Nossa Plataforma') }}</a> 
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#feedback">{{ __('Nossos clientes') }}</a> 
+                                </li>
+								<li class="nav-item ">
+                                    <a class="nav-link" href="#sobre-nos">{{ __('Sobre nós') }}</a> 
+                                </li>
+                    	</ul>
 					</div>
 					
-					<div class="col-3 ms-auto ">
-						<img src="img/logo.png" class="img-fluid">
+					<div class="col-md-4 col-12 text-white mt-2">
+						<h4>Quem somos</h4>
 						
+						<p class='text-white-50'>
+							Nós tivemos a idéia de criar uma startup para ajudar as pessoas de qualquer
+							idade, temos o intuito de simplificar a vida dessas pessoas
+							que acham que computadores, tecnologia e etc um bicho de 7 cabeças !
+						</p>
+
+					</div>
+
+					<div class="col-md-2 offset-md-1 col-12 ">
+						<img src="img/logo.png" class="img-fluid">
+					</div>
+				</div>
+				
+				<div class='row justify-content-center '>
+					<div class="ml-2 mt-3 col-6   text-light text-center">
+						<p class=''>Copyright (c) 2023 Nkw tech -  Todos os direitos reservados
+						</p>
+						<div class='mb-2'>
+							<a href='https://www.instagram.com/nkw_tech/' class='btn btn-light'><i class="fa-brands fa-instagram"></i></a>
+							<a href='https://www.tiktok.com/@nkwtech' class='btn btn-light m-1'><i class="fa-brands fa-tiktok"></i></a>
+						</div>
 					</div>
 
 				</div>

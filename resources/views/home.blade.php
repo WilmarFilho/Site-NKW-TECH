@@ -11,8 +11,8 @@
     @endif
 </header>
 
-<div class="container">
-    <div class="row justify-content-center" >    
+<div class=" fundo py-5 row justify-content-center" >
+      
             @php  auth()->user()->CODFUN == 1 ? $admin = '' : $admin = '';  @endphp
 
             @if(auth()->user()->ADMIN == 1)
@@ -20,7 +20,7 @@
                     <select class='form-control' name='codfun'>
                         <option value='1'>Admin</option>
                         <option value='2'>Usuario</option>
-                    </select>>
+                    </select>
                 </formsimples-component>
             @endif
 
@@ -34,7 +34,18 @@
                 <h2><a class='a_home_nav' href='{{route('chamado.index')}}'>Ver @if(auth()->user()->CODFUN == 1) todos @endif chamados</a> <br> <i class="a_home_nav fa-solid fa-grip "></i></h2>    
             </div>    
 
-    </div>
+
+    
+</div>
+
+<div class='row  teste justify-content-center align-items-center anime js' style='height: 700px'>
+    
+        <div class='col-10 text-center mt-3'>
+            <h2 class='h2-montagem mt-5'>Quer ajuda pra montar seu pc ?</h2>
+            <p class='p-montagem'>Acha dificil ou não tem nem ideia de onde começar para montar seu computador? <br>Deixe que nós te ajudamos nisso !!!</p>
+            <button class='btn btn-success'>Em breve ...</button>
+        </div>
+
 </div>
 
 @endsection
