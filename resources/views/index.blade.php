@@ -22,7 +22,9 @@
 	
 
 @section('content')
-			<header> <!-- Inicio Topo -->
+
+			<!-- Inicio Topo -->
+			<header> 
 
 				<div class="fundo-logo d-flex justify-content-center ">
 					<div class="align-self-center logo">
@@ -30,8 +32,10 @@
 					</div>
 				</div>
 
-			</header> <!-- Fim Topo -->
+			</header> 
+			<!-- Fim Topo -->
 
+			<!-- Inicio Carousel -->
 			<div id="carousel" class="carousel slide anime js" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					
@@ -40,13 +44,7 @@
 							<div class="align-self-center">
 								<h2 class="h2-carousel text-white  text-center ">Já teve que levar seu pc <br>na assistência ?</h2>
 								<h3 class="h3-carousel text-white text-center">Imagine ter um suporte sem sair de casa</h3>
-								<div class="d-flex justify-content-center mt-3">
-									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
-										<h4 class='text-danger' style='font-family: one;'>{{$msg}}</h4>
-									<?php } else { ?>
-										<a  href="{{route('assinar')}}" class="btn btn-danger text-center mx-auto carousel-btn">Garanta já</a>	
-									<?php } ?>
-								</div>
+								
 							</div>
 						</div>	
 					</div>
@@ -56,13 +54,7 @@
 							<div class="align-self-center">					    		
 								<h2 class="h2-carousel text-white  text-center ">Uma plataforma acessivel <br>para celulares e desktop</h2>
 								<h3 class="h3-carousel text-white  text-center ">Suporte total sobre informática</h3>
-								<div class="d-flex justify-content-center mt-3">
-									<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
-										<h4 class='text-warning' style='font-family: one;'>{{$msg}}</h4>
-									<?php } else { ?>
-										<a  href="{{route('assinar')}}" class="btn btn-danger text-center mx-auto carousel-btn">Garanta já</a>	
-									<?php } ?>
-								</div>
+								
 							</div> 
 						</div>	
 					</div>
@@ -76,22 +68,35 @@
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Next</span>
 				</button>
-			</div>
-					  											
-			 <!-- Fim Carousel -->
-
-			<section id="video" class=" py-5 anime js">
+			</div> 
+			<!-- Fim Carousel -->  											
+			
+			<!-- Inicio Video Principal -->
+			<section id="video" class="py-2 pt-4 anime js">
 				
-				<div class="row  justify-content-center py-5 ">
+				<div class="row  justify-content-center  ">
 					
 						<div class="col-12 text-center mb-3">
-							<h2 class="text-white h2-video">Veja nosso video !</h2>
+							<h2 class="text-white h2-video">Diga adeus às noites perdidas procurando respostas <br>e economize dinheiro com nossa plataforma exclusiva !</h2>
 						</div>	
 					
-						<div class="col-md-4 col-10 mx-auto" >
-							<video class="video borda"  src='video/principal.mp4' controls >
-                        
-                            </video>	
+						<div class="col-md-6 col-lg-5 col-9 mx-auto" >
+							<iframe class='video borda' width="560" height="315" src="https://www.youtube.com/embed/glAAj2FDUJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+
+						<div class="col-md-8  text-center col-lg-8 col-11 mx-auto texto-video">
+							<p class='p-video'>
+								Você está cansado de perder tempo procurando respostas para suas dúvidas sobre computadores? 
+								A nossa plataforma online é a solução para esse problema. 
+								Com ela, você pode obter respostas precisas e rápidas para qualquer dúvida que você possa ter.
+							</p>
+							<p class='p-video'>
+								Nossa plataforma é projetada para ser fácil de usar e acessível, para que qualquer pessoa possa obter respostas para suas perguntas. 
+								Nós temos uma equipe de especialistas em computadores que estão disponíveis 24 horas por dia, 7 dias por semana, para garantir que você possa obter ajuda quando precisar.
+							</p>
+							<p class='p-video'>
+								Não fique de fora dessa e pare de jogar seu tempo fora !!!
+							</p>
 						</div>
 
 						<div class="col-10 text-center mx-auto mt-4">
@@ -99,7 +104,7 @@
 							<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
 								<h4 class='text-white' style='font-family: one;'>{{$msg}}</h4>
 							<?php } else { ?>
-								<a  href="{{route('assinar')}}"  class='btn btn-danger text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
+								<a  href="{{route('assinar')}}"  class='btn btn-success text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
 								<br>
 								<small class='mt-2 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou crie sua conta primeiro !</small>
 							<?php } ?>
@@ -112,41 +117,114 @@
 					
 				</div> <!-- Inicio Video Principal -->
 
-			</section> <!-- Fim Video Principal -->
+			</section> 
+			<!-- Fim Video Principal -->
 
-			<section id="suporte" class="py-5 anime js"> <!-- Inicio Suporte -->
+			<!-- Inicio Reviews -->
+			<section id="review" class="py-2 anime js"> 
 				
-				<div class="row anime js" id='garantia'>
-					
-					<h2 class='col-10 mx-auto text-center h2-duvida mb-5'>Nossas garantias</h2>
+				<div class="row my-5">
+					<div class="col-12 text-center">
+						<h2 class="h2-feedback text-white">Revolucionando <br>o mercado </h2>
+					</div>
+				</div>
 
-					<div class="col-4 text-center text-white " >
+				<div class="row justify-content-center mt-5">
+				
+					<div class="col-md-4 col-6  mb-4 " style='padding-left: 20px; padding-right: 20px '>
+
+                        <iframe class='borda' width="260" height="315" src="https://www.youtube.com/embed/rjTsS5OTGOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+					
+					</div>
+
+					<div class=" offset-md-2 col-md-4 col-6  mb-4" style='padding-left: 20px; padding-right: 20px '>
+					
+							<iframe class='borda' width="260" height="315" src="https://www.youtube.com/embed/H1MNDDL8md0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		
+					
+					</div>
+
+					<div class="col-md-4 col-6 mb-4" style='padding-left: 20px; padding-right: 20px '>
+						
+						<iframe class='borda' width="560" height="315" src="https://www.youtube.com/embed/YkUSl6n8sN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						
+					</div>
+
+					<div class="offset-md-2 col-md-4 col-6" style='padding-left: 20px; padding-right: 20px '>
+							
+						<iframe class='borda' width="560" height="315" src="https://www.youtube.com/embed/1qiyo1jABaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+					</div>
+				
+				</div>
+
+			</section> 
+			<!-- Fim Reviews -->
+
+			<!-- Inicio Sobre Nós -->
+			<section id="sobreNos" class="row justify-content-center anime js">
+				
+				<div class="col-12 text-center mt-5">
+					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
+				</div>	
+
+				<div class="col-9  text-center mt-2">
+					<p class="p-sobre-nos">
+						Fascinados por esse mundo de computadores e tecnologia desde cedo, nós somos jovens empresários do interior de Goiás prontos
+						para revolucionar o Brasil no quesito de assistência e consultoria técnica.<br>
+						Conheça um pouco mais de nós clicando no botão abaixo !
+					</p>
+					
+					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size ' style='font-family: beach;'>Saiba mais</a>
+				</div>	
+
+				<div class='row justify-content-center mt-3'>
+
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/nattan.png')}}>
+
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/kayky.png')}}>
+
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/guizo.png')}}>
+
+				</div>
+				 <!-- Inicio Feedback -->
+
+			</section>
+			<!-- Fim Sobre Nós -->
+
+			<!-- Inicio duvidas -->
+			<section class='quem-somos    py-2  anime js' id='duvidas'> <!-- Inicio Suporte -->
+
+				<div class="row anime js justify-content-center" id='garantia'>
+					
+					<h2 class='col-10 mx-auto text-center h2-duvida mb-5'>Garantimos seu bem estar</h2>
+
+					<div class="col-md-4 col-6 text-center text-white " >
 						<i class="fa-solid fa-hand-holding-dollar icon"></i>
 						<p class="p-suporte">Experimente por 7 dias e caso não goste te reembolsamos !</p>
 					</div>
 
-					<div class="col-4 text-center text-white">
+					<div class="col-md-4 col-6 text-center text-white">
 						<i class="fa-solid fa-shield icon"></i>
 						<p class="p-suporte">Ambiente seguro para todos meios de pagamento</p>
 					</div>
 
-					<div class="col-4 text-center text-white">
+					<div class="col-md-4 col-6 text-center text-white">
 						<i class="fa-solid fa-laptop-code icon"></i>
 						<p class="p-suporte">Assistência total sem sair de casa !</p>
 					</div>
 
-				</div> s
+				</div> 
 
-				<div class='row anime js' id='duvida'>
+				<div class='row anime js justify-content-center' id='duvida'>
 
-					<h2 class='col-10 mx-auto text-center h2-duvida  mb-5'>Principais duvidas</h2>
+					<h2 class='col-10 mx-auto text-center h2-duvida'>Principais duvidas</h2>
 
-					<div class='col-md-6  text-center  '>
-						<h3 class='h3-duvida'>Vou ser atentido qualquer hora ?</h3>
-						<p class="p-suporte">Nosso time de tecnicos irá lhe atender o mais rápido possível !</p>
+					<div class='col-md-6  text-center  ' style='border-bottom: 2px solid white;'>
+						<h3 class='h3-duvida'>Vou ser atentido <br>qualquer hora ?</h3>
+						<p class="p-suporte">Nosso time de tecnicos irá lhe <br>atender o mais rápido possível !</p>
 					</div>
 
-					<div class='col-md-6 text-center'>
+					<div class='col-md-6 text-center' style='border-bottom: 2px solid white;'>
 						<h3 class='h3-duvida'>Também vou ter suporte presencial assinando a plataforma ?</h3>
 						<p class="p-suporte">Sim, além do suporte online para serviços que necessitem de atendimento presencial nossos tecnicos vão até sua casa!</p>
 					</div>
@@ -162,90 +240,12 @@
 					</div>-->
 				
 				</div>
-
-			</section> <!-- Fim Suporte -->
-
-			<section id="feedback" class="py-5  anime js">
-				
-				<div class="row my-5">
-					<div class="col-12 text-center">
-						<h2 class="text-white">Nosso trabalho </h2>
-					</div>
-				</div>
-
-				<div class="row justify-content-center mt-5">
-				
-					<div class="col-md-4 col-10  mb-4 ">
-                        <video class="borda"   src='video/cliente1.mp4' controls >
-                        
-                        </video>		
-					</div>
-
-					<div class=" offset-md-2 col-md-4 col-10  mb-4">
-						
-							<video class="borda"  src='video/cliente2.mp4' controls >
-                        
-                            </video>			
-					</div>
-
-					<div class="col-md-4 col-10 mb-4">
-						
-						<video class="borda"  src='video/cristian.mp4' controls >
-                        
-                        </video>
-						
-
-						
-					</div>
-
-					<div class="offset-md-2 col-md-4 col-10">
-							
-						<video class="borda"  src='video/cliente3.mp4' controls >
-                        
-                        </video>
-
-						
-					</div>
-				
-				</div> <!-- Inicio Feedback -->
-
-			</section> <!-- Fim Feedback -->
-
-			<section class='quem-somos row justify-content-center' id='sobre-nos'>
-
-				<div class="col-12 text-center mt-5">
-					<h2 class="text-white h2-video">Sobre nós !</h2>
-				</div>	
-
-				<div class="col-9  text-center mt-2">
-					<p class="p-suporte">
-						Fascinados por esse mundo de computadores e tecnologia desde cedo, nós somos jovens empresários do interior de Goiás prontos
-						para revolucionar o Brasil no quesito de assistência e consultoria técnica.<br>
-						Conheça um pouco mais de nós clicando no botão abaixo !
-					</p>
-					
-					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-outline-info btn-lg' style='font-family: beach;'>Saiba mais</a>
-				</div>	
-
-				<div class='row justify-content-center'>
-
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/nattan.png')}}>
-
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/kayky.png')}}>
-
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/guizo.png')}}>
-
-				</div>
-
-				
-
-
-
-
 			
-			</section>
+			</section> 
+			<!-- Fim duvidas -->
 
-			<footer id="rodape" class=''> <!-- Inicio Rodape -->
+			<!-- Inicio Rodape -->
+			<footer id="rodape" class=''> 
 
 				<div class="row align-items-center  py-4 text-center" style='border-bottom: 2px solid gray; font-family: one'>
 					
@@ -267,7 +267,7 @@
 					<div class="col-md-4 col-12 text-white mt-2">
 						<h4>Quem somos</h4>
 						
-						<p class='text-white-50'>
+						<p class='text-white-50 p-2'>
 							Nós tivemos a idéia de criar uma startup para ajudar as pessoas de qualquer
 							idade, temos o intuito de simplificar a vida dessas pessoas
 							que acham que computadores, tecnologia e etc um bicho de 7 cabeças !
@@ -292,7 +292,8 @@
 
 				</div>
 				
-			</footer> <!-- Fim Rodape -->
+			</footer> 
+			<!-- Fim Rodape -->
 @endsection
 
 	

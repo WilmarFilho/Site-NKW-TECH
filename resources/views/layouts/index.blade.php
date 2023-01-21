@@ -51,10 +51,10 @@
     <div id="app" class='container-fluid'>
         <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm fixed-top">
             <div class="container">
-               <a id='btn-login' class="btn btn-outline-danger nav-link" href="{{ route('login') }}">{{ __('Área do Usuário') }}
+               <a id='btn-login' class="btn btn-outline-danger nav-link mt-3" href="{{ route('login') }}">{{ __('Área do Usuário') }}
                  
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">

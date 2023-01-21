@@ -15,12 +15,12 @@
 
         <div id='lista-asssinatura' class='text-center'>
             <h3 class='h3-assinatura'>Nossos beneficios :<h3>
-            <ul class='text-white mt-4' style='list-style: none'>
-                <li class='li-assinatura'>- Atendimento online para problemas gerais de computadores </li>
-                <li class='li-assinatura'>- Suporte e consultoria técnica o mais rápido possível </li>
-                <li class='li-assinatura'>- Atendimento presencial </li>
-                <li class='li-assinatura'>- Desconto em serviços presenciais</li> 
-                <li class='li-assinatura'>- Buscamos e entregamos</li>
+            <ul class='text-white mt-3 text-center' style=''>
+                <li class='li-assinatura'>Atendimento online para problemas gerais de computadores </li>
+                <li class='li-assinatura'>Suporte e consultoria técnica o mais rápido possível </li>
+                <li class='li-assinatura'>Atendimento presencial </li>
+                <li class='li-assinatura'>Desconto em serviços presenciais</li> 
+                <li class='li-assinatura'>Buscamos e entregamos</li>
             </ul>
         </div>
 
@@ -127,7 +127,7 @@
                     <label class='check-termos' for='termos' style='margin-left: 7px'>Marcando aqui você aceita nossos termos de serviço! </label>
                 </div>
                 <input type="hidden" name="lookup_key" value="1LsdrDHCT0bYlJFqpniUjfkg" />
-                <button class='mt-3 btn btn-danger text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</button>
+                <button class='mt-3 btn btn-success text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</button>
                 @if($errors != '[]')
                     <div class="alert alert-danger mt-3" role="alert">
                         <?php foreach ($errors->all() as $message) { ?>

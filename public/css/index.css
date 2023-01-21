@@ -1,6 +1,47 @@
 /*Responsividade*/
 
 @media (max-width: 475.98px) {
+
+	a.btn-size {
+		font-size: 1em !important;
+	}
+
+	p.p-video {
+		font-size: 1.1em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+	}
+
+	p.p-sobre-nos {
+		font-size: 1em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+		background-color: rgba(49, 2, 2, 0.5);
+		border-radius: 20px;
+		padding: 15px;
+	}
+	
+	h2.h2-sobre-nos {
+		font-family: beach;
+		font-size: 2.5em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+	iframe.borda {
+		border: none !important;
+		box-shadow: none !important;
+		border-radius: 10px;
+		height: 400px;
+		width: 100%;
+		background-color: rgb(0, 0, 0, .7);
+	}
+
 	div.fundo-logo {
 		background: url('../img/setup.jpg');
 		background-attachment: fixed;
@@ -52,10 +93,10 @@
 	}
 
 	p.p-suporte {
-		font-size: 1.2em;
+		font-size: 1.4em;
 		padding: 5px;
 		font-family: one;
-		margin-top: 30px;
+		margin-top: 5px;
 		text-shadow: 0 0 1em purple;
 	}
 
@@ -78,13 +119,61 @@
 		font-size: 2em;
 		color: lightgray;
 		font-family: beach;
+		margin-top: 10px;
 	}
 
+	h2.h2-feedback {
+		font-family:  beach;
+		font-size: 3em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 1em cyan;
+	}
 
+	h2.h2-video {
+		font-family: beach;
+		font-size: 1.8em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
 
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
+
+	a.btn-size {
+		font-size: 1em !important;
+	}
+
+	p.p-sobre-nos {
+		font-size: 1.3em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+		background-color: rgba(49, 2, 2, 0.5);
+		border-radius: 20px;
+		padding: 15px;
+	}
+	
+	h2.h2-sobre-nos {
+		font-family: beach;
+		font-size: 2.8em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+	iframe.borda {
+		border: none !important;
+		box-shadow: none !important;
+		border-radius: 10px;
+		height: 400px;
+		width: 100%;
+		background-color: rgb(0, 0, 0, .7);
+	}
+
 	h2.h2-carousel {
 		font-size: 2em;
 		font-weight: bolder;
@@ -148,7 +237,7 @@
 		font-size: 1.3em;
 		padding: 5px;
 		font-family: one;
-		margin-top: 30px;
+		margin-top: 5px;
 		text-shadow: 0 0 1em purple;
 	}
 
@@ -162,11 +251,69 @@
 		font-size: 2em;
 		color: lightgray;
 		font-family: beach;
+		margin-top: 10px;
+	}
+
+	h2.h2-feedback {
+		font-family:  beach;
+		font-size: 3.4em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 1em cyan;
+	}
+
+	h2.h2-video {
+		font-family: beach;
+		font-size: 1.5em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+	p.p-video {
+		font-size: 1.1em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
 	}
 
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+	
+	a.btn-size {
+		font-size: 1.3em !important;
+	}
+
+	p.p-sobre-nos {
+		font-size: 1.5em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+		background-color: rgba(49, 2, 2, 0.5);
+		border-radius: 20px;
+		padding: 15px;
+	}
+	
+	h2.h2-sobre-nos {
+		font-family: beach;
+		font-size: 3em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+	iframe.borda {
+		border: none !important;
+		box-shadow: none !important;
+		border-radius: 10px;
+		height: 400px;
+		width: 100%;
+		background-color: rgb(0, 0, 0, .7);
+	}
+
 	h2.h2-carousel {
 		font-size: 3em;
 		font-weight: bolder;
@@ -230,7 +377,7 @@
 		font-size: 1.6em;
 		padding: 5px;
 		font-family: one;
-		margin-top: 30px;
+		margin-top: 5px;
 		text-shadow: 0 0 1em purple;
 	}
 
@@ -244,10 +391,58 @@
 		font-size: 2.2em;
 		color: lightgray;
 		font-family: beach;
+		margin-top: 10px;
 	}
+
+	h2.h2-feedback {
+		font-family:  beach;
+		font-size: 4em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 1em cyan;
+	}
+
+	h2.h2-video {
+		font-family: beach;
+		font-size: 1.7em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+	p.p-video {
+		font-size: 1.3em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+	}
+
+
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+	p.p-sobre-nos {
+		font-size: 1.8em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+		background-color: rgba(49, 2, 2, 0.5);
+		border-radius: 20px;
+		padding: 15px;
+	}
+	
+	h2.h2-sobre-nos {
+		font-family: beach;
+		font-size: 4em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+
 	h2.h2-carousel {
 		font-size: 3em;
 		font-weight: bolder;
@@ -326,6 +521,22 @@
 		color: lightgray;
 		font-family: beach;
 	}
+
+	h2.h2-video {
+		font-family: beach;
+		font-size: 1.7em;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 0 0 0.2em purple;
+	}
+
+	p.p-video {
+		font-size: 1.3em;
+		color: white;
+		font-family: one;
+		margin-top: 10px;
+		text-shadow: 0 0 1em purple;
+	}
 }
 
 /*Formatações Gerais*/
@@ -369,6 +580,11 @@ body {
 	margin: 0;
 	background-color: black !important; 
 	--bs-body-color: black !important;
+}
+
+.container-fluid {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
 }
 
 /*Topo*/
@@ -448,6 +664,9 @@ body {
 .h2-carousel {
 	font-size: 5.2em;
 	font-weight: bolder;
+	background-color: rgb(0, 0, 0, .5);
+	border-radius: 15px;
+	padding: 25px;
 	font-family: beach;
 	text-shadow: 0 0 0.8em cyan;
 }
@@ -479,7 +698,7 @@ body {
 }
 
 .h2-video {
-	font-family: one;
+	font-family: beach;
 	font-size: 3em;
 	font-weight: 600;
 	font-style: italic;
@@ -497,7 +716,25 @@ body {
 	height: 500px;
 }
 
-/*Suporte*/
+.texto-video {
+	background-color: rgb(0, 0, 0, .5);
+	border-radius: 20px;
+	padding: 25px;
+}
+
+.p-video {
+	font-size: 1.8em;
+	color: white;
+	font-family: one;
+	margin-top: 10px;
+	text-shadow: 0 0 1em purple;
+}
+
+/*Duvidas*/
+
+#duvidas {
+	background-image: url('../img/bg10.jpg');
+}
 
 #garantia {
 	border: 2px double cyan;
@@ -515,20 +752,17 @@ body {
 
 .h2-duvida {
 	font-size: 4em;
-	color: lightgray;
+	color: white;
 	font-family: beach;
+	font-weight: 600;
+	font-style: italic;
+	text-shadow: 0 0 1em purple;
 }
 
 .h3-duvida {
 	font-size: 3em;
 	color: lightgray;
 	font-family: beach;
-}
-
-#suporte {
-	background: url('../img/bg10.jpg');
-	background-size: cover;
-	background-position: center;
 }
 
 .icon {
@@ -540,22 +774,21 @@ body {
 	font-size: 1.8em;
 	color: white;
 	font-family: one;
-	margin-top: 30px;
+	margin-top: 10px;
 	text-shadow: 0 0 1em purple;
 }
 
-/*Feedback*/
+/*Review*/
 
-#feedback {
-	background: url('../img/bg1.jpg');
+#review {
+	background: url('../img/bg10.jpg');
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 }
 
-#feedback h2 {
-	font-family:  Noto Sans, sans-serif;
-	font-size: 3em;
+.h2-feedback {
+	font-family:  beach;
+	font-size: 5em;
 	font-weight: 600;
 	font-style: italic;
 	text-shadow: 0 0 1em cyan;
@@ -569,7 +802,7 @@ body {
 
 .borda {
 	border:  3px solid cyan;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 1em cyan;
     height: 400px;
     width: 100%;
@@ -578,6 +811,35 @@ body {
 
 /*Sobre nós*/
 
-.quem-somos {
-	background-image: url('../img/bg10.jpg');
+#sobreNos {
+	background: url('../img/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
+
+.p-sobre-nos {
+	font-size: 1.8em;
+	color: white;
+	font-family: one;
+	margin-top: 10px;
+	text-shadow: 0 0 1em purple;
+	background-color: rgba(49, 2, 2, 0.5);
+	border-radius: 20px;
+	padding: 15px;
+}
+
+.h2-sobre-nos {
+	font-family: beach;
+	font-size: 5em;
+	font-weight: 600;
+	font-style: italic;
+	text-shadow: 0 0 0.2em purple;
+	
+}
+
+.btn-size {
+	font-size: 1.7em !important;
+}
+
+
