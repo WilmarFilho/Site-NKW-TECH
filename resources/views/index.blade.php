@@ -218,6 +218,7 @@
 					
 					<div class="col-3 ms-auto ">
 						<img src="img/logo.png" class="img-fluid">
+						
 					</div>
 
 				</div>
