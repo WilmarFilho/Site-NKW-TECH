@@ -18,7 +18,11 @@ use App\Models\chamado;
 
 Route::get('/', function () {
    return view('index');
-});
+})->name('index');
+
+Route::get('/pagina', function () {
+   return view('index_secundaria');
+})->name('pagina');
 
    // Rota de sucesso no pagamento //
 

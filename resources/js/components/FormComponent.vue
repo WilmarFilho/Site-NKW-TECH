@@ -23,7 +23,7 @@
 
                         <slot></slot>
 
-                        <button  type="submit" class="btn btn-danger mt-4">Finalizar</button>>
+                        <button  type="submit" class="btn btn-success mt-3">Enviar chamado</button>>
 
 
 

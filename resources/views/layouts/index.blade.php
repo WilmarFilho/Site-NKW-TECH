@@ -27,24 +27,28 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <script src='js/index.js'></script>
-
     <script> 
     
             $(document).ready(function(){
-				$('nav ul a').click(function(e){
+				
+                $('nav ul a .rolagem').click(function(e){
 					e.preventDefault()
 					var id = $(this).attr('href');
-						targetOffset = $(id).offset().top;
-
+					targetOffset = $(id).offset().top;
+                    var dist = targetOffset - 200
 					$('html, body').animate({
-						scrollTop: targetOffset - 100
+						scrollTop: dist
 					}, 500)
 
+                    console.log(targetOffset)
+                    console.log(dist)
 				})
+
+                
 			});
     
     </script>
+
 
 </head>
 <body>
@@ -52,22 +56,25 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm fixed-top">
             <div class="container">
                <a id='btn-login' class="btn btn-outline-danger nav-link mt-3" href="{{ route('login') }}">{{ __('Área do Usuário') }}
-                 
+
                 </a>
                 <button class="navbar-toggler mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav  ms-auto mt-1">
+                    <ul class="navbar-nav nav-rodape  ms-auto mt-1">
                             @if (Route::has('login'))
-                                <li class="nav-item text-center">
-                                    <a class="nav-link" href="#video">{{ __('Nossa Plataforma') }}</a> 
+                                 <li class="nav-item text-center">
+                                    <a class="nav-link " href="{{route('index')}}">{{ __('Home') }}</a> 
                                 </li>
                                 <li class="nav-item text-center">
-                                    <a class="nav-link" href="#feedback">{{ __('Nossos clientes') }}</a> 
+                                    <a class="nav-link rolagem" href="#review">{{ __('Nossos clientes') }}</a> 
                                 </li>
-                                <li class="nav-item text-center">
-                                    <a class="nav-link" href="#sobre-nos">{{ __('Sobre nós') }}</a> 
+								<li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="#sobreNos">{{ __('Sobre nós') }}</a> 
+                                </li>
+                                <li class="nav-item  text-center">
+                                    <a class="nav-link" href="{{ route('pagina') }}">{{ __('Duvidas e Garantias') }}</a> 
                                 </li>
                              
                             @endif

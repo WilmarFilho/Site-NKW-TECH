@@ -36,13 +36,13 @@
 			<!-- Fim Topo -->
 
 			<!-- Inicio Carousel -->
-			<div id="carousel" class="carousel slide anime js" data-bs-ride="carousel">
+			<div id="carousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					
 					<div class="carousel-item active img-carousel">
 						<div  class="d-flex justify-content-center h-100">
 							<div class="align-self-center">
-								<h2 class="h2-carousel text-white  text-center ">Já teve que levar seu pc <br>na assistência ?</h2>
+								<h2 class="h2-carousel text-white  text-center ">Já teve que levar seu pc <br>na assistência?</h2>
 								<h3 class="h3-carousel text-white text-center">Imagine ter um suporte sem sair de casa</h3>
 								
 							</div>
@@ -72,7 +72,7 @@
 			<!-- Fim Carousel -->  											
 			
 			<!-- Inicio Video Principal -->
-			<section id="video" class="py-2 pt-4 anime js">
+			<section id="video" class="py-2 pt-4 ">
 				
 				<div class="row  justify-content-center  ">
 					
@@ -121,7 +121,7 @@
 			<!-- Fim Video Principal -->
 
 			<!-- Inicio Reviews -->
-			<section id="review" class="py-2 anime js"> 
+			<section id="review" class="py-2 "> 
 				
 				<div class="row my-5">
 					<div class="col-12 text-center">
@@ -161,7 +161,7 @@
 			<!-- Fim Reviews -->
 
 			<!-- Inicio Sobre Nós -->
-			<section id="sobreNos" class="row justify-content-center anime js">
+			<section id="sobreNos" class="row justify-content-center ">
 				
 				<div class="col-12 text-center mt-5">
 					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
@@ -191,59 +191,6 @@
 			</section>
 			<!-- Fim Sobre Nós -->
 
-			<!-- Inicio duvidas -->
-			<section class='quem-somos    py-2  anime js' id='duvidas'> <!-- Inicio Suporte -->
-
-				<div class="row anime js justify-content-center" id='garantia'>
-					
-					<h2 class='col-10 mx-auto text-center h2-duvida mb-5'>Garantimos seu bem estar</h2>
-
-					<div class="col-md-4 col-6 text-center text-white " >
-						<i class="fa-solid fa-hand-holding-dollar icon"></i>
-						<p class="p-suporte">Experimente por 7 dias e caso não goste te reembolsamos !</p>
-					</div>
-
-					<div class="col-md-4 col-6 text-center text-white">
-						<i class="fa-solid fa-shield icon"></i>
-						<p class="p-suporte">Ambiente seguro para todos meios de pagamento</p>
-					</div>
-
-					<div class="col-md-4 col-6 text-center text-white">
-						<i class="fa-solid fa-laptop-code icon"></i>
-						<p class="p-suporte">Assistência total sem sair de casa !</p>
-					</div>
-
-				</div> 
-
-				<div class='row anime js justify-content-center' id='duvida'>
-
-					<h2 class='col-10 mx-auto text-center h2-duvida'>Principais duvidas</h2>
-
-					<div class='col-md-6  text-center  ' style='border-bottom: 2px solid white;'>
-						<h3 class='h3-duvida'>Vou ser atentido <br>qualquer hora ?</h3>
-						<p class="p-suporte">Nosso time de tecnicos irá lhe <br>atender o mais rápido possível !</p>
-					</div>
-
-					<div class='col-md-6 text-center' style='border-bottom: 2px solid white;'>
-						<h3 class='h3-duvida'>Também vou ter suporte presencial assinando a plataforma ?</h3>
-						<p class="p-suporte">Sim, além do suporte online para serviços que necessitem de atendimento presencial nossos tecnicos vão até sua casa!</p>
-					</div>
-
-					<!--<div class='col-6 text-center'>
-						<h3 class='h3-duvida'>pergunta</h3>
-						<p class="p-suporte">tetetetettetete</p>
-					</div>
-
-					<div class='col-6 text-center'>
-						<h3 class='h3-duvida'>Pergunta 1</h3>
-						<p class="p-suporte">tetetetettetete</p>
-					</div>-->
-				
-				</div>
-			
-			</section> 
-			<!-- Fim duvidas -->
-
 			<!-- Inicio Rodape -->
 			<footer id="rodape" class=''> 
 
@@ -252,14 +199,17 @@
 					<div class=" col-md-4 col-12   text-light">
 						<h4>Menu</h4>
 						<ul class="navbar-nav nav-rodape ">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="#video">{{ __('Nossa Plataforma') }}</a> 
+								<li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="{{route('index')}}">{{ __('Home') }}</a> 
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="#feedback">{{ __('Nossos clientes') }}</a> 
+                                <li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="#review">{{ __('Nossos clientes') }}</a> 
+                                </li>
+								<li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="#sobreNos">{{ __('Sobre nós') }}</a> 
                                 </li>
 								<li class="nav-item ">
-                                    <a class="nav-link" href="#sobre-nos">{{ __('Sobre nós') }}</a> 
+                                    <a class="nav-link" href="{{route('pagina')}}">{{ __('Duvidas e Garantias') }}</a> 
                                 </li>
                     	</ul>
 					</div>

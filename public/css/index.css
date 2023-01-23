@@ -601,7 +601,7 @@ body {
 }
 
 .bg-nav-custom {
-	background: rgb(0, 0, 0, .8);
+	background: rgb(0, 0, 0, .9);
 }
 
 #btn-login {
@@ -706,7 +706,7 @@ body {
 }
 
 #video {
-	background: url('../img/bg1.jpg');
+	background: url('../img/bg10.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -781,7 +781,7 @@ body {
 /*Review*/
 
 #review {
-	background: url('../img/bg10.jpg');
+	background: url('../img/bg1.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -812,7 +812,7 @@ body {
 /*Sobre nós*/
 
 #sobreNos {
-	background: url('../img/bg1.jpg');
+	background: url('../img/bg10.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
