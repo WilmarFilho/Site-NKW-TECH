@@ -73,6 +73,12 @@ Route::get('/adiciona', function () {
 
 Route::resource('chat', 'App\Http\Controllers\ChatController')->middleware('verified')->middleware('premium');
 
+// Montagem de pcs
+
+Route::get('/montagem/{tipo}', [App\Http\Controllers\MontagemController::class, 'index'])->name('montagem')->middleware('verified')->middleware('premium');
+
+Route::post('/ajax-montagem/{tipo}/{valor}', [App\Http\Controllers\MontagemController::class, 'ajax'])->name('ajax-montagem')->middleware('verified')->middleware('premium');
+
 // Para adms
 
 Route::post('/admin',[App\Http\Controllers\PerfilController::class, 'admin'])->name('admin')->middleware('verified')->middleware('premium');

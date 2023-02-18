@@ -38,14 +38,65 @@
     
 </div>
 
-<div class='row  teste justify-content-center align-items-center anime js' style='height: 700px'>
+<div class=' row  teste justify-content-center align-items-center anime js' style='height: 700px'>
     
-        <div class='col-10 text-center mt-3'>
-            <h2 class='h2-montagem mt-5'>Quer ajuda pra montar seu pc ?</h2>
+        <div class='montagem col-10 text-center mt-3'>
+            <h2 class='h2-montagem mt-4'>Quer ajuda pra montar seu pc ?</h2>
             <p class='p-montagem'>Acha dificil ou não tem nem ideia de onde começar para montar seu computador? <br>Deixe que nós te ajudamos nisso !!!</p>
-            <button class='btn btn-success'>Em breve ...</button>
+            <a href="{{route('montagem', ['tipo' => 'placam'])}}" class='mb-3 btn btn-success'>Clique aqui</a>
         </div>
 
 </div>
+
+            <footer id="rodape" class=''> 
+
+				<div class="row align-items-center  py-4 text-center" style='border-bottom: 2px solid gray; font-family: one'>
+					
+					<div class=" col-md-4 col-12   text-light">
+						<h4>Menu</h4>
+						<ul class="navbar-nav nav-rodape ">
+								<li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="{{route('perfil')}}">{{ __('Perfil') }}</a> 
+                                </li>
+                                <li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="{{ route('ajuda') }}">{{ __('Ajuda AnyDesk') }}</a> 
+                                </li>
+								<li class="nav-item text-center">
+                                    <a class="nav-link rolagem" href="{{route('chamado.index')}}">{{ __('Chamados') }}</a> 
+                                </li>
+								<li class="nav-item ">
+                                    <a class="nav-link" href="{{route('montagem', ['tipo' => 'placam'])}}">{{ __('Montagem') }}</a> 
+                                </li>
+                    	</ul>
+					</div>
+					
+					<div class="col-md-4 col-12 text-white mt-2">
+						<h4>Suporte</h4>
+						
+						<p class='text-white-50 p-2'>
+							Encontrou algum erro ou teve alguma dúvida? Relate no nosso email !
+						</p>
+                        <p class='text-white-50'>contato@nkwtech.com</p>
+
+					</div>
+
+					<div class="col-md-2 offset-md-1 col-12 ">
+						<img src="img/logo.png" class="img-fluid">
+					</div>
+				</div>
+				
+				<div class='row justify-content-center '>
+					<div class="ml-2 mt-3 col-6   text-light text-center">
+						<p class=''>Copyright (c) 2023 Nkw tech -  Todos os direitos reservados
+						</p>
+						<div class='mb-2'>
+							<a href='https://www.instagram.com/nkw_tech/' class='btn btn-dark'><i class="fa-brands fa-instagram"></i></a>
+							<a href='https://www.tiktok.com/@nkwtech' class='btn btn-dark m-1'><i class="fa-brands fa-tiktok"></i></a>
+						</div>
+					</div>
+
+				</div>
+				
+			</footer> 
 
 @endsection

@@ -137,3 +137,42 @@ body {
 #home a {
     color: aliceblue;
 }
+
+
+
+.h2-montagem {
+    font-family: beach;
+    color: white;
+    text-shadow: 0 0 1em purple;
+    font-size: 3em;
+}
+
+.h4-montagem {
+    font-family: beach;
+    color: white;
+    text-shadow: 0 0 1em cyan;
+    letter-spacing: 2px;
+}
+
+.h3-montagem {
+    font-family: one;
+    color: white;
+    text-shadow: 0 0 1em cyan;
+    letter-spacing: 2px;
+}
+
+.label-montagem {
+    font-family: one;
+    color: white;
+    font-size: 1.4em;
+}
+
+.p-montagem {
+    color: white;
+    font-size: 1.3em;
+}
+
+.p-final-montagem {
+    font-family: one;
+    font-size: 1.4em;
+}

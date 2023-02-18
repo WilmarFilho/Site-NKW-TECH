@@ -48,6 +48,9 @@ app.component('formdados-component', FormDadosComponent);
 import InputComponent from './components/InputComponent.vue';
 app.component('input-component', InputComponent);
 
+import MontagemComponent from './components/MontagemComponent.vue';
+app.component('montagem-component', MontagemComponent);
+
 
 
 /**

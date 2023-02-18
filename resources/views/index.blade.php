@@ -234,6 +234,7 @@
 					<div class="ml-2 mt-3 col-6   text-light text-center">
 						<p class=''>Copyright (c) 2023 Nkw tech -  Todos os direitos reservados
 						</p>
+						<p>contato@nkwtech.com</p>
 						<div class='mb-2'>
 							<a href='https://www.instagram.com/nkw_tech/' class='btn btn-light'><i class="fa-brands fa-instagram"></i></a>
 							<a href='https://www.tiktok.com/@nkwtech' class='btn btn-light m-1'><i class="fa-brands fa-tiktok"></i></a>

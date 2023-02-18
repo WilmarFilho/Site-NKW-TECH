@@ -26,6 +26,110 @@
     <!-- Scripts -->
      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <script>
+
+        $(document).ready(function(){
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+                
+            $("#escolha").on('change', function(){
+
+                $('#descricao').fadeOut()
+                $('#foto').fadeOut()
+
+                let valorSelect = document.getElementById('escolha').value;
+                
+                let tipo = document.getElementById('hardware').innerHTML;
+              
+                let rota = '/ajax-montagem/' + tipo + '/' + valorSelect
+            
+                        
+                $.ajax({
+                    url: rota,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    
+                    success: function(data) {
+                        
+
+                        $("#marca").html(data['marca'])
+                        $("#geracao").html(data['geracao'])
+                        $("#frequencia").html(data['frequencia'])
+                        $("#memoria").html(data['memoria'] + 'gb')
+                        $("#capacidade").html(data['capacidade'])
+                        $("#potencia").html(data['potenciaf'])
+                        $("#resumo").html(data['descricao'])
+                        $("#modelo").html(data['modelo'])
+                        $("#socket").attr("value", data['socket'] )
+                        $("#ddr").attr("value", data['ddr'] )
+                        $("#ngeracao").attr("value", data['ngeracao'] ) 
+                        $("#potencia").attr("value", data['potencia'] )
+
+                        var urlFoto = "http://localhost:8000/" + data['foto']
+
+                        $("#foto").attr("src", urlFoto )
+
+                        $('#descricao').fadeIn()
+                        $('#foto').fadeIn()
+                            
+                        
+                        
+                        if (data['modelo'] == ''  || data['modelo'] == null || data['modelo'] == ' ') {
+                            $("#rowModelo").fadeOut() 
+                        } else {
+                            $("#rowModelo").fadeIn() 
+                        }
+
+                        if (data['geracao'] == '' || data['geracao'] == null) {
+                            $("#rowGeracao").fadeOut() 
+                        } else {
+                            $("#rowGeracao").fadeIn() 
+                        }
+
+                        if (data['frequencia'] == '' || data['frequencia'] == null) {
+                            $("#rowFrequenciaR").fadeOut() 
+                        } else {
+                            $("#rowFrequenciaR").fadeIn() 
+                        }
+
+
+                        if (data['memoria'] == '' || data['memoria'] == null) {
+                            $("#rowRamvideo").fadeOut() 
+                        } else {
+                            $("#rowRamvideo").fadeIn() 
+                        }
+
+                        if (data['capacidade'] == '' || data['capacidade'] == null) {
+                            $("#rowCapacidade").fadeOut() 
+                        } else {
+                            $("#rowCapacidade").fadeIn() 
+                        }
+
+                        if (data['potenciaf'] == '' || data['potenciaf'] == null || data['potenciaf'] == ' ') {
+                            $("#rowPotencia").fadeOut() 
+                        } else {
+                            $("#rowPotencia").fadeIn() 
+                        }
+                        
+                    
+                        
+                    }
+                });
+
+                
+
+            });
+
+        });
+
+
+    </script>
+
 </head>
 <body>
     <div id="app">
