@@ -56,16 +56,16 @@
 						<h4>Menu</h4>
 						<ul class="navbar-nav nav-rodape ">
 								<li class="nav-item text-center">
-                                    <a class="nav-link rolagem" href="{{route('perfil')}}">{{ __('Perfil') }}</a> 
+                                    <a class="nav-link rolagem m-2" href="{{route('perfil')}}">{{ __('Perfil') }}</a> 
                                 </li>
                                 <li class="nav-item text-center">
-                                    <a class="nav-link rolagem" href="{{ route('ajuda') }}">{{ __('Ajuda AnyDesk') }}</a> 
+                                    <a class="nav-link rolagem m-2" href="{{ route('ajuda') }}">{{ __('Ajuda AnyDesk') }}</a> 
                                 </li>
 								<li class="nav-item text-center">
-                                    <a class="nav-link rolagem" href="{{route('chamado.index')}}">{{ __('Chamados') }}</a> 
+                                    <a class="nav-link rolagem m-2" href="{{route('chamado.index')}}">{{ __('Chamados') }}</a> 
                                 </li>
 								<li class="nav-item ">
-                                    <a class="nav-link" href="{{route('montagem', ['tipo' => 'placam'])}}">{{ __('Montagem') }}</a> 
+                                    <a class="nav-link m-2" href="{{route('montagem', ['tipo' => 'placam'])}}">{{ __('Montagem') }}</a> 
                                 </li>
                     	</ul>
 					</div>
@@ -81,7 +81,7 @@
 					</div>
 
 					<div class="col-md-2 offset-md-1 col-12 ">
-						<img src="img/logo.png" class="img-fluid">
+						<img src="img/geral/logo.png" class="img-fluid">
 					</div>
 				</div>
 				

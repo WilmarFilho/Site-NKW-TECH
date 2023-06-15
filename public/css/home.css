@@ -3,7 +3,7 @@
 @media (max-width: 475.98px) {
 	
     div#topo {
-        background: url('../img/setup.jpg') ;
+        background: url('../img/geral/setup.jpg') ;
         background-size: cover;
         height: 550px;
     }
@@ -65,9 +65,20 @@
         border-radius: 4px;
     }
 
+    ul.nav-rodape {
+		flex-direction: row !important;
+		justify-content: center !important;
+	}
+
 }
 
 @media (min-width: 475.99px) and (max-width: 575.98px) {
+
+    ul.nav-rodape {
+		flex-direction: row !important;
+		justify-content: center !important;
+	}
+
     h3.h3-intro {
         color: darkred;
         font-size: 6em;
@@ -105,6 +116,12 @@
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+
+    ul.nav-rodape {
+		flex-direction: row !important;
+		justify-content: center !important;
+	}
+
     h2.h2-montagem {
         font-family: one;
         color: aliceblue;
@@ -123,6 +140,13 @@
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+    ul.nav-rodape {
+		flex-direction: row !important;
+		justify-content: center !important;
+	}
+
+    
     h2.h2-montagem {
         font-family: one;
         color: aliceblue;
@@ -169,7 +193,7 @@ body {
 /*  Topo  */
 
 #topo {
-    background: url('../img/setup.jpg') ;
+    background: url('../img/geral/setup.jpg') ;
     background-size: cover;
     height: 850px;
 }
@@ -240,7 +264,7 @@ a {
 
 
 .teste {
-    background: url('../img/pc3.jpg') ;
+    background: url('../img/index/pc3.jpg') ;
     background-size: cover;
 }
 
@@ -252,7 +276,7 @@ a {
 }
 
 .fundo {
-    background: url('../img/teste3.jpg') ;
+    background: url('../img/geral/teste3.jpg') ;
     background-size: cover;
     background-attachment: fixed;
     border-bottom: 4px double purple;

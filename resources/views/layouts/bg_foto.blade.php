@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Icon -->
-    <link rel="icon"  href="{{asset('img/icon.png')}}">
+    <link rel="icon"  href="{{asset('img/geral/icon.png')}}">
 
     <!-- Style custom  -->
     <link rel='stylesheet' href={{asset('css/chamados.css')}}>
@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    <img src={{asset('img/logo.png')}} class='img-fluid' width='250'>
+                    <img src={{asset('img/geral/logo.png')}} class='img-fluid' width='250'>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

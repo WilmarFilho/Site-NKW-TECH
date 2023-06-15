@@ -11,7 +11,7 @@
 
 
     <!-- Icon -->
-    <link rel="icon"  href="{{asset('img/icon.png')}}">
+    <link rel="icon"  href="{{asset('img/geral/icon.png')}}">
 
     <!-- Style custom  -->
     <link rel='stylesheet' href='css/index.css'>

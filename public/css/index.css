@@ -43,7 +43,7 @@
 	}
 
 	div.fundo-logo {
-		background: url('../img/setup.jpg');
+		background: url('../img/geral/setup.jpg');
 		background-attachment: fixed;
 		background-size: cover;	
 		height: 350px;
@@ -191,7 +191,7 @@
 	}
 
 	div.fundo-logo {
-		background: url('../img/setup.jpg');
+		background: url('../img/geral/setup.jpg');
 		background-attachment: fixed;
 		background-size: cover;	
 		height: 350px;
@@ -331,7 +331,7 @@
 	}
 
 	div.fundo-logo {
-		background: url('../img/setup.jpg');
+		background: url('../img/geral/setup.jpg');
 		background-attachment: fixed;
 		background-size: cover;	
 		height: 350px;
@@ -460,7 +460,7 @@
 	}
 
 	div.fundo-logo {
-		background: url('../img/setup.jpg');
+		background: url('../img/geral/setup.jpg');
 		background-attachment: fixed;
 		background-size: cover;	
 		height: 350px;
@@ -616,7 +616,7 @@ body {
 }
 
 .fundo-logo {
-	background: url('../img/setup.jpg');
+	background: url('../img/geral/setup.jpg');
 	background-size: cover;	
 	height: 600px;
 	animation: 2s translatex forwards;
@@ -644,11 +644,11 @@ body {
 /*Carousel*/
 
 .img-carousel {
-	background: url('../img/setup4.jpg');
+	background: url('../img/index/setup4.jpg');
 }
 
 .img-carousel-2 {
-	background: url('../img/setup3.jpg');	
+	background: url('../img/index/setup3.jpg');	
 }
 
 .img-carousel, .img-carousel-2 {
@@ -706,7 +706,7 @@ body {
 }
 
 #video {
-	background: url('../img/bg10.jpg');
+	background: url('../img/index/bg10.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -733,7 +733,7 @@ body {
 /*Duvidas*/
 
 #duvidas {
-	background-image: url('../img/bg10.jpg');
+	background-image: url('../img/index/bg10.jpg');
 }
 
 #garantia {
@@ -781,7 +781,7 @@ body {
 /*Review*/
 
 #review {
-	background: url('../img/bg1.jpg');
+	background: url('../img/index/bg1.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -812,7 +812,7 @@ body {
 /*Sobre nós*/
 
 #sobreNos {
-	background: url('../img/bg10.jpg');
+	background: url('../img/index/bg10.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;

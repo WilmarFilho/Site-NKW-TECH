@@ -179,11 +179,11 @@
 
 				<div class='row justify-content-center mt-3'>
 
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/nattan.png')}}>
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/index/nattan.png')}}>
 
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/kayky.png')}}>
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/index/kayky.png')}}>
 
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/guizo.png')}}>
+					<img class='col-md-3 col-4 img-fluid' src={{asset('img/index/guizo.png')}}>
 
 				</div>
 				 <!-- Inicio Feedback -->
@@ -226,7 +226,7 @@
 					</div>
 
 					<div class="col-md-2 offset-md-1 col-12 ">
-						<img src="img/logo.png" class="img-fluid">
+						<img src="img/geral/logo.png" class="img-fluid">
 					</div>
 				</div>
 				
