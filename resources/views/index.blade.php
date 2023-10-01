@@ -36,7 +36,7 @@
 			<!-- Fim Topo -->
 
 			<!-- Inicio Carousel -->
-			<div id="carousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+			<div id="carousel" class="carousel slide d-md-block" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					
 					<div class="carousel-item active img-carousel">
@@ -72,7 +72,7 @@
 			<!-- Fim Carousel -->  											
 			
 			<!-- Inicio Video Principal -->
-			<section id="video" class="py-2 pt-4 ">
+			<section id="video">
 				
 				<div class="row  justify-content-center  ">
 					
@@ -81,7 +81,7 @@
 						</div>	
 					
 						<div class="col-md-6 col-lg-5 col-9 mx-auto" >
-							<iframe class='video borda' width="560" height="315" src="https://www.youtube.com/embed/glAAj2FDUJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe class='video video-p' width="560" height="315" src="https://www.youtube.com/embed/glAAj2FDUJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 						</div>
 
 						<div class="col-md-8  text-center col-lg-8 col-11 mx-auto texto-video">
@@ -104,9 +104,9 @@
 							<?php if(isset(auth()->user()->assinatura) and auth()->user()->assinatura == 'premium') { ?>
 								<h4 class='text-white' style='font-family: one;'>{{$msg}}</h4>
 							<?php } else { ?>
-								<a  href="{{route('assinar')}}"  class='btn btn-success text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
+								<a  href="{{route('assinar')}}"  class='mb-2 btn btn-success text-center mx-auto carousel-btn' id="checkout-and-portal-button" type="submit">Garanta sua vaga</a>
 								<br>
-								<small class='mt-2 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou crie sua conta primeiro !</small>
+								<small class='mt-5 text-white' Style='font-size: .9em; font-family: one;'>Faça login ou crie sua conta primeiro !</small>
 							<?php } ?>
 							
 							
@@ -121,17 +121,17 @@
 			<!-- Fim Video Principal -->
 
 			<!-- Inicio Reviews -->
-			<section id="review" class="py-2 "> 
+			<section id="review" class="py-6"> 
 				
-				<div class="row my-5">
+				<div class="row mb-5">
 					<div class="col-12 text-center">
-						<h2 class="h2-feedback text-white">Revolucionando <br>o mercado </h2>
+						<h2 class="h2-feedback text-white">Revolucionando o mercado </h2>
 					</div>
 				</div>
 
 				<div class="row justify-content-center mt-5">
 				
-					<div class="col-md-4 col-6  mb-4 " style='padding-left: 20px; padding-right: 20px '>
+					<!--<div class="col-md-4 col-6  mb-4 " style='padding-left: 20px; padding-right: 20px '>
 
                         <iframe class='borda' width="260" height="315" src="https://www.youtube.com/embed/rjTsS5OTGOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
 					
@@ -153,17 +153,97 @@
 							
 						<iframe class='borda' width="560" height="315" src="https://www.youtube.com/embed/1qiyo1jABaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+					</div>-->
+
+					<div class="review col-10 row  my-5" >
+
+						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
+                        	
+								<h3 class='desc-review'>"Indico a NKW para qualquer serviço ligado á computadores"</h3>
+							
+								<p class='nome-review'>Fernanda Martins - Proprietária da Philly's Idiomas</p>
+								
+								<img class='foto-review img-fluid col-4 col-md-2 justify-content-center' src={{asset('img/index/foto1.jpeg')}}>
+
+						</div>
+
+						<div class='row col-md-4 col-10 offset-1'> 
+                        	<iframe class='borda' width="260" height="315" src="https://www.youtube.com/embed/rjTsS5OTGOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
+						</div>
+
 					</div>
-				
+
+					<div class='col-10 linha-review'></div>
+
+					<div class="review col-10 row my-5" >
+
+						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
+                        	
+								<h3 class='desc-review'>"A NKW simplesmente resolveu meu problema na hora que eu precisava, é uma empresa de responsabilidade na qual eu confiei meu notebook"</h3>
+							
+								<p class='nome-review'>Cristian Hernane - Influencer e Empresário</p>
+
+								<img class='foto-review img-fluid col-4 col-md-2 justify-content-center' src={{asset('img/index/foto2.jpeg')}}>
+							
+						</div>
+						
+						<div class='row col-md-4 col-10 offset-1'>
+                        	<iframe class='borda' width="260" height="315" src="https://www.youtube.com/embed/H1MNDDL8md0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>		
+						</div>
+
+					</div>
+
+					<div class='col-10 linha-review'></div>
+
+					<div class="review col-10 row my-5" >
+
+						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
+                        	
+								<h3 class='desc-review'>"O preço é ótimo, acesível para todos e o trabalho é maravilhoso"</h3>
+							
+								<p class='nome-review'>Ana Beatriz - Graduada em letras</p>
+
+								<img class='foto-review img-fluid col-4 col-md-2 justify-content-center' src={{asset('img/index/foto3.jpeg')}}>
+							
+						</div>
+
+						<div class='row col-md-4 col-10 offset-1'> 
+                        	<iframe class='borda' width="560" height="315" src="https://www.youtube.com/embed/YkUSl6n8sN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+
+					</div>
+					
+					<div class='col-10 linha-review'></div>
+
+					<div class="review col-10 row my-5" >
+
+						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
+                        	
+							<h3 class='desc-review'>"Eles resolveram meu problema em 20 minutos"</h3>
+							
+							<p class='nome-review'>Vitória - Estudante</p>
+
+							<img class='foto-review img-fluid col-4 col-md-2 justify-content-center' src={{asset('img/index/foto4.jpeg')}}>
+							
+						</div>
+						
+						<div class='row col-md-4 col-10 offset-1'> 
+                        	<iframe class='borda col-12' width="560" height="215" src="https://www.youtube.com/embed/1qiyo1jABaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+
+					</div>
+
+					<div class='col-10 linha-review'></div>
+
 				</div>
 
 			</section> 
 			<!-- Fim Reviews -->
 
 			<!-- Inicio Sobre Nós -->
-			<section id="sobreNos" class="row justify-content-center ">
+			<section id="sobreNos" class="pt-6 row justify-content-center ">
 				
-				<div class="col-12 text-center mt-5">
+				<div class="col-12 text-center">
 					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
 				</div>	
 
@@ -174,7 +254,7 @@
 						Conheça um pouco mais de nós clicando no botão abaixo !
 					</p>
 					
-					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size ' style='font-family: beach;'>Saiba mais</a>
+					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size mb-4' style='font-family: beach;'>Saiba mais</a>
 				</div>	
 
 				<div class='row justify-content-center mt-3'>

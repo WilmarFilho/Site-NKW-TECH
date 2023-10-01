@@ -9,7 +9,6 @@
     }
 
     div#textos {
-        background-color: rgb(0, 0, 0, .1);
         padding: 30px;
         border-radius: 15px;
     }
@@ -19,7 +18,6 @@
         margin-top: 45px;
         font-size: 3em; 
         color: white;
-        text-shadow: 0 0 0.8em cyan;
     }
 
     a.a_home_nav {
@@ -27,7 +25,6 @@
         font-family: beach;
         color: rgb(255, 255, 255);
         font-style: italic;
-        text-shadow: 0 0 0.8em cyan;
     }
 
     h3.h3-intro {
@@ -52,15 +49,13 @@
     h2.h2-montagem {
         font-family: one;
         color: aliceblue;
-        text-shadow: 0 0 1em purple;
         font-size: 3em;
     }
 
     p.p-montagem {
         font-size: 1.4em;
         color: aliceblue;
-        font-family: beach;
-        background-color: rgb(0, 0, 0, .8);
+        font-family: roboto;
         padding: 10px;
         border-radius: 4px;
     }
@@ -101,15 +96,13 @@
     h2.h2-montagem {
         font-family: one;
         color: aliceblue;
-        text-shadow: 0 0 1em purple;
         font-size: 3em;
     }
 
     p.p-montagem {
         font-size: 1.6em;
         color: aliceblue;
-        font-family: beach;
-        background-color: rgb(0, 0, 0, .8);
+        font-family: roboto;
         padding: 10px;
         border-radius: 4px;
     }
@@ -125,15 +118,13 @@
     h2.h2-montagem {
         font-family: one;
         color: aliceblue;
-        text-shadow: 0 0 1em purple;
         font-size: 3em;
     }
 
     p.p-montagem {
         font-size: 1.6em;
         color: aliceblue;
-        font-family: beach;
-        background-color: rgb(0, 0, 0, .8);
+        font-family: roboto;
         padding: 10px;
         border-radius: 4px;
     }
@@ -150,15 +141,13 @@
     h2.h2-montagem {
         font-family: one;
         color: aliceblue;
-        text-shadow: 0 0 1em purple;
         font-size: 3em;
     }
 
     p.p-montagem {
         font-size: 1.6em;
         color: aliceblue;
-        font-family: beach;
-        background-color: rgb(0, 0, 0, .8);
+        font-family: roboto;
         padding: 10px;
         border-radius: 4px;
     }
@@ -178,6 +167,11 @@
 }
 
 @font-face {
+	font-family: roboto;
+	src: url('../fonts/roboto.woff');
+}
+
+@font-face {
 	font-family: one;
 	src: url('../fonts/one.woff');
 }
@@ -193,7 +187,11 @@ body {
 /*  Topo  */
 
 #topo {
-    background: url('../img/geral/setup.jpg') ;
+    background-image: linear-gradient(
+		to bottom,
+		rgb(0,0,0, 0.9),
+		rgba(22, 22, 22, 0.4)
+	  ), url('../img/geral/setup.jpg');
     background-size: cover;
     height: 850px;
 }
@@ -207,11 +205,9 @@ body {
     font-family: 'beach';
     font-size: 5em; 
     color: white;
-    text-shadow: 0 0 0.8em cyan;
 }
 
 #textos {
-    background-color: rgb(0, 0, 0, .8);
     padding: 30px;
     border-radius: 15px;
 }
@@ -239,7 +235,6 @@ body {
     font-family: beach;
     color: rgb(255, 255, 255);
     font-style: italic;
-    text-shadow: 0 0 0.8em cyan;
 }
 
 a {
@@ -264,38 +259,41 @@ a {
 
 
 .teste {
-    background: url('../img/index/pc3.jpg') ;
+    background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(22, 22, 22, 0.9)
+	  ), url('../img/index/pc3.jpg');
     background-size: cover;
 }
 
 .h2-montagem {
     font-family: one;
     color: aliceblue;
-    text-shadow: 0 0 1em purple;
     font-size: 5em;
 }
 
 .fundo {
-    background: url('../img/geral/teste3.jpg') ;
+    background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(15, 15, 15, 0.8)
+	  ), url('../img/index/bgteste1.jpg');
     background-size: cover;
     background-attachment: fixed;
-    border-bottom: 4px double purple;
-    border-top: 4px double purple;
+    border-bottom: 4px double red;
+    border-top: 4px double red;
    
 }
 
 .p-montagem {
     font-size: 2em;
     color: aliceblue;
-    font-family: beach;
+    font-family: roboto;
 }
 
 
 
-.montagem {
-    background-color: rgb(0, 0, 0, .8);
-    border-radius: 10px;
-}
 
 .js .anime {
 	opacity: 0;

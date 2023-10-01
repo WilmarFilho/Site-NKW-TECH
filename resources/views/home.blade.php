@@ -54,7 +54,7 @@
 					
 					<div class=" col-md-4 col-12   text-light">
 						<h4>Menu</h4>
-						<ul class="navbar-nav nav-rodape ">
+						<ul class="navbar-nav nav-rodape flex-row justify-content-center">
 								<li class="nav-item text-center">
                                     <a class="nav-link rolagem m-2" href="{{route('perfil')}}">{{ __('Perfil') }}</a> 
                                 </li>

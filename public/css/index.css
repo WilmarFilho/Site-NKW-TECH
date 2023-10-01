@@ -2,6 +2,23 @@
 
 @media (max-width: 475.98px) {
 
+	body {
+		margin-right: -12px !important; 
+	}
+
+	img.foto-review {
+		position: relative;
+		top: 30px;
+	}
+
+	p.nome-review {
+		margin-top: 25px;
+	}
+
+	div.logo {
+		margin-top: 50px !important;
+	}
+
 	a.btn-size {
 		font-size: 1em !important;
 	}
@@ -9,35 +26,31 @@
 	p.p-video {
 		font-size: 1.1em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
 	}
 
 	p.p-sobre-nos {
 		font-size: 1em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
-		background-color: rgba(49, 2, 2, 0.5);
 		border-radius: 20px;
 		padding: 15px;
 	}
 	
 	h2.h2-sobre-nos {
-		font-family: beach;
+		font-family: one;
 		font-size: 2.5em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 	iframe.borda {
 		border: none !important;
 		box-shadow: none !important;
 		border-radius: 10px;
-		height: 400px;
+		height: 200px;
 		width: 100%;
 		background-color: rgb(0, 0, 0, .7);
 	}
@@ -56,8 +69,7 @@
 	h2.h2-carousel {
 		font-size: 2em;
 		font-weight: bolder;
-		font-family: beach;
-		text-shadow: 0 0 0.8em cyan;
+		font-family: one;
 	}
 
 	button.carousel-btn {
@@ -68,8 +80,8 @@
 	h3.h3-carousel {
 		font-size: 1.2em;
 		font-weight: 400;
-		font-family: one;
-		text-shadow: 0 0 1em cyan;
+		font-family: roboto;
+		padding: 10px;
 	}
 
 	button.btn-lg {
@@ -82,7 +94,7 @@
 	}
 
 	section#carousel {
-		border: 7px double cyan;
+		border: 7px double red;
 		border-left: none;
 		border-right: none;
 		box-shadow: none;		
@@ -95,9 +107,8 @@
 	p.p-suporte {
 		font-size: 1.4em;
 		padding: 5px;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 5px;
-		text-shadow: 0 0 1em purple;
 	}
 
 	ul.nav-rodape {
@@ -112,30 +123,28 @@
 	h2.h2-duvida {
 		font-size: 3em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 	}
 	
 	h3.h3-duvida {
 		font-size: 2em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 		margin-top: 10px;
 	}
 
 	h2.h2-feedback {
-		font-family:  beach;
+		font-family:  one;
 		font-size: 3em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 1em cyan;
 	}
 
 	h2.h2-video {
-		font-family: beach;
+		font-family: one;
 		font-size: 1.8em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 }
@@ -146,30 +155,35 @@
 		font-size: 1em !important;
 	}
 
+	img.foto-review {
+		position: relative;
+		top: 30px;
+	}
+
+	p.nome-review {
+		margin-top: 25px;
+	}
+
 	p.p-sobre-nos {
 		font-size: 1.3em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
-		background-color: rgba(49, 2, 2, 0.5);
-		border-radius: 20px;
 		padding: 15px;
 	}
 	
 	h2.h2-sobre-nos {
-		font-family: beach;
+		font-family: one;
 		font-size: 2.8em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 	iframe.borda {
 		border: none !important;
 		box-shadow: none !important;
 		border-radius: 10px;
-		height: 400px;
+		height: 200px;
 		width: 100%;
 		background-color: rgb(0, 0, 0, .7);
 	}
@@ -177,8 +191,7 @@
 	h2.h2-carousel {
 		font-size: 2em;
 		font-weight: bolder;
-		font-family: beach;
-		text-shadow: 0 0 0.8em cyan;
+		font-family: one;
 	}
 
 	ul.nav-rodape {
@@ -210,7 +223,6 @@
 		font-size: 1.2em;
 		font-weight: 400;
 		font-family: one;
-		text-shadow: 0 0 1em cyan;
 	}
 
 	button.btn-lg {
@@ -223,7 +235,7 @@
 	}
 
 	section#carousel {
-		border: 7px double cyan;
+		border: 7px double red;
 		border-left: none;
 		border-right: none;
 		box-shadow: none;		
@@ -236,46 +248,42 @@
 	p.p-suporte {
 		font-size: 1.3em;
 		padding: 5px;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 5px;
-		text-shadow: 0 0 1em purple;
 	}
 
 	h2.h2-duvida {
 		font-size: 3em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 	}
 	
 	h3.h3-duvida {
 		font-size: 2em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 		margin-top: 10px;
 	}
 
 	h2.h2-feedback {
-		font-family:  beach;
-		font-size: 3.4em;
+		font-family:  one;
+		font-size: 2.5em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 1em cyan;
 	}
 
 	h2.h2-video {
-		font-family: beach;
+		font-family: one;
 		font-size: 1.5em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 	p.p-video {
 		font-size: 1.1em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
 	}
 
 }
@@ -286,30 +294,27 @@
 		font-size: 1.3em !important;
 	}
 
+
 	p.p-sobre-nos {
 		font-size: 1.5em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
-		background-color: rgba(49, 2, 2, 0.5);
-		border-radius: 20px;
 		padding: 15px;
 	}
 	
 	h2.h2-sobre-nos {
-		font-family: beach;
+		font-family: one;
 		font-size: 3em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 	iframe.borda {
 		border: none !important;
 		box-shadow: none !important;
 		border-radius: 10px;
-		height: 400px;
+		height: 200px;
 		width: 100%;
 		background-color: rgb(0, 0, 0, .7);
 	}
@@ -317,8 +322,7 @@
 	h2.h2-carousel {
 		font-size: 3em;
 		font-weight: bolder;
-		font-family: beach;
-		text-shadow: 0 0 0.8em cyan;
+		font-family: one;
 	}
 
 	ul.nav-rodape {
@@ -350,7 +354,6 @@
 		font-size: 1.6em;
 		font-weight: 400;
 		font-family: one;
-		text-shadow: 0 0 1em cyan;
 	}
 
 	button.btn-lg {
@@ -363,7 +366,7 @@
 	}
 
 	section#carousel {
-		border: 7px double cyan;
+		border: 7px double red;
 		border-left: none;
 		border-right: none;
 		box-shadow: none;		
@@ -378,44 +381,40 @@
 		padding: 5px;
 		font-family: one;
 		margin-top: 5px;
-		text-shadow: 0 0 1em purple;
 	}
 
 	h2.h2-duvida {
 		font-size: 3.2em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 	}
 	
 	h3.h3-duvida {
 		font-size: 2.2em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 		margin-top: 10px;
 	}
 
 	h2.h2-feedback {
-		font-family:  beach;
-		font-size: 4em;
+		font-family:  one;
+		font-size: 3em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 1em cyan;
 	}
 
 	h2.h2-video {
-		font-family: beach;
+		font-family: one;
 		font-size: 1.7em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 	p.p-video {
 		font-size: 1.3em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
 	}
 
 
@@ -424,30 +423,31 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
 
 	p.p-sobre-nos {
-		font-size: 1.8em;
+		font-size: 1.3em !important;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
-		background-color: rgba(49, 2, 2, 0.5);
-		border-radius: 20px;
 		padding: 15px;
 	}
 	
 	h2.h2-sobre-nos {
-		font-family: beach;
-		font-size: 4em;
+		font-family: one;
+		font-size: 1.8em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
+		
+	}
+
+	h2.h2-feedback {
+		font-size: 3em;
 	}
 
 
 	h2.h2-carousel {
 		font-size: 3em;
 		font-weight: bolder;
-		font-family: beach;
-		text-shadow: 0 0 0.8em cyan;
+		font-family: one;
+		
 	}
 
 	ul.nav-rodape {
@@ -479,7 +479,6 @@
 		font-size: 1.6em;
 		font-weight: 400;
 		font-family: one;
-		text-shadow: 0 0 1em cyan;
 	}
 
 	button.btn-lg {
@@ -492,7 +491,7 @@
 	}
 
 	section#carousel {
-		border: 7px double cyan;
+		border: 7px double red;
 		border-left: none;
 		border-right: none;
 		box-shadow: none;		
@@ -505,37 +504,34 @@
 	p.p-suporte {
 		font-size: 1.6em;
 		padding: 5px;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 30px;
-		text-shadow: 0 0 1em purple;
 	}
 
 	h2.h2-duvida {
 		font-size: 3.2em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 	}
 	
 	h3.h3-duvida {
 		font-size: 2.2em;
 		color: lightgray;
-		font-family: beach;
+		font-family: one;
 	}
 
 	h2.h2-video {
-		font-family: beach;
+		font-family: one;
 		font-size: 1.7em;
 		font-weight: 600;
 		font-style: italic;
-		text-shadow: 0 0 0.2em purple;
 	}
 
 	p.p-video {
 		font-size: 1.3em;
 		color: white;
-		font-family: one;
+		font-family: roboto;
 		margin-top: 10px;
-		text-shadow: 0 0 1em purple;
 	}
 }
 
@@ -554,6 +550,11 @@
 @font-face {
 	font-family: one;
 	src: url('../fonts/one.woff');
+}
+
+@font-face {
+	font-family: roboto;
+	src: url('../fonts/roboto.woff');
 }
 
 @keyframes translatex {
@@ -644,11 +645,19 @@ body {
 /*Carousel*/
 
 .img-carousel {
-	background: url('../img/index/setup4.jpg');
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(49, 49, 49, 0.4)
+	  ), url('../img/index/setup4.jpg');
 }
 
 .img-carousel-2 {
-	background: url('../img/index/setup3.jpg');	
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(49, 49, 49, 0.4)
+	  ), url('../img/index/setup3.jpg');
 }
 
 .img-carousel, .img-carousel-2 {
@@ -664,22 +673,19 @@ body {
 .h2-carousel {
 	font-size: 5.2em;
 	font-weight: bolder;
-	background-color: rgb(0, 0, 0, .5);
-	border-radius: 15px;
 	padding: 25px;
-	font-family: beach;
-	text-shadow: 0 0 0.8em cyan;
+	font-family: one;
 }
 
 .h3-carousel {
-	font-size: 2.2em;
+	font-size: 2em;
 	font-weight: 400;
-	font-family: one;
-	text-shadow: 0 0 1em cyan;
+	font-family: roboto;
+	text-transform: uppercase;
 }
 
 #carousel {
-	border: 5px double cyan;
+	border: 5px double red;
 	border-left: none;
 	border-right: none;
 }
@@ -698,26 +704,28 @@ body {
 }
 
 .h2-video {
-	font-family: beach;
+	font-family: one;
 	font-size: 3em;
 	font-weight: 600;
 	font-style: italic;
-	text-shadow: 0 0 0.2em purple;
 }
 
 #video {
-	background: url('../img/index/bg10.jpg');
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(15, 15, 15, 0.8)
+	  ), url('../img/geral/setup.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	padding-top: 70px;
+	padding-bottom: 70px;
 }
 
-.video {
-	height: 500px;
-}
+
 
 .texto-video {
-	background-color: rgb(0, 0, 0, .5);
 	border-radius: 20px;
 	padding: 25px;
 }
@@ -725,9 +733,8 @@ body {
 .p-video {
 	font-size: 1.8em;
 	color: white;
-	font-family: one;
+	font-family: roboto;
 	margin-top: 10px;
-	text-shadow: 0 0 1em purple;
 }
 
 /*Duvidas*/
@@ -781,17 +788,20 @@ body {
 /*Review*/
 
 #review {
-	background: url('../img/index/bg1.jpg');
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(15, 15, 15, 0.8)
+	  ), url('../img/index/bgteste1.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
 .h2-feedback {
-	font-family:  beach;
+	font-family:  one;
 	font-size: 5em;
 	font-weight: 600;
 	font-style: italic;
-	text-shadow: 0 0 1em cyan;
 }
 
 .foto-perfil {			
@@ -801,10 +811,15 @@ body {
 }
 
 .borda {
-	border:  3px solid cyan;
     border-radius: 10px;
-    box-shadow: 0 0 1em cyan;
-    height: 400px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .7);
+}
+
+.video-p {
+	border-radius: 12px;
+    height: 300px;
     width: 100%;
     background-color: rgb(0, 0, 0, .7);
 }
@@ -812,7 +827,11 @@ body {
 /*Sobre nós*/
 
 #sobreNos {
-	background: url('../img/index/bg10.jpg');
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(15, 15, 15, 0.8)
+	  ), url('../img/geral/setup.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -821,25 +840,73 @@ body {
 .p-sobre-nos {
 	font-size: 1.8em;
 	color: white;
-	font-family: one;
+	font-family: roboto;
 	margin-top: 10px;
-	text-shadow: 0 0 1em purple;
-	background-color: rgba(49, 2, 2, 0.5);
-	border-radius: 20px;
 	padding: 15px;
 }
 
 .h2-sobre-nos {
-	font-family: beach;
+	font-family: one;
 	font-size: 5em;
 	font-weight: 600;
-	font-style: italic;
-	text-shadow: 0 0 0.2em purple;
-	
+	font-style: italic;	
 }
 
 .btn-size {
 	font-size: 1.7em !important;
 }
 
+.nav-rodape {
+	flex-direction: row !important;
+	justify-content: center !important;
+}
 
+.nav-item {
+	padding: 8px !important;
+}
+
+
+
+.foto-review {
+	border-radius: 200px;
+	/*position: relative;
+	bottom: 70px;*/
+	border: 1px solid white;
+}
+
+.linha-review {
+	color: white;
+	border-top: 2px solid rgb(151, 151, 151);
+}
+
+.review {
+	font-family: roboto;
+}
+
+.texto-review {
+
+}
+
+.review p {
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+
+.py-6 {
+	padding-top: 165px;
+	padding-bottom: 165px;
+}
+
+.pt-6 {
+	padding-top: 90px;
+}
+
+.nome-review {
+	font-family: roboto;
+	margin-top: 5px;
+}
+
+.desc-review {
+	font-family: one;
+}
