@@ -740,19 +740,20 @@ body {
 /*Duvidas*/
 
 #duvidas {
-	background-image: url('../img/index/bg10.jpg');
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(0,0,0, 0.9),
+		rgba(15, 15, 15, 0.8)
+	  ), url('../img/geral/setup.jpg');
+	  background-position: top;
 }
 
 #garantia {
-	border: 2px double cyan;
-	border-radius: 20px;
 	margin: 15px;
 	padding: 15px;
 }
 
 #duvida {
-	border: 2px double cyan;
-	border-radius: 20px;
 	margin: 15px;
 	padding: 15px;
 }
@@ -760,29 +761,26 @@ body {
 .h2-duvida {
 	font-size: 4em;
 	color: white;
-	font-family: beach;
+	font-family: one;
 	font-weight: 600;
 	font-style: italic;
-	text-shadow: 0 0 1em purple;
 }
 
 .h3-duvida {
 	font-size: 3em;
 	color: lightgray;
-	font-family: beach;
+	font-family: one;
 }
 
 .icon {
 	font-size: 4em;
-	text-shadow: 0 0 1em cyan;
 }
 
 .p-suporte {
 	font-size: 1.8em;
 	color: white;
-	font-family: one;
+	font-family: roboto;
 	margin-top: 10px;
-	text-shadow: 0 0 1em purple;
 }
 
 /*Review*/

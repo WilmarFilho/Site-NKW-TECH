@@ -101,16 +101,16 @@
 
 				</div> 
 
-				<div class='row anime js justify-content-center' id='duvida'>
+				<div class='row anime js justify-content-between' id='duvida'>
 
 					<h2 class='col-10 mx-auto text-center h2-duvida'>Principais duvidas</h2>
 
-					<div class='col-md-6  text-center  ' style='border-bottom: 2px solid white;'>
+					<div class='col-md-5  text-center  mt-5'>
 						<h3 class='h3-duvida'>Vou ser atentido <br>qualquer hora?</h3>
 						<p class="p-suporte">Nosso time de tecnicos irá lhe <br>atender o mais rápido possível !</p>
 					</div>
 
-					<div class='col-md-6 text-center' style='border-bottom: 2px solid white;'>
+					<div class='col-md-5 text-center mt-5' >
 						<h3 class='h3-duvida'>Também vou ter suporte presencial assinando a plataforma?</h3>
 						<p class="p-suporte">Sim, além do suporte online para serviços que necessitem de atendimento presencial nossos tecnicos vão até sua casa!</p>
 					</div>
