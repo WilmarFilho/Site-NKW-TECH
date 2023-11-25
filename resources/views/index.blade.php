@@ -243,7 +243,7 @@
 			<!-- Inicio Sobre Nós -->
 			<section id="sobreNos" class="pt-6 row justify-content-center ">
 				
-				<div class="col-12 text-center">
+				<!--<div class="col-12 text-center">
 					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
 				</div>	
 
@@ -255,15 +255,24 @@
 					</p>
 					
 					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size mb-4' style='font-family: beach;'>Saiba mais</a>
-				</div>	
+				</div>	-->
 
-				<div class='row justify-content-center mt-3'>
+				<div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center  text-center mt-2 row">
 
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/index/nattan.png')}}>
+					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
+				
+					<p class="p-sobre-nos">
+						Fascinados por esse mundo de computadores e tecnologia desde cedo, nós somos jovens empresários do interior de Goiás prontos
+						para revolucionar o Brasil no quesito de assistência e consultoria técnica.
+						Conheça um pouco mais de nós clicando no botão abaixo !
+					</p>
+					
+					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size mb-4 col-6' style='font-family: beach;'>Saiba mais</a>
+				</div>
 
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/index/kayky.png')}}>
+				<div class='col-12 col-md-6 row justify-content-center mt-3'>
 
-					<img class='col-md-3 col-4 img-fluid' src={{asset('img/index/guizo.png')}}>
+					<img class='col-md-12 col-12 img-fluid' src={{asset('img/index/sobre.png')}}>
 
 				</div>
 				 <!-- Inicio Feedback -->
