@@ -53,7 +53,7 @@
 </head>
 <body>
     <div id="app" class='container-fluid'>
-        <nav class="navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm fixed-top">
+        <nav class="container-fluid navbar navbar-expand-md navbar-dark bg-nav-custom shadow-sm fixed-top">
             <div class="container">
                <a id='btn-login' class="btn btn-outline-danger nav-link mt-3" href="{{ route('login') }}">{{ __('Área do Usuário') }}
 
@@ -89,7 +89,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class='container-fluid'>
             @yield('content')
         </main>
     </div>

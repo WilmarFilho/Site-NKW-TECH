@@ -72,9 +72,9 @@
 			<!-- Fim Carousel -->  											
 			
 			<!-- Inicio Video Principal -->
-			<section id="video">
+			<div id="video" class='container-fluid'>
 				
-				<div class="row  justify-content-center  ">
+				<div class="row  justify-content-center  " style='margin-left: 0 !important;margin-right: 0 !important'>
 					
 						<div class="col-12 text-center mb-3">
 							<h2 class="text-white h2-video">Diga adeus às noites perdidas procurando respostas <br>e economize dinheiro com nossa plataforma exclusiva !</h2>
@@ -117,19 +117,19 @@
 					
 				</div> <!-- Inicio Video Principal -->
 
-			</section> 
+			</div> 
 			<!-- Fim Video Principal -->
 
 			<!-- Inicio Reviews -->
-			<section id="review" class="py-6"> 
+			<div id="review" class="py-6"> 
 				
-				<div class="row mb-5">
+				<div class="row mb-5" style='margin-left: 0 !important;margin-right: 0 !important'>
 					<div class="col-12 text-center">
 						<h2 class="h2-feedback text-white">Revolucionando o mercado </h2>
 					</div>
 				</div>
 
-				<div class="row justify-content-center mt-5">
+				<div class="row justify-content-center mt-5" style='margin-left: 0 !important;margin-right: 0 !important'>
 				
 					<!--<div class="col-md-4 col-6  mb-4 " style='padding-left: 20px; padding-right: 20px '>
 
@@ -155,7 +155,7 @@
 
 					</div>-->
 
-					<div class="review col-10 row  my-5" >
+					<div class="review col-10 row  my-5" style='margin-left: 0 !important;margin-right: 0 !important'>
 
 						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
                         	
@@ -175,7 +175,7 @@
 
 					<div class='col-10 linha-review'></div>
 
-					<div class="review col-10 row my-5" >
+					<div class="review col-10 row my-5" style='margin-left: 0 !important;margin-right: 0 !important'>
 
 						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
                         	
@@ -195,7 +195,7 @@
 
 					<div class='col-10 linha-review'></div>
 
-					<div class="review col-10 row my-5" >
+					<div class="review col-10 row my-5" style='margin-left: 0 !important;margin-right: 0 !important'>
 
 						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
                         	
@@ -215,7 +215,7 @@
 					
 					<div class='col-10 linha-review'></div>
 
-					<div class="review col-10 row my-5" >
+					<div class="review col-10 row my-5" style='margin-left: 0 !important;margin-right: 0 !important'>
 
 						<div class='texto-review text-center flex-column  text-white col-md-6 col-12 d-flex align-items-center justify-content-center'> 
                         	
@@ -237,11 +237,11 @@
 
 				</div>
 
-			</section> 
+			</div> 
 			<!-- Fim Reviews -->
 
 			<!-- Inicio Sobre Nós -->
-			<section id="sobreNos" class="pt-6 row justify-content-center ">
+			<div id="sobreNos" class="pt-6 row justify-content-center " style='margin-left: 0 !important;margin-right: 0 !important'>
 				
 				<!--<div class="col-12 text-center">
 					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
@@ -257,7 +257,7 @@
 					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size mb-4' style='font-family: beach;'>Saiba mais</a>
 				</div>	-->
 
-				<div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center  text-center mt-2 row">
+				<div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center  text-center mt-2 row" style='margin-left: 0 !important;margin-right: 0 !important'>
 
 					<h2 class="text-white h2-sobre-nos">Contato direto com <br>os fundadores !</h2>
 				
@@ -270,20 +270,20 @@
 					<a href='https://www.instagram.com/reel/Cm42v6Aq4Ds/?igshid=MDM4ZDc5MmU=' class='btn btn-danger btn-size mb-4 col-6' style='font-family: beach;'>Saiba mais</a>
 				</div>
 
-				<div class='col-12 col-md-6 row justify-content-center mt-3'>
+				<div class='col-12 col-md-6 row justify-content-center mt-3' style='margin-left: 0 !important;margin-right: 0 !important'>
 
 					<img class='col-md-12 col-12 img-fluid' src={{asset('img/index/sobre.png')}}>
 
 				</div>
 				 <!-- Inicio Feedback -->
 
-			</section>
+			</div>
 			<!-- Fim Sobre Nós -->
 
 			<!-- Inicio Rodape -->
 			<footer id="rodape" class=''> 
 
-				<div class="row align-items-center  py-4 text-center" style='border-bottom: 2px solid gray; font-family: one'>
+				<div class="row align-items-center  py-4 text-center" style='border-bottom: 2px solid gray; font-family: one;margin-left: 0 !important;margin-right: 0 !important'>
 					
 					<div class=" col-md-4 col-12   text-light">
 						<h4>Menu</h4>
@@ -319,7 +319,7 @@
 					</div>
 				</div>
 				
-				<div class='row justify-content-center '>
+				<div class='row justify-content-center ' style='margin-left: 0 !important;margin-right: 0 !important'>
 					<div class="ml-2 mt-3 col-6   text-light text-center">
 						<p class=''>Copyright (c) 2023 Nkw tech -  Todos os direitos reservados
 						</p>
